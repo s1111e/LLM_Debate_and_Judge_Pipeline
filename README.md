@@ -1,3 +1,5 @@
+Full report: [REPORT.md](REPORT.md)
+
 # Multi-Agent Debate System for Reasoning Tasks
 
 This project implements a multi-agent debate framework for answering
