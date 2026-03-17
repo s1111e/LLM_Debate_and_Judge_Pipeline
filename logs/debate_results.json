@@ -1,0 +1,602 @@
+[
+  {
+    "question": "Can Aerosmith fit in a 2020 Mitsubishi Outlander?",
+    "ground_truth": true,
+    "prediction": "yes",
+    "judge_output": "**1. Analysis of both debaters**\n\n| Aspect | Debater\u202fA (YES) | Debater\u202fB (NO) |\n|--------|-----------------|----------------|\n| **Seat capacity** | Correctly notes 5 seat\u2011belts (driver, passenger, 3 rear) \u2192 all five band members can sit. | Misstates that the front seat has only a single\u2011point belt; actually it has a"
+  },
+  {
+    "question": "Are kayaks used at the summit of Mount Everest?",
+    "ground_truth": true,
+    "prediction": "no",
+    "judge_output": "**1. Analysis of both debaters**  \n- **Debater A:** No argument was presented. The transcript contains only placeholders (\u201cNo argument generated.\u201d).  \n- **Debater B:** Presented a single, coherent argument that kayaks are not used at Everest\u2019s summit, citing geographic, environmental, logistical, and historical reasons.\n\n**2. Strongest argument from each side**  \n- **A:** None \u2013 no content to evaluate.  \n- **B:** The combination of geographic constraints (no water, rocky plateau), extreme altitude/temperature/wind making a kayak unusable, and the absence of any documented use in the long history of Everest climbs.\n\n**3. Weakest argument from each side**  \n- **A:** The absence of an argument itself is the weakest point.  \n- **B:** The claim that \u201cno credible reports or photographs\u201d exist is the weakest, as it relies on lack of evidence rather than a direct refutation of a hypothetical use case.\n\n**4. Final verdict**  \n**NO** \u2013 Kayaks are not used at the summit of Mount Everest.\n\n**5. Confidence score**  \n5 (high confidence)."
+  },
+  {
+    "question": "Does the country that received the most gold medals during the 1976 Olympics still exist?",
+    "ground_truth": false,
+    "prediction": "yes",
+    "judge_output": "**1. Analysis of both debaters**  \n- **Debater\u202fB (NO)** argues that the USSR dissolved in 1991, the IOC still lists the USSR as the 1976 gold\u2011medal leader, and none of the successor states matched that haul.  \n- **Debater\u202fA (YES)** claims that Russia is the legal successor of the USSR, recognized by the UN, EU, and IOC, and therefore the nation that topped the table still exists as Russia.\n\n**2. Strongest argument from each side**  \n- **B:** The USSR ceased to exist as a sovereign state on 26\u202fDec\u202f1991; the IOC\u2019s official medal database still attributes the 1976 gold haul to \u201cSoviet Union.\u201d  \n- **A:** Russia is"
+  },
+  {
+    "question": "Would a Common warthog starve in a greenhouse?",
+    "ground_truth": false,
+    "prediction": "no",
+    "judge_output": "No argument generated."
+  },
+  {
+    "question": "Would a model be appropriate to star in a LA Femme Nikita remake?",
+    "ground_truth": true,
+    "prediction": "no",
+    "judge_output": "**1. Analysis of the debaters**  \n- **Debater\u202fA** emphasizes the modern model\u2019s athleticism, marketability, and the possibility of skill acquisition, citing high\u2011profile transitions (Theron, Nyong\u2019o, Gadot).  \n- **Debater\u202fB** focuses on the narrative demands of *Nikita*\u2014psychological nuance, gritty realism, and fan expectations\u2014arguing that a model\u2019s typical skill set is insufficient for such depth.\n\n**2. Strongest argument**  \n- **A:** The precedent of models successfully becoming serious action\u2011drama actors (e.g., Theron, Gadot) shows that with proper training the role\u2019s physical and dramatic demands can be met.  \n- **B:** The franchise\u2019s core is a morally ambiguous, psychologically complex spy; audiences expect authentic, gritty performances, and a model risks reducing the story to a visual spectacle.\n\n**3. Weakest argument**  \n- **A:** The claim that visual appeal and social\u2011media followings alone can secure success ignores"
+  },
+  {
+    "question": "Is eating a Dicopomorpha echmepterygis size Uranium pellet fatal?",
+    "ground_truth": false,
+    "prediction": "no",
+    "judge_output": "No argument generated."
+  },
+  {
+    "question": "Did any of Maya Angelou's children follow in her footsteps?",
+    "ground_truth": true,
+    "prediction": "no",
+    "judge_output": "**1. Analysis of both debaters**\n\n- **Debater A** repeatedly asserts that Maya Angelou\u2019s daughter, Maya Angelou\u202fJr., published poetry, a memoir, wrote essays for major newspapers, and spoke at civil\u2011rights venues. These claims are unsupported, contradict reliable biographical sources, and contain factual errors (e.g., the daughter\u2019s profession is dance/choreography, not writing). A\u2019s statements lack citations and rely on fabricated titles and dates.\n\n- **Debater B** correctly states that Maya Angelou had only one child, Maya Angelou\u202fJr., who is a professional dancer and choreographer. B cites public records and reputable news outlets that show no published literary works or civil\u2011rights activism by the daughter. B also corrects the erroneous claim that Angelou had other children. B\u2019s argument is concise, fact\u2011based, and aligns with established biographical data.\n\n**2. Strongest argument from each side**\n\n- **Debater A**: The most persuasive point is the claim that the daughter has a literary and activist career, which, if true, would directly answer the question. However, this point is unsubstantiated and factually incorrect.\n\n- **Debater B**: The strongest point is the factual clarification that Maya Angelou had only one child who is not a writer or activist, supported by credible sources. This directly addresses the"
+  },
+  {
+    "question": "Is chaff produced by hydropower?",
+    "ground_truth": true,
+    "prediction": "no",
+    "judge_output": "**1. Analysis of both debaters**  \n- **Debater A** conflates erosion by\u2011products (silt, metal filings) with the agricultural definition of chaff. The claim that hydropower \u201cgenerates a distinct form of chaff\u201d is unsupported; no credible industry source or definition is provided.  \n- **Debater B** correctly cites the USDA/International Grain Organization definition of chaff as a dry, fibrous husk from grain threshing. It notes that hydropower plants have no grain\u2011processing equipment and that erosion products are mineral/metallic, not fibrous. The argument is grounded in standard terminology and industry practice.\n\n**2. Strongest argument**  \n- **Debater B**: Clear, authoritative definition of chaff and logical exclusion of any hydropower link.  \n- **Debater A**: The claim that hydropower produces a \u201cdistinct form of chaff\u201d documented in industry reports, though it lacks evidence.\n\n**3. Weakest argument**  \n- **Debater A"
+  },
+  {
+    "question": "Could two newborn American Black Bear cubs fit on a king size bed?",
+    "ground_truth": true,
+    "prediction": "no",
+    "judge_output": "**1. Analysis of both debaters**\n\n| Debater | Key points | Assessment |\n|---------|------------|------------|\n| **A** | \u2022 Newborn cubs \u224820\u201325\u202fcm long, 10\u202fcm wide, 1\u20132\u202fkg each. <br>\u2022 King\u2011size bed \u2248193\u202f\u00d7\u202f203\u202fcm (\u224839\u202f000\u202fcm\u00b2). <br>\u2022 Two cubs occupy ~400\u202fcm\u00b2, < 1\u202f% of bed area. <br>\u2022 Mattress load capacity far exceeds 4\u202fkg. <br>\u2022 Simple blanket or protector can contain them. | Strong quantitative reasoning. Focuses on physical fit and weight tolerance. Ignores behavioral and environmental safety concerns. |\n|"
+  },
+  {
+    "question": "Did Benito Mussolini wear bigger shoes than Haf\u00fe\u00f3r Bj\u00f6rnsson?",
+    "ground_truth": false,
+    "prediction": "yes",
+    "judge_output": "**1. Analysis of both debaters**  \n- **Debater\u202fA** offered no substantive argument at any point; all replies were \u201cNo argument generated.\u201d  \n- **Debater\u202fB** presented three conflicting claims:  \n  1. Initial claim that Mussolini was US\u202f9\u201110 and Bj\u00f6rnsson US\u202f15 \u2192 NO.  \n  2. Later claim that Mussolini was US\u202f13 (boot) and Bj\u00f6rnsson US\u202f15 (unverified) \u2192 YES.  \n  3. Final claim that boot size is not shoe size and that Bj\u00f6rnsson\u2019s US\u202f15 is confirmed \u2192 NO.  \n  The most credible part of B\u2019s case is the Guardian interview where"
+  },
+  {
+    "question": "Did land owners elect their rulers in the Kingdom of Hungary?",
+    "ground_truth": false,
+    "prediction": "no",
+    "judge_output": "No argument generated."
+  },
+  {
+    "question": "Would Brian Warner be a good singer for a soul music band?",
+    "ground_truth": false,
+    "prediction": "no",
+    "judge_output": "**1. Analysis of both debaters**  \n- **Debater A** builds a case around vocal timbre, specific performances, and recent collaborations that align with soul aesthetics. The argument is grounded in concrete examples (cover of \u201cAin\u2019t No Sunshine,\u201d 2021 gospel\u2011influenced track, 2022 Soul Fest call\u2011and\u2011response).  \n- **Debater B"
+  },
+  {
+    "question": "Are most books written as a Haiku?",
+    "ground_truth": false,
+    "prediction": "no",
+    "judge_output": "**1. Analysis of both debaters**  \n- **Debater\u202fA**: No argument was presented; silence cannot be taken as evidence for or against the claim.  \n- **Debater\u202fB**: Provides a structured argument: definition of haiku, structural requirements of a book, statistical data on published titles, and examples of \u201chaiku\u2011heavy\u201d works to show the minority status of haiku in books.\n\n**2. Strongest argument from each side**  \n- **A**: None \u2013 the absence of an argument is the strongest point.  \n- **B**: The combination of formal definition (17\u2011mora, three lines) with the structural reality of books (chapters, prose, narrative arcs) and the statistical evidence that only ~0.05\u202f% of titles are pure haiku anthologies.\n\n**3. Weakest argument from each side**  \n- **A**: The lack of any argument is a weakness; it offers no support for the claim.  \n- **B**: The argument assumes that a book *must* be continuous prose or a single poetic form; it overlooks experimental works that might be composed entirely of haiku (e.g., a haiku novel), though such works are extremely rare.\n\n**4. Final verdict**  \n**NO** \u2013 Most books are not written as a Haiku.\n\n**5. Confidence score**  \n5 (high confidence)"
+  },
+  {
+    "question": "Will AC/DC album sales buy more B-52 bombers than Lil Wayne's?",
+    "ground_truth": true,
+    "prediction": "no",
+    "judge_output": "No argument generated."
+  },
+  {
+    "question": "Can Kit & Kaboodle hypothetically help someone past the Underworld gates?",
+    "ground_truth": false,
+    "prediction": "no",
+    "judge_output": "No argument generated."
+  },
+  {
+    "question": "Are Saturn's famous rings solid?",
+    "ground_truth": false,
+    "prediction": "no",
+    "judge_output": "**1. Analysis of the debaters**\n\n| Debater | Position | Key points | Strengths | Weaknesses |\n|---------|----------|------------|-----------|------------|\n| **A** | Rings are effectively solid | \u2022 Continuous mass distribution due to high density<br>\u2022 Gravitational cohesion and self\u2011gravity wakes<br>\u2022 Macroscopic rigidity: supports density/bending waves, behaves like a solid in dynamical experiments<br>\u2022 Cassini radar/optical depth shows coherent surface | Uses dynamical evidence and observational data; frames the rings as a collective medium rather than isolated particles | Overstates \u201ccontinuous\u201d \u2013 gaps are still tens of meters; \u201csolid\u201d is a loose analogy; relies on inferred bulk properties rather than direct measurement of a solid lattice |\n| **B** | Rings are not solid | \u2022 Composition: ice/rock"
+  },
+  {
+    "question": "Did Emma Stone pursue a higher education?",
+    "ground_truth": false,
+    "prediction": "no",
+    "judge_output": "**1. Analysis of both debaters**  \n- **Debater A**: No arguments or evidence were presented; the burden of proof remains on the opposing side.  \n- **Debater B**: Repeatedly asserts that Emma\u202fStone did not attend college, citing:  \n  - Early departure from Jefferson High School (2003).  \n  - Absence of university enrollment in reputable databases (IMDb, SAG\u2011AFTRA).  \n  - Interviews (The Wrap, Variety) where Stone explicitly says she \u201cdidn\u2019t go to college.\u201d  \n  - Lack of any diploma or degree listed on official biographies.\n\n**2. Strongest argument from each side**  \n- **A**: None \u2013 the side failed to provide any evidence, so its strongest point is simply the lack of counter\u2011evidence.  \n- **B**: The direct quotes from reputable interviews (Variety, The Wrap) where Stone herself states she did not attend college, combined with the absence of any university affiliation in official records.\n\n**3. Weakest argument from each side**  \n- **A**: The claim that the burden remains on the opponent because no evidence was offered; this is a procedural point, not substantive.  \n- **B**: The reliance on the absence of records as proof; while strong, it could be challenged if undisclosed education existed, but no such evidence is known.\n\n**4. Final verdict**  \n**NO** \u2013 Emma\u202fStone did not pursue higher education.\n\n**5. Confidence score**  \n5 (high confidence based on multiple independent sources and direct statements)."
+  },
+  {
+    "question": "Does a person using tonsure have hair at the top of their scalp?",
+    "ground_truth": false,
+    "prediction": "no",
+    "judge_output": "**1. Analysis of both debaters**  \n- **Debater\u202fA** argues that the ring of hair left in a tonsure is anatomically on the superior surface of the skull, thus constituting hair \u201cat the top\u201d of the scalp. A key point is that historical descriptions refer to this band as the visible hair on the head\u2019s crown.  \n- **Debater\u202fB** contends that the ring is merely a decorative fringe bordering the shaved area; the \u201ctop\u201d is defined as the shaved zone itself. B cites dictionary and encyclopedic definitions that emphasize the shaving of the top and the ring as an adjacent margin.\n\n**2. Strongest argument from each side**  \n- **A\u2019s strongest point:** The ring is a continuous band encircling the superior surface; it is literally hair on the topmost plane of the scalp, as confirmed by medieval sources describing it as \u201chair upon the top of the head.\u201d  \n- **B\u2019s strongest point:** The canonical definition of tonsure focuses on shaving the uppermost portion, and the ring is described as a fringe or margin, implying that the top surface is bare.\n\n**3. Weakest argument from each side**  \n- **A\u2019s weakest point:** Treating the ring as the \u201ctop\u201d ignores the common interpretation that the shaved area is the top; the ring is a border rather than the primary surface.  \n- **B\u2019s weakest point:** The claim that the ring is not on the top contradicts anatomical reality;"
+  },
+  {
+    "question": "Can an Asian black bear use chopsticks?",
+    "ground_truth": false,
+    "prediction": "yes",
+    "judge_output": "**1. Analysis of both debaters**  \n- **Debater\u202fA (YES)** argues that Asian black bears possess flexible forepaws capable of fine manipulation, cite general stick\u2011using behavior, and claim that chopsticks are simple enough for a bear to learn.  \n- **Debater\u202fB (NO)** focuses on anatomical constraints: a single non\u2011opposable \u201cthumb,\u201d lack of fine\u2011motor neural circuitry, and the absence of any documented chopstick use. They also note that claws would damage the utensil.\n\n**2. Strongest argument from each side**  \n- **A:** Bears routinely use sticks to fish and probe, showing they can manipulate two objects simultaneously.  \n- **B:** Bears lack an opposable thumb and fine\u2011motor control; no empirical evidence exists of chopstick use, and claws would quickly break the sticks.\n\n**3. Weakest argument from each side**  \n- **A:** Overgeneralizes stick\u2011using behavior to chopsticks without evidence; ignores claw damage and lack of true opposable digits.  \n- **B:** Assumes that absence of documented cases equals impossibility, without considering potential learning or training.\n\n**4. Final verdict**  \n**NO** \u2013 An Asian black bear cannot realistically use chopsticks.\n\n**5. Confidence score**  \n**4** \u2013 Strong anatomical and behavioral evidence supports the conclusion, though absolute impossibility"
+  },
+  {
+    "question": "Would Roman Gallic Wars army struggle to build the pyramids faster?",
+    "ground_truth": false,
+    "prediction": "yes",
+    "judge_output": "**1. Analysis of both debaters**\n\n| Side | Key Points | Strengths | Weaknesses |\n|------|------------|-----------|------------|\n| **A (Yes \u2013 struggle)** | \u2022 Pyramids required highly skilled masons, not combat troops."
+  },
+  {
+    "question": "Was Martin Luther same sect as Martin Luther King Jr.?",
+    "ground_truth": false,
+    "prediction": "unknown",
+    "judge_output": "**1. Analysis of the debaters**\n\n| Debater | Approach | Evidence & reasoning | Logical coherence |\n|---------|----------|----------------------|-------------------|\n| **A** | Argues that both men belong to the same \u201csect\u201d by equating Protestant"
+  },
+  {
+    "question": "Would four shoes be insufficient for a set of octuplets?",
+    "ground_truth": true,
+    "prediction": "no",
+    "judge_output": "No argument generated."
+  },
+  {
+    "question": "Did the 40th president of the United States forward lolcats to his friends?",
+    "ground_truth": false,
+    "prediction": "no",
+    "judge_output": "**1. Analysis of both debaters**  \n- **Debater\u202fA**: Relies solely on Reagan\u2019s general sense of humor and makes an unsupported claim that he forwarded lolcats. No evidence, no references to specific communications, and no acknowledgment of the meme\u2019s timeline.  \n- **Debater\u202fB**: Provides a clear temporal argument: the first lolcat meme (I\u202fCan\u202fHas\u202fCheezburger?) appeared in 2005 (or 2003\u20112005 depending on source) after Reagan\u2019s death in 2004. B cites the absence of any documented email, fax, or social\u2011media activity that could carry a meme, and references reputable biographies and archives that contain no mention of cat pictures.\n\n**2. Strongest argument from each side**  \n- **A**: The claim that Reagan\u2019s humor would naturally extend to modern internet memes.  \n- **B**: The chronological mismatch and lack of any documented evidence of Reagan sharing lolcats.\n\n**3. Weakest argument from each side**  \n- **A**: The assumption that humor"
+  },
+  {
+    "question": "Should wool be hand washed only?",
+    "ground_truth": true,
+    "prediction": "no",
+    "judge_output": "No argument generated."
+  },
+  {
+    "question": "Would Tom Cruise ever insult L. Ron Hubbard?",
+    "ground_truth": false,
+    "prediction": "no",
+    "judge_output": "No argument generated."
+  },
+  {
+    "question": "Was Great Recession the period of severest unemployment?",
+    "ground_truth": false,
+    "prediction": "no",
+    "judge_output": "**1. Analysis of both debaters**  \n- **Debater\u202fA** argues that severity should be measured by cumulative impact: higher labor\u2011force participation loss, youth unemployment peak, rise in involuntary part\u2011time work, longest average spell, and the largest share of long\u2011duration unemployment. All metrics are U.S.\u2011centric but show a deep, prolonged shock.  \n- **Debater\u202fB** focuses on peak unemployment rate, noting that the Great Recession\u2019s 10\u202f% peak is dwarfed by the 25\u202f% peak of the Great Depression and higher peaks in some earlier recessions. B\u2019s argument is limited to a single statistic and ignores cumulative measures.\n\n**2. Strongest argument from each side**  \n- **A:** The Great Recession produced the largest cumulative loss of labor"
+  },
+  {
+    "question": "Will the small intenstine break down a cotton ball?",
+    "ground_truth": false,
+    "prediction": "no",
+    "judge_output": "**1. Analysis of both debaters**\n\n| Debater | Key points | Strengths | Weaknesses |\n|---------|------------|-----------|------------|\n| **A** | \u2022 Peristaltic waves mechanically fragment large foreign bodies.<br>\u2022 Distal small intestine harbors cellulolytic bacteria capable of hydrolyzing cellulose (citing pig data). | \u2022 Addresses potential microbial contribution, which is often overlooked.<br>\u2022 Suggests a plausible mechanism for partial degradation. | \u2022 No evidence that peristalsis actually pulverizes rigid cotton fibers; radiographs show intact cotton through jejunum/ileum.<br>\u2022 The cited bacterial counts and cellulase activity in the ileum are far below levels needed for significant cellulose breakdown.<br>\u2022 Overstates the extent of microbial cellulase in the small intestine. |\n| **B** | \u2022 Cotton is cellulose; humans lack cellulase.<"
+  },
+  {
+    "question": "Can the theory of cultural hegemony explain global warming?",
+    "ground_truth": false,
+    "prediction": "yes",
+    "judge_output": "**1. Analysis of the debaters**\n\n| Debater | Strengths | Weaknesses |\n|---------|-----------|------------|\n| **A** (Yes) | \u2022 Connects hegemonic institutions (subsidies, lobbying, \u201cgreen\u201d framing) to the economic pathways that generate emissions. <br>\u2022 Uses specific reports (World Bank, OECD, IPCC audit) to illustrate material influence. | \u2022 Equates cultural hegemony with the physical cause of warming; lacks a clear causal mechanism linking ideology to atmospheric CO\u2082. <br>\u2022 Relies on correlational data; does not rule out other drivers (technological, demographic). |\n| **B** (No) | \u2022 Clearly distinguishes between the physical science of climate change and the sociological theory of hegemony. <br>\u2022 Cites empirical evidence that emissions are driven by fossil\u2011fuel combustion and land\u2011use change, independent of cultural narratives. <br>\u2022 Highlights cross\u2011cultural variation that undermines a causal link. | \u2022 Slightly dismissive of the role ideology plays in shaping emission pathways; could acknowledge that he"
+  },
+  {
+    "question": "Does Carmen Electra own a junk?",
+    "ground_truth": false,
+    "prediction": "no",
+    "judge_output": "**1. Analysis of both debaters**  \n- **Debater A**: No arguments were presented in any round.  \n- **Debater B**: Presented a single, concise argument in the initial round, claiming that there is no public evidence, that the term \u201cjunk\u201d would contradict her polished image, and that official records do not list a junk vehicle under her name.\n\n**2. Strongest argument from each side**  \n- **Debater B**: The strongest point is the lack of any credible public or legal evidence indicating that Carmen Electra owns a junk vehicle. This is a concrete, verifiable claim.  \n- **Debater A**: No argument was offered; therefore, there is no strongest point.\n\n**3. Weakest argument from each side**  \n- **Debater B**: The reliance on \u201cprofessional image\u201d as a reason is the weakest, as image alone does not prove ownership status.  \n- **Debater A**: No argument, so no weakest point.\n\n**4. Final verdict**  \n**NO** \u2013 Carmen Electra does not own a junk.\n\n**5. Confidence score**  \n5 (high confidence due to lack of evidence and clear counter\u2011argument)."
+  },
+  {
+    "question": "Would the number 666 appear in a church?",
+    "ground_truth": false,
+    "prediction": "no",
+    "judge_output": "**1. Analysis of both debaters**  \n- **Debater A**: No arguments were presented; the side is essentially empty.  \n- **Debater B**: Presented five points\u2014biblical connotation, tradition of avoidance, liturgical practice, public perception, and architectural/administrative norms\u2014to argue that churches deliberately avoid the number 666.\n\n**2. Strongest argument from each side**  \n- **A**: None (no content).  \n- **B**: The biblical connotation (Revelation 13:18) is the most compelling because it directly ties the number to demonic symbolism, which churches actively seek to distance themselves from.\n\n**3. Weakest argument from each side**  \n- **A**: The absence of any argument is the weakest point.  \n- **B**: The claim that \u201cno churches ever use 666 in any context\u201d is the weakest, as it ignores accidental occurrences (e.g., room numbers, addresses) that are not intentionally symbolic.\n\n**4. Final verdict**  \n**NO** \u2013 The number 666 would not appear in a church in any intentional or prominent way.\n\n**5. Confidence score**  \n4"
+  },
+  {
+    "question": "In baseball, is a \"Homer\" named after the poet Homer who wrote the Odyssey?",
+    "ground_truth": false,
+    "prediction": "no",
+    "judge_output": "**1. Analysis of both debaters**  \n- **Debater\u202fB** presents a clear, historically grounded explanation that \u201chomer\u201d is a slang shortening of \u201chome run,\u201d citing early newspaper usage and dictionary entries.  \n- **Debater\u202fA** offers no argument at all; all rounds contain \u201cNo argument generated.\u201d  \n\n**2. Strongest argument from each side**  \n- **B**: The term\u2019s earliest documented use dates to the 1890s in baseball contexts, directly linked to the action of reaching home plate, with no reference to the ancient poet.  \n- **A**: No argument presented.  \n\n**3. Weakest argument from each side**  \n- **B**: None; the argument is internally consistent and well\u2011supported.  \n- **A**: Complete absence of evidence or reasoning.  \n\n**4. Final verdict**  \n**NO** \u2013 a baseball \u201chomer\u201d is not named after the poet Homer.  \n\n**5. Confidence score**  \n5 (highly confident)."
+  },
+  {
+    "question": "Did Metallica band members cutting their hair hurt their sales?",
+    "ground_truth": true,
+    "prediction": "no",
+    "judge_output": "No argument generated."
+  },
+  {
+    "question": "Did Easy Rider make a profit at the theater when it was released?",
+    "ground_truth": true,
+    "prediction": "no",
+    "judge_output": "No argument generated."
+  },
+  {
+    "question": "Will Al Pacino and Margaret Qualley score same amount of Bacon Number points?",
+    "ground_truth": true,
+    "prediction": "no",
+    "judge_output": "No argument generated."
+  },
+  {
+    "question": "Did the lead singer of Led Zepplin ever perform with Ernest Chataway?",
+    "ground_truth": true,
+    "prediction": "yes",
+    "judge_output": "**1. Analysis of both debaters**  \n- **Debater A**: Begins with a single statement claiming a collaboration, but offers no evidence, citations, or reasoning. In subsequent rounds, A does not provide any counter\u2011argument or data, effectively presenting an unsupported assertion.  \n- **Debater B**: Provides a detailed, evidence\u2011based rebuttal. B cites specific databases (Discogs, AllMusic, MusicBrainz, Setlist.fm, Songkick), reputable press outlets (BBC, NME, Rolling Stone), and the nature of Ernest Chataway\u2019s career (actor\u2011comedian, no music credits). B systematically shows that no record of a joint performance exists.\n\n**2. Strongest argument from each side**  \n- **Debater A**: The claim itself (\u201cYes\u201d)\u2014though unsupported, it is the only assertion presented.  \n- **Debater B**: The exhaustive absence\u2011of\u2011evidence approach, referencing multiple authoritative sources and the clear distinction between Chataway\u2019s career and Plant\u2019s musical collaborations.\n\n**3. Weakest argument from each side**  \n- **Debater A**: Complete lack of evidence or reasoning; the claim stands on no factual support.  \n- **Debater B**: Relies solely on negative evidence (absence of records). While strong, it could be challenged if an obscure collaboration existed outside mainstream databases.\n\n**4. Final verdict**  \n**NO** \u2013 There is no credible evidence that Robert Plant performed with Ernest Chataway.\n\n**5. Confidence score**  \n**5** \u2013 The evidence overwhelmingly supports the negative conclusion."
+  },
+  {
+    "question": "Can a single honey bee sting multiple humans?",
+    "ground_truth": false,
+    "prediction": "no",
+    "judge_output": "**1. Analysis of both debaters**  \n- **Debater B** presents a clear, evidence\u2011based explanation: the honey bee\u2019s barbed stinger is permanently embedded in the first victim, the venom sac is torn from the abdomen, and the bee dies. It cites physical constraints and behavioral observations.  \n- **Debater A** offers no argument or evidence; the transcript shows silence throughout.\n\n**2. Strongest argument**  \n- **Debater B**: The barbed stinger design and documented post\u2011sting mortality of honey bees make a second sting impossible.\n\n**3. Weakest argument**  \n- **Debater A**: Complete lack of any counter\u2011argument or evidence.\n\n**4. Final verdict**  \n**NO** \u2013 a single honey bee cannot sting multiple humans.\n\n**5. Confidence score**  \n5 (high confidence)"
+  },
+  {
+    "question": "Do drag kings take testosterone to look masculine?",
+    "ground_truth": false,
+    "prediction": "no",
+    "judge_output": "No argument generated."
+  },
+  {
+    "question": "Does Dean Cain have less days to birthday than Will Ferrell every 4th of July?",
+    "ground_truth": false,
+    "prediction": "no",
+    "judge_output": "**1. Analysis of both debaters**  \n- **Debater A**: No argument presented; simply states \u201cNo argument generated.\u201d  \n- **Debater B**: Provides a clear, step\u2011by\u2011step calculation:  \n  - Will\u202fFerrell\u2019s birthday is July\u202f16 \u2192 12 days from July\u202f4.  \n  - Dean\u202fCain\u2019s birthday is October\u202f23 \u2192 27 (remaining July) + 31 (Aug) + 30 (Sep) + 23 (Oct) = 111 days.  \n  - Concludes Cain has more days, not fewer.\n\n**2. Strongest argument**  \n- **Debater B**: The explicit arithmetic comparison is straightforward and directly answers the question.\n\n**3. Weakest argument**  \n- **Debater A**: Provides no reasoning or evidence, rendering the position unsupported.  \n- **Debater B**: Minor omission of inclusive/exclusive day counting, but this does not alter the conclusion.\n\n**4. Final verdict**  \n- **NO** \u2013 Dean Cain does not have fewer days until his birthday than Will Ferrell on July\u202f4.\n\n**5. Confidence score**  \n- **5** \u2013 The calculation is unambiguous and the question is straightforward."
+  },
+  {
+    "question": "Is Michael Vick on People for the Ethical Treatment of Animals's hypothetical blacklist?",
+    "ground_truth": true,
+    "prediction": "yes",
+    "judge_output": "**1. Analysis of both debaters**\n\n| Debater | Key Points | Evidence & Reasoning |\n|---------|------------|----------------------|\n| **A (Yes)** | \u2022 PETA\u2019s blacklist flags anyone with a documented history of animal abuse. <br>\u2022 Vick\u2019s dog\u2011fighting conviction is a clear, verifiable instance of cruelty. <br>\u2022 PETA"
+  },
+  {
+    "question": "Can paratroopers be used in a vacuum?",
+    "ground_truth": false,
+    "prediction": "no",
+    "judge_output": "**1. Analysis of both debaters**  \n- **Debater\u202fB** presents a clear, physics\u2011based case that a parachute cannot generate drag in a vacuum, that a human would suffocate and suffer extreme temperature/pressure effects, and that conventional deployment mechanics would fail.  \n- **Debater\u202fA** offers no substantive argument or counter\u2011point; the transcript shows only silence.\n\n**2. Strongest argument from each side**  \n- **B:** The parachute\u2019s fundamental reliance on atmospheric drag\u2014without air the canopy cannot create the necessary resistance, so descent would be lethal.  \n- **A:** The absence of any argument itself demonstrates a lack of support for the proposition.\n\n**3. Weakest argument from each side**  \n- **B:** The argument does not consider possible technological adaptations (e.g., pressurized suits, alternative descent devices) that might mitigate the vacuum\u2019s effects.  \n- **A:** No argument is presented at all, providing no basis for the claim.\n\n**4. Final verdict**  \n**NO** \u2013 Paratroopers cannot"
+  },
+  {
+    "question": "Will Lhamo Thondup be considered by Catholic Church to be a saint?",
+    "ground_truth": false,
+    "prediction": "no",
+    "judge_output": "**1. Analysis of both debaters**  \n- **Debater\u202fB** presents a clear, canon\u2011law\u2011based case: the formal canonization process, requirement of Catholic baptism or conversion, need for verified miracles, and Canon\u202f1144\u2019s prohibition on non\u2011Catholics.  \n- **Debater\u202fA** attempts to overturn this by citing \u201cPope\u2019s 2023 declaration of Universal Mercy\u201d and examples of non\u2011Catholic canonizations, but the examples are incorrect (both Teresa of Calcutta and John of the Cross were Catholic) and no such papal declaration exists. The miracles cited are unverified and lack Vatican documentation.\n\n**"
+  },
+  {
+    "question": "Has Ringo Starr been in a relatively large number of bands?",
+    "ground_truth": false,
+    "prediction": "no",
+    "judge_output": "**1. Analysis of both debaters**  \n- **Debater A**: No arguments were provided; the side is effectively silent.  \n- **Debater B**: Presents a single, concise claim that Ringo Starr\u2019s band involvement is limited to The Beatles and a handful of short\u2011lived or one\u2011off projects, arguing this does not meet the threshold of a \u201crelatively large number.\u201d\n\n**2. Strongest argument from each side**  \n- **A**: None (no content).  \n- **B**: The factual list of Ringo\u2019s major affiliations (Beatles, All\u2011Stars, Ringo Starr Band, etc.) demonstrates a small, well\u2011defined set of groups.\n\n**3. Weakest argument from each side**  \n- **A**: Complete absence of argumentation.  \n- **B**: The claim relies on an undefined standard for \u201crelatively large number\u201d and does not address potential counterexamples (e.g., later collaborations or touring ensembles).\n\n**4. Final verdict**  \n**NO** \u2013 Ringo Starr has not been in a relatively large number of bands.\n\n**5. Confidence score**  \n5 (high confidence)."
+  },
+  {
+    "question": "Is double duty an incorrect phrase for host of Dancing With The Stars?",
+    "ground_truth": false,
+    "prediction": "unknown",
+    "judge_output": "**1. Analysis of both debaters**\n\n| Debater | Argument style | Evidence used | Persuasiveness |\n|---------|----------------|---------------|----------------|\n| **A** | Linguistic\u2011corpus & industry\u2011credit focus | COCA/BNC usage of \u201cdouble duty\u201d with distinct occupations; official credits list only \u201cHost\u201d; claim that the phrase misleads viewers | Strong on specificity, but limited to a narrow definition of \u201cdouble duty\u201d as *two separate jobs*. |\n| **B** | Definition & functional description | Dictionary definition of \u201cdouble duty\u201d; description of host\u2019s varied on\u2011air duties; claim of common usage in entertainment journalism | Strong on functional interpretation, but lacks concrete citations or counter\u2011evidence to A\u2019s corpus claim. |\n\n**2. Strongest argument from each side**\n\n- **A**: The idiom \u201cdouble duty\u201d is almost exclusively used for *two distinct* jobs (e.g., a nurse who does double duty as a paramedic). In DWTS the host\u2019s tasks are facets of one role; production credits list only \u201cHost.\u201d Therefore the phrase is misapplied.\n-"
+  },
+  {
+    "question": "Can furniture be made of hair?",
+    "ground_truth": true,
+    "prediction": "no",
+    "judge_output": "No argument generated."
+  },
+  {
+    "question": "Did Pedubastis I know Japanese people?",
+    "ground_truth": false,
+    "prediction": "no",
+    "judge_output": "**1. Analysis of both debaters**  \n- **Debater A**: Relies on historical context\u2014Pedubastis I reigned 732\u2013720\u202fBCE, before Japan had a distinct nation or written records. Cites lack of archaeological or textual evidence of Egypt\u2011Japan contact.  \n- **Debater B**: Reiterates A\u2019s points, adding that Japanese maritime activity began only in the 3rd\u202fcentury\u202fCE, and that Egyptian records mention trade only with the Near East and Mediterranean, not East Asia. Emphasizes the absence of any contemporaneous inscriptions or artifacts linking the two regions.\n\nBoth arguments are essentially identical in content and logic, differing only in phrasing and emphasis.\n\n**2. Strongest argument from each side**  \n- **Debater A**: The most compelling point is the chronological mismatch: Pedubastis I\u2019s reign predates any known Japanese statehood or written records, making contact impossible.  \n- **Debater B**: The strongest element is the explicit mention of the earliest Japanese maritime vessels appearing in the 3rd\u202fcentury\u202fCE, which is centuries after Pedubastis I\u2019s death, reinforcing the impossibility of interaction.\n\n**3. Weakest argument from each side**  \n- **Debater A**: The claim that \u201cno Egyptian inscriptions, artifacts, or trade goods have been found in Japan\u201d is somewhat redundant; the lack of evidence is already established by the chronological argument.  \n- **Debater B**: The reference to the 2nd\u202fcentury\u202fCE Silk Road trade is irrelevant to Pedubastis I\u2019s era and does not strengthen the case beyond the already stated chronological gap.\n\n**4. Final verdict**  \n**NO** \u2013 Pedubastis I could not have known any Japanese people.\n\n**5. Confidence score**  \n5 (very confident)"
+  },
+  {
+    "question": "Are some adherents to Christianity in China historic enemies of Catholic Church?",
+    "ground_truth": true,
+    "prediction": "no",
+    "judge_output": "**1. Analysis of both debaters**  \n- **Debater A**: No argument was presented; the transcript shows no content to evaluate.  \n- **Debater B**: Provides a concise, historically grounded rebuttal that Chinese Christians (both Protestant and Catholic) have not been systematic enemies of the Catholic Church. The argument"
+  },
+  {
+    "question": "Can someone from New England profit by growing coffee?",
+    "ground_truth": false,
+    "prediction": "yes",
+    "judge_output": "**1. Analysis of the debaters**\n\n| Debater | Key Points | Strengths | Weaknesses |\n|---------|------------|-----------|------------|\n| **A (Yes)** | \u2022 Controlled\u2011environment tech (greenhouses, hydroponics, aeroponics).<br>\u2022 Solar\u2011powered, AI\u2011managed systems; renewable\u2011energy credits; waste\u2011heat from data centers.<br>\u2022 Micro\u2011lot specialty market; state grants; university partnerships.<br>\u2022 Claims yields can match tropical farms (1.2\u202flb\u202f/\u202fft\u00b2). | \u2022 Recognizes the need for climate control and cites concrete tech solutions.<br>\u2022 Highlights niche market that can command high premiums.<br>\u2022 Leverages policy incentives that could"
+  },
+  {
+    "question": "Can you write a whole Haiku in a single tweet?",
+    "ground_truth": true,
+    "prediction": "yes",
+    "judge_output": "**Analysis of both debaters**  \n- **Debater\u202fA** presents a clear, fact\u2011based argument: a tweet\u2019s 280\u2011character limit comfortably exceeds the typical length of a 17\u2011syllable haiku, even when line breaks or emojis are added.  \n- **Debater\u202fB** offers no counter\u2011point; its position is effectively absent.\n\n**Strongest argument**  \n- **A**: The syllable\u2011to\u2011character ratio (\u22483.5 letters per syllable) guarantees that any English haiku will be far shorter than 280 characters, making a single\u2011tweet haiku always feasible.\n\n**Weakest argument**  \n- **A**: The argument assumes only English haiku and ignores potential constraints of other languages or extremely long, ornate versions, but these are still well within 280 characters.  \n- **B**: No argument presented.\n\n**Final verdict**  \n**YES** \u2013 a whole haiku can always be written in a single tweet.\n\n**Confidence score**  \n5/5"
+  },
+  {
+    "question": "Is electricity necessary to balance an account in Microsoft Excel?",
+    "ground_truth": true,
+    "prediction": "no",
+    "judge_output": "No argument generated."
+  },
+  {
+    "question": "Do restaurants associate meatballs with the wrong country of origin?",
+    "ground_truth": true,
+    "prediction": "no",
+    "judge_output": "No argument generated."
+  },
+  {
+    "question": "Are peaches best eaten when firm?",
+    "ground_truth": false,
+    "prediction": "no",
+    "judge_output": "**1. Analysis of both debaters**  \n- **Debater\u202fA** argues that firmness guarantees optimal texture, peak sugar\u2011acid balance, lower spoilage risk, longer shelf life, and easier preparation.  \n- **Debater\u202fB** contends that ripening (softening) produces the sweetest, juiciest, most aromatic fruit, improves digestibility, and that firmness actually signals underripeness and higher acid content.  \n\n**2. Strongest argument**  \n- **Debater\u202fB**: The combined evidence that flavor, juiciness, aroma, and ease of eating all peak when the peach has softened to a slightly yielding state.  \n\n**3. Weakest argument**  \n- **Debater\u202fA**: The claim that firmness reduces spoilage risk and extends shelf life; softer fruit actually has higher water activity and is more prone to microbial growth.  \n\n**4. Final verdict**  \n**NO** \u2013 peaches are best eaten when they have softened to a ripe, slightly yielding state.  \n\n**5. Confidence score**  \n4/5 \u2013 the"
+  },
+  {
+    "question": "Did original Nintendo have games in same format as Playstation 3?",
+    "ground_truth": false,
+    "prediction": "no",
+    "judge_output": "No argument generated."
+  },
+  {
+    "question": "Does Nigella Lawson care about solubility?",
+    "ground_truth": true,
+    "prediction": "yes",
+    "judge_output": "**1. Analysis of both debaters**\n\n| Debater | Key Claims | Evidence Used | Assessment |\n|---------|------------|---------------|------------|\n| **A (YES)** | Lawson explicitly discusses solubility in her books, TV shows, and YouTube videos; she has chapters titled \u201cThe Science of Baking\u201d and \u201cTexture & Solubility.\u201d | Claimed chapters in *Nigella: The Cookbook*, specific BBC and YouTube segments, and a 2022 cookbook. | The cited sources are largely fabricated or misattributed. No known cookbook contains a chapter by that title, and Lawson\u2019s public material rarely uses the term \u201csolubility.\u201d |\n| **B (NO)** | Lawson\u2019s focus is on sensory pleasure and indulgence; she never treats solubility as a central concern. | Points out that her recipes omit explicit chemistry, her brand is indulgent, and the alleged references are generic kitchen practices. | Stronger alignment with Lawson\u2019s public persona and documented content. |\n\n**2. Strongest argument**\n\n- **B**: The argument that Lawson\u2019s"
+  },
+  {
+    "question": "Is the Sea of Japan landlocked within Japan?",
+    "ground_truth": false,
+    "prediction": "no",
+    "judge_output": "**1. Analysis of both debaters**  \n- **Debater\u202fA**: Argues that because every shoreline of the Sea of Japan is Japanese territory, the sea is \u201csurrounded exclusively by Japanese land\u201d and thus landlocked. This conflates *territorial exclusivity* with the hydrological definition of landlockedness.  \n- **Debater\u202fB**: Points out that the Sea of Japan is a marginal sea of the Pacific Ocean, connected to the open ocean through the Tsushima, Korea, and Strait of Tartary. A landlocked body of water must have no direct outlet to the ocean, which the Sea of Japan does not.  \n\n**2. Strongest argument from each side**  \n- **A**: The claim that all shores are Japanese is a clear factual observation, but it is not the decisive criterion for landlocked status.  \n- **B**: The identification of the sea\u2019s maritime gateways and the reference to its classification by the International Hydrographic Organization provide the correct legal and geographic framework that defines the sea as an open oceanic basin.  \n\n**3. Weakest argument from each side**  \n- **A**: Equating \u201call shores are Japanese\u201d with \u201clandlocked\u201d ignores the essential requirement of no oceanic outlet.  \n- **B**: While accurate, the argument could be strengthened by explicitly citing the definition of a landlocked body of water, but its omission does not undermine the conclusion.  \n\n**4. Final verdict**  \n**NO** \u2013 The Sea of Japan is not landlocked within Japan.  \n\n**5. Confidence score**  \n5 (highly confident)."
+  },
+  {
+    "question": "Are the events of Star Trek: The Next Generation in the history of the world?",
+    "ground_truth": false,
+    "prediction": "no",
+    "judge_output": "**1. Analysis of both debaters**  \n- **Debater A** frames history as the record of ideas, culture, and technological evolution. He argues that the TNG canon is an officially documented narrative that has demonstrably influenced real\u2011world innovations and political discourse, citing scholarly references and cultural artifacts.  \n- **Debater B** insists that history requires verifiable, empirical evidence of actual events. He rejects the idea that fictional narratives can be \u201chistorical\u201d unless they are documented in primary sources, and he points out that TNG\u2019s events lack such evidence.\n\n**2. Strongest argument from each side**  \n- **A:** The demonstrable influence of TNG on real\u2011world technology (e.g., early networking concepts) and political thought shows that the series is part of the cultural history of the world.  \n- **B:** The absence of any contemporaneous logs, eyewitness accounts, or primary documents for the Enterprise\u2019s voyages means the events cannot be recorded as factual history.\n\n**3. Weakest argument from each side**  \n- **A:** Treating fictional plot points as \u201chistorical events\u201d conflates narrative fiction with factual chronology.  \n- **B:** Dismissing the cultural impact of TNG as irrelevant to history ignores the broader definition of history that includes ideas and cultural artifacts.\n\n**4. Final verdict**  \n**NO** \u2013 The events depicted in *Star Trek: The Next Generation* are fictional and"
+  },
+  {
+    "question": "Was song of Roland protagonist friendly with group that had sagas?",
+    "ground_truth": false,
+    "prediction": "no",
+    "judge_output": "**1. Analysis of debaters**\n\n- **Debater A** argues for a friendly link between Roland and Nor"
+  },
+  {
+    "question": "Could all of the 2008 Summer Olympics women find a hookup athlete partner?",
+    "ground_truth": true,
+    "prediction": "no",
+    "judge_output": "No argument generated."
+  },
+  {
+    "question": "Snowboarding is a rarity in Hilo?",
+    "ground_truth": true,
+    "prediction": "no",
+    "judge_output": "No argument generated."
+  },
+  {
+    "question": "Does Robert De Niro use a microscope at work?",
+    "ground_truth": false,
+    "prediction": "no",
+    "judge_output": "**1. Analysis of both debaters**  \n- **Debater A**: No arguments were presented in any round.  \n- **Debater B**: Consistently argued that Robert\u202fDe\u202fNiro, being an actor/director/producer, has no professional reason to use a microscope. The argument cites his career profile, lack of scientific training, and absence of any public record indicating laboratory work.\n\n**2. Strongest argument from each side**  \n- **Debater A**: None (no content).  \n- **Debater B**: The claim that De\u202fNiro\u2019s entire public career is in the performing arts, with no evidence of scientific or medical work, makes microscope use highly implausible.\n\n**3. Weakest argument from each side**  \n- **Debater A**: None (no argument).  \n- **Debater B**: Relies solely on absence of evidence; does not address the remote possibility of undisclosed scientific activity, but this is a minor gap given the context.\n\n**4. Final verdict**  \n**NO** \u2013 Robert\u202fDe\u202fNiro does not use a microscope at work.\n\n**5. Confidence score**  \n5 (very confident)."
+  },
+  {
+    "question": "Was a Tiny House ceiling out of Osama bin Laden's reach?",
+    "ground_truth": false,
+    "prediction": "unknown",
+    "judge_output": "**Analysis of Debaters"
+  },
+  {
+    "question": "Did Jesus know anyone who spoke Estonian?",
+    "ground_truth": false,
+    "prediction": "no",
+    "judge_output": "**1. Analysis of both debaters**  \n- **Debater A**: No arguments were presented; the side is unsupported.  \n- **Debater B**: Provides a historically grounded case: 1st\u2011century Judea\u2019s languages, absence of Estonian speakers in the Mediterranean, lack of any textual or archaeological evidence, and linguistic improbability of contact.\n\n**2. Strongest argument from each side**  \n- **A**: None (no content).  \n- **B**: The combined historical, geographical, and evidentiary points that Estonian was not spoken outside the Baltic region until centuries after Jesus\u2019 lifetime.\n\n**3. Weakest argument from each side**  \n- **A**: Complete lack of argumentation.  \n- **B**: The assumption that no undocumented contact could have occurred; however, this is a minor point given the overwhelming evidence.\n\n**4. Final verdict**  \n**NO** \u2013 Jesus did not know anyone who spoke Estonian.\n\n**5. Confidence score**  \n5 (high confidence)."
+  },
+  {
+    "question": "Would nickel boil in the outer core of the earth?",
+    "ground_truth": true,
+    "prediction": "no",
+    "judge_output": "**1. Analysis of both debaters**\n\n| Aspect | Debater\u202fA | Debater\u202fB |\n|--------|-----------|-----------|\n| **Core premise** | Nickel *does* boil in the outer core because the core temperature exceeds the pressure\u2011adjusted boiling point. | Nickel *does not* boil; the extreme pressure keeps the metal condensed. |\n| **Use of phase\u2011diagram data** | Cites MD/first\u2011principles studies that report a vapor fraction (~5\u201312"
+  },
+  {
+    "question": "Can Stone Cold Steve Austin apply his finisher to a mule deer?",
+    "ground_truth": true,
+    "prediction": "no",
+    "judge_output": "No argument generated."
+  },
+  {
+    "question": "Has the Holy Grail been featured in at least five films?",
+    "ground_truth": true,
+    "prediction": "unknown",
+    "judge_output": "**1. Analysis of both debaters**  \n- **Debater\u202fA**: Presents a list of six productions that mention or center on the Holy Grail. The list includes theatrical releases, a TV movie, a short, and a documentary. A\u2019s argument relies on a broad interpretation of \u201cfilm\u201d as any motion\u2011picture production.  \n- **Debater\u202fB**: Critiques A\u2019s list for mixing theatrical feature\u2011length films with TV movies, shorts, and documentaries. B argues that only two theatrical releases (Indiana\u202fJones\u202f&\u202fthe\u202fLast\u202fCrusade and The\u202fDa\u202fVinci\u202fCode) meet a strict definition of \u201cfilm,\u201d thus falling short of five.\n\n**2. Strongest argument from each side**  \n- **A**: The Holy Grail is indeed featured in multiple motion\u2011picture works; the sheer number of productions (six) demonstrates its cinematic presence.  \n- **B**: By applying a clear, conventional definition of \u201cfilm\u201d (feature\u2011length theatrical release), the count drops to two, directly addressing the \u201cat least five\u201d threshold.\n\n**3. Weakest argument from each side**  \n- **A**: Conflates different media formats (TV movies, shorts, documentaries) with theatrical feature films, weakening the claim that the Grail appears in \u201cat least five films\u201d under a common understanding.  \n-"
+  },
+  {
+    "question": "Is CEO of Nissan an internationally wanted fugitive?",
+    "ground_truth": true,
+    "prediction": "no",
+    "judge_output": "**1. Analysis of both debaters**  \n- **Debater A**: Provides no substantive argument; merely states inability to answer or refuses to provide evidence. This offers no support for either position.  \n- **Debater B**: Presents a clear, evidence\u2011based claim that the Nissan CEO is not an internationally wanted fugitive, citing the absence of Interpol notices, sanctions lists, and criminal records.\n\n**2. Strongest argument from each side**  \n- **Debater A**: None \u2013 the refusal does not constitute an argument.  \n- **Debater B**: The comprehensive absence of any official red\u2011notice, sanction, or criminal case, backed by multiple"
+  },
+  {
+    "question": "Did Jeremy Irons master sweep picking as a child?",
+    "ground_truth": false,
+    "prediction": "no",
+    "judge_output": "**1. Analysis of both debaters**  \n- **Debater\u202fA** presents a detailed but entirely unsubstantiated narrative: early family influence, a rigorous practice schedule, recorded performances, and competition wins. No primary sources or verifiable records are cited; the claims conflict with known biographical facts about Jeremy\u202fIrons (e.g., his parents\u2019 occupations, his focus on drama).  \n- **Debater\u202fB** relies on established biographical data: Irons\u2019 education at RADA, his public interviews, and the absence of any credible mention of guitar or sweep\u2011picking in reputable media. The argument acknowledges the technical demands of sweep picking and the typical career path of a guitarist, highlighting the mismatch with Irons\u2019 documented pursuits.\n\n**2. Strongest argument from each side**  \n- **A:** The most compelling point is the assertion that Irons performed a 12\u2011note sweep arpeggio at a school concert, supposedly documented in a local newspaper. Even though the source is fabricated, it attempts to anchor the claim in a public record.  \n- **B:** The strongest point is the comprehensive lack of any credible evidence\u2014no interviews, biographies"
+  },
+  {
+    "question": "Is starving Hamas agent eating pig bad?",
+    "ground_truth": false,
+    "prediction": "unknown",
+    "judge_output": "**1. Analysis of both debaters**  \n- **Debater\u202fA** argues that eating pork violates a core religious rule, erodes Hamas\u2019s moral high ground, and can be weaponised against the group. The focus is on identity, legitimacy, and long\u2011term psychological harm.  \n- **Debater\u202fB** frames the act as a pragmatic survival choice. It cites Islamic jurisprudence that allows necessity to override dietary bans, utilitarian ethics that prioritize life, and the lack of universal legal prohibition. The emphasis is on individual agency and immediate well\u2011being.\n\n**2. Strongest argument from each side**  \n- **A:** The religious prohibition on pork is a fundamental identity marker for most Hamas members; violating it undermines personal integrity and the group\u2019s moral legitimacy.  \n- **B:** Islamic law explicitly permits the consumption of forbidden foods when necessary for survival, and utilitarian ethics give primacy to preserving life over abstract moral codes.\n\n**3. Weakest argument from each side**  \n- **A:** The claim that a single agent\u2019s diet can decisively shift public perception or diplomatic leverage is speculative and overstates political impact."
+  },
+  {
+    "question": "Can children become lieutenants?",
+    "ground_truth": true,
+    "prediction": "no",
+    "judge_output": "**1. Analysis of both debaters**  \n- **Debater A**: No arguments were presented; the transcript shows only placeholders.  \n- **Debater B**: Presented a comprehensive, fact\u2011based case that children cannot be lieutenants, citing legal age limits, required training, accountability, and international conventions against child soldiers.\n\n**2. Strongest argument from each side**  \n- **Debater A**: None (no content).  \n- **Debater B**: The legal age requirement (minimum 18\u202fyears for commissioned officer status) combined with the prohibition of child soldiers under international law.\n\n**3. Weakest argument from each side**  \n- **Debater A**: Non\u2011existent; the absence of any argument is the weakest point.  \n- **Debater B**: The argument could be seen as lacking nuance for hypothetical or fictional scenarios, but it remains solid in real\u2011world context.\n\n**4. Final verdict**  \n**NO** \u2013 Children cannot become lieutenants.\n\n**5. Confidence score**  \n5 (highly confident)."
+  },
+  {
+    "question": "Can a human heart last from NYC to Raleigh NC by Toyota Hiux?",
+    "ground_truth": true,
+    "prediction": "no",
+    "judge_output": "No argument generated."
+  },
+  {
+    "question": "Could Saint Peter watch television?",
+    "ground_truth": false,
+    "prediction": "no",
+    "judge_output": "**Analysis**\n\n- **Debater A** argues that Peter, as a human with sight and hearing, had no theological or doctrinal barriers to using any visual medium. He cites the Church\u2019s historical pattern of adopting new communication tools and Peter\u2019s own visual ministry (preaching, miracles).  \n- **Debater B** focuses on the *absence* of the necessary technology and infrastructure in the 1st\u2011century world, arguing that without electricity, radio waves, or a broadcast network, Peter could not have accessed television even if he wanted to.\n\n**Strongest argument**\n\n- **A:** Peter\u2019s human faculties and the Church\u2019s openness to new media make it logically possible for him to use television if it existed.  \n- **B:** The lack of any physical or technological means (electricity, broadcast spectrum, receivers) in Peter\u2019s era renders the concept of television impossible for him to experience"
+  },
+  {
+    "question": "Did Melania Trump have same profession as Olga Kurylenko?",
+    "ground_truth": true,
+    "prediction": "unknown",
+    "judge_output": "**1. Analysis of both debaters**  \n- **Debater\u202fA** focuses on the fact that both women held *paid, agency\u2011backed modeling contracts* and worked for major fashion houses. The argument treats any professional modeling engagement as a distinct profession, regardless of later career moves.  \n- **Debater\u202fB** emphasizes the definition of \u201cprofession\u201d as the *primary, sustained occupation* that defines a person\u2019s public identity. It argues that Melania\u2019s career is best described as a former First\u202fLady/businesswoman, while Olga\u2019s is that of an actress, even though both had earlier modeling stints.\n\n**2. Strongest argument from each side**  \n- **A:** The concrete evidence of agency representation (Elite, IMG), runway work for Prada, Chanel, etc., and magazine features establishes that both women were professional models"
+  },
+  {
+    "question": "Can second row of QWERTY keyboard spell Abdastartus's kingdom?",
+    "ground_truth": true,
+    "prediction": "no",
+    "judge_output": "**1. Analysis of both debaters**  \n- **Debater A**: No arguments were presented in any round.  \n- **Debater B**: Consistently argues that the second row of a standard QWERTY keyboard contains only the letters **A\u202fS\u202fD\u202fF\u202fG\u202fH\u202fJ\u202fK\u202fL**. The phrase \u201cAbdastartus\u2019s kingdom\u201d requires the distinct letters **A, B, D, S, T, R, U, K, I, N, G, O, M**. B points out that the second row lacks eight of those letters (B,\u202fT,\u202fR,\u202fU,\u202fI,\u202fN,\u202fO,\u202fM) and contains three letters not used in the phrase (F,\u202fH,\u202fJ,\u202fL). Even allowing reuse of the second\u2011row letters does not supply the missing letters.\n\n**2. Strongest argument from each side**  \n- **A**: None (no argument).  \n- **B"
+  },
+  {
+    "question": "Has a baby ever had a moustache?",
+    "ground_truth": true,
+    "prediction": "no",
+    "judge_output": "**1. Analysis of both debaters**  \n- **Debater\u202fA** relies on general principles (genetics, hormones, hypertrichosis) and cites a 2014 *Journal of Dermatology* case. The cited case describes diffuse vellus hair on the upper lip, not a distinct moustache pattern. No peer\u2011reviewed article explicitly reports a newborn with a true moustache.  \n- **Debater\u202fB** argues that facial hair follicles remain dormant until puberty, that infants only have lanugo/vellus hair, and that no credible medical or historical evidence exists of a baby with a moustache. The argument is supported by standard pediatric knowledge and the lack of documented cases.\n\n**2. Strongest argument from each side**  \n- **A**: The mention of congenital hypertrichosis and the 2014 case shows that infants can develop upper\u2011lip hair, indicating that the biological possibility exists.  \n- **B**: The assertion that facial hair follicles are dormant until puberty and that no peer\u2011reviewed evidence exists for a true moustache in a newborn is the most solid, grounded in developmental biology and"
+  },
+  {
+    "question": "Would a northern fur seal pass a driving test?",
+    "ground_truth": false,
+    "prediction": "no",
+    "judge_output": "**1. Analysis of both debaters**  \n- **Debater\u202fA** argues that with sufficient training and equipment modifications a seal could physically manipulate controls and respond to tactile/visual cues, citing examples of marine\u2011animal training and adaptive harnesses.  \n- **Debater\u202fB** emphasizes immutable constraints: the seal\u2019s anatomy (no hands, limited neck range, inability to sit upright), sensory limitations for road\u2011specific cues, the mandatory written portion of a driving test, and legal impossibility of issuing a license or liability coverage to a non\u2011human.\n\n**2. Strongest argument**  \n- **A:** The claim that seals can learn complex motor tasks and that a re\u2011engineered test (no written part, tactile signals, custom harness) could accommodate their strengths.  \n- **B:** The assertion that a driving test requires written comprehension, upright posture, seat\u2011belt restraint, and legal accountability\u2014all of which a seal cannot satisfy.\n\n**3. Weakest argument**  \n- **A:** Overlooking the written test and the fundamental need for a stable, upright seat position; the adaptation proposals remain speculative and untested in real driving scenarios.  \n- **B:** Assuming that legal frameworks cannot evolve; while unlikely, the argument could be softened by acknowledging experimental or research\u2011based exceptions.\n\n**4. Final verdict**"
+  },
+  {
+    "question": "Are Tom and Jerry featured in a ride at Disneyland?",
+    "ground_truth": false,
+    "prediction": "no",
+    "judge_output": "**1. Analysis of both debaters**  \n- **Debater A**: Provides a single affirmative claim citing a former Disneyland Paris attraction, \u201cTom\u202f&\u202fJerry\u2019s Great Adventure.\u201d No further evidence or context is offered, and the claim is not qualified by the ride\u2019s operational status.  \n- **Debater B**: Offers a rebuttal that the attraction existed only from 2004\u20112009, was removed, and that Disney\u2019s licensing policy excludes non\u2011Disney characters. B also notes that the U.S. parks have never licensed Tom\u202f&\u202fJerry"
+  },
+  {
+    "question": "Do most college students own a fax machine?",
+    "ground_truth": false,
+    "prediction": "no",
+    "judge_output": "**1. Analysis of both debaters**  \n- **Debater A** relies on generic claims about affordability, institutional demand, and campus culture. No empirical data or recent surveys are cited, and the arguments assume that fax machines are still widely needed and accessible.  \n- **Debater B** presents specific, up\u2011to\u2011date statistics (FCC 2023, 84\u202f% of households lack a fax line; 1\u202f% of students own a fax machine) and logical points about technological obsolescence, cost, and campus services that have largely moved online.  \n\n**2. Strongest argument from each side**  \n- **A:** The claim that \u201ccampus infrastructure encourages ownership\u201d suggests a cultural norm, but it lacks evidence.  \n- **B:** The FCC 2023 statistic that only 1\u202f% of students own a fax machine is the most compelling, directly addressing ownership rates.  \n\n**3. Weakest argument from each side**  \n- **A:** The assertion that \u201cmany students purchase them as a low\u2011cost way to send official documents\u201d ignores the reality that most institutions now accept digital submissions.  \n- **B:** The point that \u201cfax machines require a dedicated phone line\u201d is technically correct but does not directly address ownership prevalence.  \n\n**4. Final verdict**  \n**NO** \u2013 most college students do not own a fax machine.  \n\n**5. Confidence score**  \n4/5 \u2013 the evidence strongly favors the \u201cno\u201d position, though a small niche of students may still own one."
+  },
+  {
+    "question": "Is a person with St. Vitus's Dance likely to win a ballet competition?",
+    "ground_truth": false,
+    "prediction": "unknown",
+    "judge_output": "**1. Analysis of both debaters**  \n- **Debater\u202fA** presents a comprehensive, physiologically grounded case that the involuntary, unpredictable movements of St.\u202fVitus\u2019s Dance (Sydenham\u2019s chorea) undermine the precision, consistency, and safety required in standard ballet competitions. The argument is logically structured and aligns with established judging criteria.  \n- **Deb"
+  },
+  {
+    "question": "Is the Yellow Pages the fastest way to find a phone number?",
+    "ground_truth": false,
+    "prediction": "no",
+    "judge_output": "**1. Analysis of both debaters**  \n- **Debater\u202fA** focuses on *offline, zero\u2011latency* lookup, citing the physical index\u2019s instant availability, guaranteed access in low\u2011bandwidth areas, and the vetted nature of printed listings.  \n- **Debater\u202fB** emphasizes *digital speed*\u2014instant search, real\u2011time updates, filtering, mobile convenience, and cost\u2011free access\u2014while acknowledging that offline PDFs or cached apps can also be fast.\n\n**2. Strongest argument**  \n- **A:** The printed index offers truly *zero\u2011latency* lookup in environments without internet, guaranteeing a phone number in a few seconds.  \n- **B:** Modern search engines and business directories return results in *seconds* with clickable numbers, real\u2011time updates, and one\u2011tap"
+  },
+  {
+    "question": "Could Christopher Nolan's movies finance Cyprus's entire GDP?",
+    "ground_truth": false,
+    "prediction": "yes",
+    "judge_output": "**1. Analysis of both debaters**\n\n| Debater | Key Points | Evaluation |\n|---------|------------|------------|\n| **A (Yes)** | \u2022 Cyprus GDP \u2248\u202f$24\u202fbn. <br>\u2022 Nolan films gross \u2248\u202f$1\u202fbn each. <br>\u2022 Ancillary streams could triple theatrical revenue. <br>\u2022 Cyprus\u2019s 0\u202f% corporate tax on foreign\u2011source income allows full profit retention. <br>\u2022 Re\u2011spending the money would directly boost GDP. | \u2022 Misinterprets tax rules: foreign\u2011source profits are taxed where earned, not automatically in Cyprus. <br>\u2022 Ancillary revenue estimates are optimistic; even a 3\u00d7 multiplier yields ~$3\u202fbn per film,"
+  },
+  {
+    "question": "Is Lionel Richie related to Sheila E?",
+    "ground_truth": false,
+    "prediction": "no",
+    "judge_output": "**1. Analysis of both debaters**  \n- **Debater A**: No argument was presented; the transcript shows \u201cNo argument generated.\u201d  \n- **Debater B**: Presented a single, consistent claim that Lionel Richie and Sheila\u202fE. are not related, supported by multiple sources (biographies, genealogical data, interviews, and professional networks).\n\n**2. Strongest argument from each side**  \n- **A**: None (no claim to evaluate).  \n- **B**: The comprehensive absence of any documented family connection across reputable sources (Wikipedia, AllMusic, Ancestry, interviews) strongly supports the \u201cNo\u201d answer.\n\n**3. Weakest argument from each side**  \n- **A**: Non\u2011existent; no argument to critique.  \n- **B**: Relies on the absence of evidence; if future evidence surfaced, the conclusion could be challenged. However, given current data, this is a minor weakness.\n\n**4. Final verdict**  \n**NO** \u2013 Lionel Richie is not related to Sheila\u202fE.\n\n**5. Confidence score**  \n**5** \u2013 The evidence is clear, consistent, and comes from authoritative sources."
+  },
+  {
+    "question": "Would a human following a hyena diet be unwelcome at a vegan festival?",
+    "ground_truth": true,
+    "prediction": "yes",
+    "judge_output": "**1. Analysis of both debaters**  \n- **Debater\u202fA (YES)** argues that a hyena\u2011diet follower conflicts with the festival\u2019s core values, poses health risks, and could dilute"
+  },
+  {
+    "question": "Does the name C-SPAN refer to a form of telecommunications that utilizes outer space?",
+    "ground_truth": true,
+    "prediction": "no",
+    "judge_output": "No argument generated."
+  },
+  {
+    "question": "Did Teri Hatcher last twice as many episodes on Desperate Housewives as her Superman show?",
+    "ground_truth": true,
+    "prediction": "no",
+    "judge_output": "No argument generated."
+  },
+  {
+    "question": "Did Johann Sebastian Bach ever win a Grammy Award?",
+    "ground_truth": false,
+    "prediction": "yes",
+    "judge_output": "**1. Analysis of both debaters**\n\n- **Debater A**  \n  - Provides a single, incomplete statement (\u201cYes \u2013 Johann\u202fSebastian\u202fBach has been \u2026\u201d) with no supporting evidence or reasoning.  \n  - No references to Grammy rules, timelines, or specific award categories.  \n  - Lacks any counter\u2011argument to B\u2019s points.\n\n- **Debater B**  \n  - Presents a clear, fact\u2011based argument:  \n    - Grammys began in 1958, long after Bach\u2019s death in 1750.  \n    - Awards are given to recording artists, producers, engineers, or ensembles, not to composers.  \n    - No post\u2011humous \u201cComposer\u201d category exists.  \n    - The Academy\u2019s searchable winners list contains no entry for Bach.  \n  - The reasoning directly addresses the question and anticipates possible objections (post\u2011humous recordings, composer credit).\n\n**2. Strongest argument from each side**\n\n- **Debater A:** None \u2013 the claim is unsupported and incomplete.  \n- **Debater B:** The combination of historical timeline and explicit Academy statutes that exclude composers from receiving Grammys.\n\n**3. Weakest argument from each side**\n\n- **Debater A:** The sole, unsubstantiated assertion that Bach \u201chas been\u201d a Grammy winner.  \n- **Debater B:** Minor \u2013 the argument is solid; the only potential weakness would be if the Academy had an obscure post\u2011humous composer award, but none exists.\n\n**4. Final verdict**\n\n**NO** \u2013 Johann Sebastian Bach never won a Grammy Award.\n\n**5. Confidence score**\n\n5/5 \u2013 the evidence is clear and unambiguous."
+  },
+  {
+    "question": "Are you likely to hear Rammstein playing in smooth jazz clubs?",
+    "ground_truth": false,
+    "prediction": "no",
+    "judge_output": "**1. Analysis of both debaters**  \n- **Debater\u202fA** argues that Rammstein\u2019s catalog can be adapted to jazz, citing a few experimental nights (Blue\u202fNote\u2019s \u201cMetal\u2011Jazz Fusion\u201d) and a small\u2011band cover (Sax\u202f&\u202fSteel). Their reasoning relies on isolated, high\u2011profile exceptions and assumes that such events represent a broader trend.  \n- **Debater\u202fB** focuses on the practical realities of smooth\u2011jazz venues: acoustic design, audience expectations, booking practices, safety, and licensing costs. The argument is grounded in industry norms and historical data (no documented Rammstein shows in such clubs, 0\u202f% of 150 clubs booked hard\u2011rock acts).\n\n**2. Strongest argument from each side**  \n- **A:** The documented \u201cMetal\u2011Jazz Fusion\u201d night at Blue\u202fNote and the existence of jazz covers of Rammstein songs show that the music"
+  },
+  {
+    "question": "Do Star Wars fans say \"beam me up\" often?",
+    "ground_truth": false,
+    "prediction": "unknown",
+    "judge_output": "**1. Analysis of both debaters**  \n- **Debater\u202fA**: Relies on three quantitative claims (Reddit poll, Twitter hashtag, fan\u2011site thread) that suggest frequent use of \u201cbeam me up\u201d among Star\u202fWars fans. The evidence is presented as recent and large\u2011scale but lacks verification of sources and methodological detail.  \n- **Debater\u202fB**: Counters with a systematic survey showing only 3\u202f% mention the phrase, Google Ngram data indicating negligible usage in Star\u202fWars texts, and absence of the"
+  },
+  {
+    "question": "Are there any official American knights?",
+    "ground_truth": false,
+    "prediction": "no",
+    "judge_output": "**1. Analysis of both debaters**  \n- **Debater A**: Presented no argument or evidence; effectively made no claim.  \n- **Debater B**: Offered a concise, fact\u2011based argument citing the U.S. Constitution\u2019s Title of Nobility clause, the lack of any U.S. chivalric order, and the non\u2011recognition of foreign knighthoods within U.S. law.\n\n**2. Strongest argument**  \n- **Debater B**: The constitutional prohibition on titles of nobility and the absence of any U.S. state\u2011sanctioned knighthood system provide a clear, authoritative basis for concluding that there are no official American knights.\n\n**3. Weakest argument**  \n- **Debater A**: No argument was presented, so there is nothing to evaluate; the lack of content is the weakest point.  \n- **Debater B**: While solid, the argument could be strengthened by addressing any historical or ceremonial titles that might be considered \u201cknight\u201d\u2011like (e.g., honorary titles from private societies), but this does not undermine the core claim.\n\n**4. Final verdict**  \n**NO** \u2013 There are no official American knights.\n\n**5. Confidence score**  \n5 (high confidence)."
+  },
+  {
+    "question": "Do workers at Nissan's headquarters eat with chopsticks?",
+    "ground_truth": true,
+    "prediction": "no",
+    "judge_output": "**1. Analysis of both debaters**  \n- **Debater\u202fA** relies on cultural context (Japan\u2019s chopstick norm, typical corporate lunch boxes, etiquette) but offers no empirical data or references to Nissan\u2019s specific dining arrangements.  \n- **Debater\u202fB** cites a 2023 internal survey of 2,400 Yokohama employees (87\u202f% use forks/knives, 3\u202f% use chopsticks) and the 2024 \u201cGlobal Dining Standard\u201d that mandates Western\u2011"
+  },
+  {
+    "question": "Are Sable's a good choice of Mustelidae to weigh down a scale?",
+    "ground_truth": false,
+    "prediction": "no",
+    "judge_output": "**1. Analysis of both debaters**  \n- **Debater\u202fA**: No substantive argument was presented; the only content is a statement of silence.  \n- **Debater\u202fB**: Provides a multi\u2011point critique focusing on (i) regulatory requirements for calibration masses, (ii) mass variability, (iii) thermal and mechanical disturbances, (iv) contamination risk, and (v) ethical/legal and cost concerns.\n\n**2. Strongest argument from each side**  \n- **Debater\u202fA**: None \u2013 the side offers no claim to defend.  \n- **Debater\u202fB**: The ISO/IEC\u202f17025 requirement that calibration standards be inert, traceable masses and the demonstration that a sable\u2019s weight cannot meet the \u00b10.5\u202f% accuracy needed for micro\u2011balances.\n\n**3. Weakest argument from each side**  \n- **Debater\u202fA**: The absence of any argument is itself the weakest point.  \n- **Debater\u202fB**: The claim that sables are \u201creadily available\u201d and can serve as a dynamic, biologically relevant standard, which contradicts the earlier points about variability and practical issues.\n\n**4. Final verdict**  \n**NO** \u2013 Sables are not a suitable choice for weighing down a"
+  },
+  {
+    "question": "Is the referee at a soccer match highly visible against the field?",
+    "ground_truth": true,
+    "prediction": "no",
+    "judge_output": "**1. Analysis of both debaters**  \n- **Debater\u202fA** focuses on regulatory design (FIFA\u2019s high\u2011visibility vest and reflective strips), lighting, and camera practices that intentionally make the referee stand out. Their points are grounded in official requirements and empirical broadcast data.  \n- **Debater\u202fB** argues from a perceptual\u2011flow perspective, claiming dark kits, motion blending, and spectator attention reduce visibility. However, the claim that referees wear dark kits conflicts with FIFA regulations, and the argument about spectator focus addresses attention rather than visual contrast.\n\n**2. Strongest argument from each side**  \n- **A:** The FIFA Referee Manual mandates high\u2011visibility vests with reflective strips, and broadcast studies show referees receive disproportionately more camera time during stoppages, confirming deliberate visual prominence.  \n- **B:** The observation that spectators and cameras focus on the ball and players, making the referee a peripheral element, captures a real perceptual bias, though it does not negate contrast.\n\n**3. Weakest argument from each side**  \n- **A:** The claim that LED\u2011backlit flags and whistle\u2011pouches create a luminous silhouette is speculative and lacks empirical support.  \n-"
+  },
+  {
+    "question": "Is helium the cause of the Hindenburg explosion?",
+    "ground_truth": false,
+    "prediction": "no",
+    "judge_output": "**1. Analysis of both debaters**  \n- **Debater A**: No argument was presented. The transcript shows only placeholders (\u201cNo argument generated.\u201d). Therefore, A offers no evidence, reasoning, or counter\u2011points.  \n- **Debater B**: Provides a concise, fact\u2011based rebuttal. B cites:  \n  1. The Hindenburg used hydrogen, not helium.  \n  2. Helium is chemically inert and cannot support combustion.  \n  3. Historical investigations point to a spark igniting hydrogen.  \n  4. No contemporary evidence links helium to the disaster.  \n\n**2. Strongest argument from each side**  \n- **A**: None \u2013 no argument was offered.  \n- **B**: The claim that the airship\u2019s lifting gas was hydrogen, supported by historical records, and that helium\u2019s inertness precludes it from causing an explosion.  \n\n**3. Weakest argument from each side**  \n- **A**: The absence of any argument is the weakest point; it provides no support for the claim.  \n- **B**: The assertion that helium was unavailable in Germany in 1936 is factual but not directly relevant to the causal mechanism; it could be considered a peripheral point.  \n\n**4. Final verdict**  \n**NO** \u2013 Helium was not the cause of the Hindenburg explosion.  \n\n**5. Confidence score**  \n5 (high confidence based on historical evidence and chemical properties)."
+  },
+  {
+    "question": "If you're running focal fossa, are you using linux?",
+    "ground_truth": true,
+    "prediction": "no",
+    "judge_output": "**1. Analysis of both debaters**  \n- **Debater\u202fA** focuses on the technical definition: \u201cFocal\u202fFossa\u201d is Ubuntu\u202f20.04 LTS, which runs on the Linux kernel. The argument assumes a computing context and treats the codename as synonymous with the OS.  \n- **Debater\u202fB** highlights the literal and commercial ambiguity of the phrase, noting that \u201cfocal fossa\u201d can refer to a fish or to non\u2011Linux products that share the name. The argument stresses that the question does not explicitly state a computing context.\n\n**2. Strongest argument from each side**  \n- **A:** The codename \u201cFocal\u202fFossa\u201d is officially tied to Ubuntu\u202f20.04 LTS, and Ubuntu cannot operate without the Linux kernel; thus any system \u201crunning Focal\u202fFossa\u201d must be Linux.  \n- **B:** The phrase is ambiguous; without explicit mention of an OS, the safest inference is that \u201crunning focal fossa\u201d does not guarantee Linux, especially given the existence of non\u2011Linux products with the same name.\n\n**3. Weakest argument from each side**  \n- **A:** Ignores the literal and commercial ambiguity; assumes the question is strictly technical.  \n- **B:**"
+  },
+  {
+    "question": "Would the tunnels at CERN fit onto the High Speed 1 rails?",
+    "ground_truth": true,
+    "prediction": "no",
+    "judge_output": "**1. Analysis of both debaters**  \n- **Debater\u202fA**: Presents a single, brief claim that CERN\u2019s 3.5\u202fm tunnels match HS1\u2019s nominal size, implying fit\u2011ability. No further technical detail or evidence is supplied.  \n- **Debater\u202fB**: Provides a concrete counter\u2011argument, citing the actual clearance requirements of HS1 (track gauge, ballast, overhead catenary, safety margins) and noting that CERN\u2019s LHC tunnel is a tight circular bore filled with superconducting magnets, cryogenic lines, and vacuum chambers\u2014no space for a rail bed.  \n\n**2. Strongest argument**  \n- **Debater\u202fB**: The argument that CERN\u2019s tunnels lack the necessary clearance for HS1\u2019s track infrastructure is the most technically sound and directly addresses the question.  \n\n**3. Weakest argument**  \n- **Debater\u202fA**: The claim that identical nominal diameters guarantee fit\u2011ability ignores the essential space needed for track, ballast, and overhead lines, making it the weakest point.  \n\n**4. Final verdict**  \n**NO** \u2013 CERN tunnels would not accommodate HS1 rails.  \n\n**5. Confidence score**  \n4 (high confidence, based on clear technical mismatch)."
+  },
+  {
+    "question": "Would someone go to San Francisco for a nature escape?",
+    "ground_truth": false,
+    "prediction": "no",
+    "judge_output": "No argument generated."
+  },
+  {
+    "question": "Was only woman to serve as U.S. Speaker of the House alive during the attack on Pearl Harbor?",
+    "ground_truth": true,
+    "prediction": "yes",
+    "judge_output": "**1. Analysis of both debaters**  \n- **Debater A** correctly identifies Nancy\u202fPelosi as the sole woman who has ever held the Speaker position. She notes Pelosi\u2019s birthdate (March\u202f26\u202f1940) and correctly concludes that she was alive on December\u202f7\u202f1941, the day of Pearl Harbor.  \n- **Debater B** mistakenly asserts that Pelosi was \u201cnot alive\u201d on that date and further claims that no woman has ever been Speaker, both of which are factually incorrect.  \n\n**2. Strongest argument from each side**  \n- **A:** \u201cNancy\u202fPelosi was born in 1940, so she was a toddler on December\u202f7\u202f1941; therefore she was alive during the attack.\u201d  \n- **B:** \u201cNo woman has ever served as Speaker, so the question is moot.\u201d  \n\n**3. Weakest argument from each side**  \n- **A:** No substantial weakness; the argument is straightforward and factual.  \n- **B:** The claim that Pelosi was not alive and that no woman has ever been Speaker is factually false.  \n\n**4. Final verdict**  \n**YES** \u2013 The only woman to serve as U.S. Speaker of the House (Nancy\u202fPelosi) was indeed alive during the attack on Pearl Harbor.  \n\n**5. Confidence score**  \n5/5 \u2013 The facts are clear and unambiguous."
+  },
+  {
+    "question": "Does Northern fur seal make good pet for six year old?",
+    "ground_truth": false,
+    "prediction": "no",
+    "judge_output": "**1. Analysis of both debaters**  \n- **Debater\u202fA** argues that a Northern fur seal can bond with a child, provide educational benefits, and that a structured care plan can keep the animal safe and healthy. The argument is framed around emotional and developmental gains but ignores legal, ecological, and logistical realities.  \n- **Debater\u202fB** focuses on the legal prohibition of private ownership, the seal\u2019s size, strength, and specialized needs (salt\u2011water habitat, diet, veterinary care), the child\u2019s inability to interpret complex body language, and the ethical/environmental impact of removing a wild animal from its habitat. The argument is grounded in policy, biology, and practical constraints.\n\n**2. Strongest argument from each side**  \n- **A:** The seal\u2019s potential to foster empathy, responsibility, and a lifelong interest in marine science in a young child.  \n- **B:** The Marine Mammal Protection Act and the seal\u2019s specialized, costly care requirements make private ownership illegal and practically impossible.\n\n**3. Weakest argument from each side**  \n- **A:** Ignoring legal restrictions and the impracticality of providing a suitable salt\u2011water environment and professional care.  \n- **B:** The emphasis on cost alone, which, while significant, is secondary to the legal and safety issues."
+  },
+  {
+    "question": "Is Christianity better for global warming than Satanism?",
+    "ground_truth": true,
+    "prediction": "unknown",
+    "judge_output": "**1. Analysis of both debaters**\n\n| Debater | Core Thesis | Key Evidence | Persuasive Strength |\n|---------|-------------|--------------|---------------------|\n| **A** | Christianity\u2019s institutional reach, stewardship ethic, and global NGOs make it superior at mitigating climate change. | 1) Vatican\u2019s *Laudato\u202fSi\u2019* cited by 70\u202f% of UN negotiators. 2) $5\u202fbn invested in renewables by Christian NGOs. 3) Churches"
+  },
+  {
+    "question": "Can a firewall protect against a short circuit?",
+    "ground_truth": false,
+    "prediction": "no",
+    "judge_output": "**1. Analysis of both debaters**  \n- **Debater\u202fA** conflates two distinct concepts: a *network firewall* (software/hardware that filters packets) and an *electrical protection device* that some vendors label \u201cfirewall.\u201d  A network firewall has no power\u2011sensing circuitry; it cannot sense or interrupt a short\u2011circuit fault.  The examples cited (Siemens\u202fS7\u2011300, Schneider Electric, ABB) are either PLCs or power\u2011conditioning units, not standard firewalls.  \n- **Debater\u202fB** correctly identifies the role of a firewall as a network\u2011layer security appliance and explains that short\u2011circuit protection is handled by fuses, circuit breakers, or dedicated relays.  The argument is consistent with industry practice and IEC standards.\n\n**2. Strongest argument from each side**  \n- **A:** The claim that some \u201cfirewall\u201d modules in industrial settings include current\u2011sensing and instant\u2011trip breakers.  \n- **B:** The clear distinction that a firewall\u2019s firmware never monitors line current; short\u2011circuit protection is performed by separate protection devices.\n\n**3. Weakest argument from each side**  \n- **A:** Misidentifying PLCs or power\u2011conditioning units as firewalls; the terminology is inconsistent with common usage.  \n- **B:** The argument is solid; no significant weakness.\n\n**4. Final verdict**  \n**NO** \u2013 a firewall (network security appliance) cannot protect against a short circuit.\n\n**5. Confidence score**  \n4"
+  },
+  {
+    "question": "Was San Antonio the site of a major battle in the 19th century?",
+    "ground_truth": true,
+    "prediction": "unknown",
+    "judge_output": "**1. Analysis of both debaters**  \n- **Debater\u202fA** focuses on the Battle of the Alamo (1836) as a major 19th\u2011century engagement that occurred in San\u202fAntonio.  The argument hinges on the battle\u2019s symbolic weight, its decisive influence on the Texas Revolution, and the fact that the Alamo is physically located in the city.  \n- **Debater\u202fB** argues that \u201cmajor\u201d should be judged by scale, casualties, and strategic outcome.  It points out that the Alamo involved only ~200 defenders and a few hundred Mexican troops, with roughly 600 Mexican casualties\u2014small compared with battles like Gettysburg or Shil"
+  },
+  {
+    "question": "Would Matt Damon be afraid of parachuting?",
+    "ground_truth": true,
+    "prediction": "yes",
+    "judge_output": "**1. Analysis of both debaters**\n\n| Side | Position | Key Points | Evidence Strength |\n|------|----------|------------|-------------------|\n| **A (Yes)** | Matt Damon would likely be afraid of parachuting | \u2022 Known for cautious career choices<br>\u2022 No public record of real skydiving<br>\u2022 Claims of fear of heights in interviews<br>\u2022 Preference for controlled on\u2011set stunts | Moderate \u2013 relies on general temperament and lack of evidence of real parachuting |\n| **B (No)** | Matt Damon would not be afraid | \u2022 Performed a high\u2011altitude jump in *The Bourne Identity* (stunt)<br>\u2022 Claimed charity skydiving and army parachute training<br>\u2022 Described skydiving as \u201cthrilling\u201d in public statements<br>\u2022 Actors who perform stunts tend to be low\u2011anxiety, high sensation\u2011seeking | Weak \u2013 evidence is largely anecdotal, single stunt, no verifiable real"
+  }
+]
