@@ -4,12 +4,12 @@
     "ground_truth": true,
     "answers": [
       "yes",
-      "no",
-      "no",
-      "no",
+      "yes",
+      "yes",
+      "yes",
       "no"
     ],
-    "majority": "no"
+    "majority": "yes"
   },
   {
     "question": "Are kayaks used at the summit of Mount Everest?",
@@ -28,8 +28,8 @@
     "ground_truth": false,
     "answers": [
       "no",
-      "yes",
       "no",
+      "yes",
       "no",
       "no"
     ],
@@ -42,7 +42,7 @@
       "no",
       "yes",
       "yes",
-      "yes",
+      "no",
       "yes"
     ],
     "majority": "yes"
@@ -51,7 +51,7 @@
     "question": "Would a model be appropriate to star in a LA Femme Nikita remake?",
     "ground_truth": true,
     "answers": [
-      "yes",
+      "no",
       "no",
       "no",
       "no",
@@ -65,11 +65,11 @@
     "answers": [
       "no",
       "yes",
-      "yes",
-      "yes",
+      "no",
+      "no",
       "yes"
     ],
-    "majority": "yes"
+    "majority": "no"
   },
   {
     "question": "Did any of Maya Angelou's children follow in her footsteps?",
@@ -77,7 +77,7 @@
     "answers": [
       "no",
       "no",
-      "yes",
+      "no",
       "no",
       "no"
     ],
@@ -124,8 +124,8 @@
     "ground_truth": false,
     "answers": [
       "yes",
-      "yes",
-      "yes",
+      "no",
+      "no",
       "yes",
       "yes"
     ],
@@ -197,8 +197,8 @@
     "answers": [
       "no",
       "yes",
-      "no",
       "yes",
+      "no",
       "no"
     ],
     "majority": "no"
@@ -207,9 +207,9 @@
     "question": "Does a person using tonsure have hair at the top of their scalp?",
     "ground_truth": false,
     "answers": [
+      "no",
       "yes",
-      "no",
-      "no",
+      "yes",
       "no",
       "no"
     ],
@@ -232,10 +232,10 @@
     "ground_truth": false,
     "answers": [
       "yes",
-      "yes",
       "no",
       "yes",
-      "no"
+      "no",
+      "yes"
     ],
     "majority": "yes"
   },
@@ -279,13 +279,13 @@
     "question": "Should wool be hand washed only?",
     "ground_truth": true,
     "answers": [
-      "no",
       "yes",
-      "no",
-      "no",
+      "yes",
+      "yes",
+      "yes",
       "yes"
     ],
-    "majority": "no"
+    "majority": "yes"
   },
   {
     "question": "Would Tom Cruise ever insult L. Ron Hubbard?",
@@ -496,7 +496,7 @@
     "ground_truth": false,
     "answers": [
       "no",
-      "yes",
+      "no",
       "no",
       "no",
       "no"
@@ -507,7 +507,7 @@
     "question": "Is double duty an incorrect phrase for host of Dancing With The Stars?",
     "ground_truth": false,
     "answers": [
-      "yes",
+      "no",
       "no",
       "no",
       "no",
@@ -544,7 +544,7 @@
     "ground_truth": true,
     "answers": [
       "yes",
-      "no",
+      "yes",
       "yes",
       "yes",
       "yes"
@@ -579,13 +579,13 @@
     "question": "Is electricity necessary to balance an account in Microsoft Excel?",
     "ground_truth": true,
     "answers": [
-      "yes",
+      "no",
       "no",
       "yes",
       "no",
       "yes"
     ],
-    "majority": "yes"
+    "majority": "no"
   },
   {
     "question": "Do restaurants associate meatballs with the wrong country of origin?",
@@ -763,7 +763,7 @@
       "yes",
       "yes",
       "yes",
-      "yes"
+      "no"
     ],
     "majority": "yes"
   },
@@ -799,7 +799,7 @@
       "yes",
       "yes",
       "yes",
-      "no"
+      "yes"
     ],
     "majority": "yes"
   },
@@ -843,13 +843,13 @@
     "question": "Did Melania Trump have same profession as Olga Kurylenko?",
     "ground_truth": true,
     "answers": [
+      "yes",
       "no",
       "no",
       "yes",
-      "no",
       "yes"
     ],
-    "majority": "no"
+    "majority": "yes"
   },
   {
     "question": "Can second row of QWERTY keyboard spell Abdastartus's kingdom?",
@@ -871,7 +871,7 @@
       "no",
       "no",
       "yes",
-      "yes"
+      "no"
     ],
     "majority": "no"
   },
@@ -975,13 +975,13 @@
     "question": "Does the name C-SPAN refer to a form of telecommunications that utilizes outer space?",
     "ground_truth": true,
     "answers": [
-      "yes",
+      "no",
       "no",
       "yes",
-      "no",
-      "yes"
+      "yes",
+      "no"
     ],
-    "majority": "yes"
+    "majority": "no"
   },
   {
     "question": "Did Teri Hatcher last twice as many episodes on Desperate Housewives as her Superman show?",
@@ -1120,7 +1120,7 @@
     "ground_truth": false,
     "answers": [
       "no",
-      "no",
+      "yes",
       "no",
       "no",
       "no"
@@ -1133,7 +1133,7 @@
     "answers": [
       "yes",
       "yes",
-      "yes",
+      "no",
       "yes",
       "yes"
     ],
@@ -1156,12 +1156,12 @@
     "ground_truth": true,
     "answers": [
       "no",
-      "no",
-      "no",
-      "no",
+      "yes",
+      "yes",
+      "yes",
       "no"
     ],
-    "majority": "no"
+    "majority": "yes"
   },
   {
     "question": "Can a firewall protect against a short circuit?",

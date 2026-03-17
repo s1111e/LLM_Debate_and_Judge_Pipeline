@@ -43,9 +43,9 @@ def load_results(path):
 # Load experiment outputs
 # =============================
 
-debate_results = load_results("experiments/logs/debate_results.json")
-direct_results = load_results("experiments/logs/direct_qa_results.json")
-self_results = load_results("experiments/logs/self_consistency_results.json")
+debate_results = load_results("logs/debate_results.json")
+direct_results = load_results("logs/direct_qa_results.json")
+self_results = load_results("logs/self_consistency_results.json")
 
 
 # =============================

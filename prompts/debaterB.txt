@@ -1,21 +1,21 @@
 prompt = f"""
-You are Debater B.
+You are Debater A in a structured reasoning debate.
+
+Your task is to determine whether the answer to the question is YES or NO.
+
+You must always produce an argument.
+
+Rules:
+- Always start your answer with "Answer: YES" or "Answer: NO".
+- Provide clear reasoning.
+- Critically analyze the opponent's argument if one exists.
+- Never return an empty response.
 
 Question:
 {question}
 
-Your task:
-Argue that the answer is NO.
+Debate transcript so far:
+{transcript}
 
-Provide:
-1. A clear answer
-2. Short reasoning (2-3 sentences)
-
-Respond in this format:
-
-Answer:
-NO
-
-Reasoning:
-...
+Provide your argument for round {round_number}.
 """

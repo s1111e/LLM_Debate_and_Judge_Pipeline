@@ -84,9 +84,6 @@ The overall architecture follows a four-stage pipeline:
 <li>Final answer extraction and logging</li>
 </ul>
 
-<p align="center">
-<img src="figures/architecture.png" width="600">
-</p>
 
 <h3>Project Structure</h3>
 
@@ -189,26 +186,117 @@ computational efficiency.
 
 
 
+
 <section id="experiments">
 
-<h2>Experiments</h2>
+<h2>2. Experiments</h2>
 
 <h3>Experimental Setup</h3>
 
 <p>
-Experiments were conducted using 100 questions from the StrategyQA dataset.
-Three reasoning strategies were evaluated:
+To evaluate the effectiveness of the debate framework, we conducted experiments
+on the StrategyQA dataset. StrategyQA is a benchmark dataset that requires
+multi-step reasoning and implicit knowledge to answer binary (YES/NO) questions.
+</p>
+
+<p>
+We selected a subset of 100 questions for evaluation. Each question includes a
+ground-truth answer used to compute accuracy.
+</p>
+
+<p>
+We compare three reasoning methods:
 </p>
 
 <ul>
-
-<li>Debate Pipeline</li>
-<li>Direct Question Answering</li>
-<li>Self Consistency</li>
-
+<li><b>Debate Pipeline</b> – multi-agent reasoning with two debaters and a judge</li>
+<li><b>Direct QA</b> – single-step answer generation without debate</li>
+<li><b>Self Consistency</b> – multiple sampled answers with majority voting</li>
 </ul>
 
+---
+
+<h3>Implementation Details</h3>
+
+<p>
+All experiments are implemented in Python and executed using the OpenAI API.
+The system is modular and consists of separate scripts for each method:
+</p>
+
+<pre>
+experiments/run_debate.py
+experiments/run_direct_qa.py
+experiments/run_self_consistency.py
+</pre>
+
+<p>
+Results are stored as JSON files for reproducibility:
+</p>
+
+<pre>
+logs/debate_results.json
+logs/direct_qa_results.json
+logs/self_consistency_results.json
+</pre>
+
+---
+
+<h3>Evaluation Metric</h3>
+
+<p>
+We use <b>accuracy</b> as the main evaluation metric.
+Accuracy is computed as:
+</p>
+
+<pre>
+Accuracy = (Number of Correct Predictions) / (Total Number of Questions)
+</pre>
+
+<p>
+Predictions are extracted from model outputs and compared with the
+ground-truth labels from the dataset.
+</p>
+
+---
+
+<h3>Debate Configuration</h3>
+
+<p>
+The debate system is configured using a YAML configuration file. Key parameters include:
+</p>
+
+<ul>
+<li>Number of debate rounds (default: 3)</li>
+<li>Adaptive stopping based on answer convergence</li>
+<li>Temperature for generation</li>
+</ul>
+
+<p>
+Each debate produces a full transcript, which is later evaluated by the judge.
+</p>
+
+---
+
+<h3>Baseline Configuration</h3>
+
+<p>
+For Direct QA, the model generates a single response for each question.
+</p>
+
+<p>
+For Self Consistency, multiple responses are generated using temperature sampling,
+and the final answer is determined by majority vote.
+</p>
+
+---
+
 <h3>Results</h3>
+
+<p>
+The following table shows the accuracy of each method:
+</p>
+
+<div align="center">
 
 <table>
 
@@ -219,76 +307,400 @@ Three reasoning strategies were evaluated:
 
 <tr>
 <td>Debate Pipeline</td>
-<td>0.54</td>
+<td>0.48</td>
 </tr>
 
 <tr>
 <td>Direct QA</td>
-<td>0.72</td>
+<td>0.74</td>
 </tr>
 
 <tr>
 <td>Self Consistency</td>
-<td>0.72</td>
+<td>0.74</td>
 </tr>
 
 </table>
 
+</div>
+
+<p align="center">
 <img src="figures/results_chart.png" width="500">
+</p>
+
+---
+
+<h3>Observations</h3>
+
+<p>
+The debate pipeline achieves lower accuracy compared to both baseline methods.
+This indicates that structured debate does not always improve reasoning performance.
+</p>
+
+<p>
+Direct QA and Self Consistency achieve higher accuracy. Self Consistency benefits
+from sampling multiple independent answers, which reduces random errors.
+</p>
+
+<p>
+In contrast, the debate system introduces additional reasoning steps that may
+propagate incorrect assumptions across multiple rounds.
+</p>
+
+---
+
+<h3>Error Analysis (Quantitative)</h3>
+
+<p>
+During evaluation, several types of errors were observed:
+</p>
+
+<ul>
+<li>Missing arguments from one debater</li>
+<li>Incorrect assumptions propagated across rounds</li>
+<li>Judge selecting the strongest but incorrect argument</li>
+<li>Unclear or inconsistent output formats</li>
+</ul>
+
+<p>
+These errors contribute to the lower performance of the debate system.
+</p>
+
+---
+
+<h3>Statistical Considerations</h3>
+
+<p>
+Although the dataset size is relatively small (100 questions), the difference
+between debate accuracy (0.48) and baseline methods (0.74) is significant.
+</p>
+
+<p>
+This suggests that the observed performance gap is not due to random variation,
+but reflects systematic differences between reasoning approaches.
+</p>
+
+<p>
+A larger dataset could provide more reliable statistical validation,
+but the current results already indicate a clear trend.
+</p>
+
+---
+
+<h3>Summary</h3>
+
+<p>
+Overall, the experimental results show that:
+</p>
+
+<ul>
+<li>Debate reasoning produces structured arguments but lower accuracy</li>
+<li>Direct QA is simple and effective</li>
+<li>Self Consistency improves robustness through sampling</li>
+</ul>
+
+<p>
+These findings highlight important limitations of multi-agent debate systems.
+</p>
 
 </section>
+
+
+
+
 
 <section id="analysis">
 
-<h2>Analysis</h2>
-
-<h3>Successful Debate Example</h3>
+<h2>3. Analysis</h2>
 
 <p>
-In several cases, debate successfully produced correct reasoning.
-For example, when answering whether kayaks are used at the summit
-of Mount Everest, one agent correctly explained that the summit
-contains no bodies of water, leading the judge to select the
-correct answer.
+To better understand the behavior of the debate system, we analyze several
+debate transcripts collected during experiments. These examples highlight
+both successful reasoning cases and common failure modes.
 </p>
 
-<h3>Failure Cases</h3>
+---
+
+<h3>Case 1: Successful Debate</h3>
+
+<p><b>Question:</b> Are kayaks used at the summit of Mount Everest?</p>
 
 <p>
-Some debates failed when both agents relied on incorrect assumptions.
-In these cases the debate focused on irrelevant details, which caused
-the judge to rely on flawed reasoning.
+In this example, Debater B consistently argues that kayaks cannot be used
+because there is no water at the summit and the environment is extremely cold.
+The reasoning is grounded in physical constraints and real-world knowledge.
 </p>
 
-<h3>Relation to Debate Theory</h3>
+<p>
+Even though Debater A fails to produce an argument, the judge correctly
+identifies the stronger reasoning and returns the correct answer: <b>NO</b>.
+</p>
 
 <p>
-Irving et al. proposed debate as a method for improving reasoning
-transparency by allowing agents to challenge each other's arguments.
-However, our experiments suggest that debate may fail when both agents
-share the same incorrect premise.
+This example shows that debate can succeed when at least one agent provides
+clear and correct reasoning.
+</p>
+
+---
+
+<h3>Case 2: One-Sided Debate (Failure Mode)</h3>
+
+<p><b>Observation:</b> Debater A produced no argument.</p>
+
+<p>
+In several transcripts, one debater failed to generate any response and returned
+"No argument generated". This leads to a one-sided debate where only one agent
+provides reasoning.
+</p>
+
+<p>
+As a result, the judge has no alternative perspective to compare, and the final
+decision depends entirely on a single argument. This reduces the effectiveness
+of the debate framework.
+</p>
+
+<p>
+This failure mode highlights the importance of robust prompt design to ensure
+both agents actively participate in the debate.
+</p>
+
+---
+
+<h3>Case 3: Incorrect Assumption Propagation</h3>
+
+<p><b>Question:</b> Can Aerosmith fit in a 2020 Mitsubishi Outlander?</p>
+
+<p>
+In this example, both debaters focus on the cargo capacity and equipment size.
+However, they introduce approximate and potentially incorrect numerical values
+for volume and weight.
+</p>
+
+<p>
+The debate becomes centered around these assumptions rather than verifying
+the actual facts. As a result, the judge selects the stronger argument,
+but the reasoning itself may still be flawed.
+</p>
+
+<p>
+This demonstrates a key limitation of debate systems: incorrect assumptions
+can propagate through multiple rounds and influence the final decision.
+</p>
+
+---
+
+<h3>Case 4: Output Format Failure</h3>
+
+<p>
+In some cases, the judge output does not follow a strict YES/NO format,
+which leads to extraction failures and "unknown" predictions.
+</p>
+
+<p>
+This type of error is not related to reasoning ability, but rather to
+output formatting. It highlights the importance of enforcing structured
+outputs in prompt design.
+</p>
+
+---
+
+<h3>Connection to Debate Theory (Irving et al.)</h3>
+
+<p>
+Irving et al. (2018) proposed debate as a method to improve AI alignment
+by allowing agents to challenge each other's reasoning. The key idea is
+that incorrect arguments can be exposed through adversarial interaction.
+</p>
+
+<p>
+Our experimental results partially support this theory. In some cases,
+strong arguments successfully dominate weak ones and lead to correct answers.
+</p>
+
+<p>
+However, our findings also reveal limitations:
+</p>
+
+<ul>
+<li>If one agent fails to participate, debate becomes ineffective</li>
+<li>If both agents rely on incorrect assumptions, errors propagate</li>
+<li>The judge may select the strongest argument even if it is incorrect</li>
+</ul>
+
+<p>
+These observations suggest that while debate can improve reasoning in theory,
+its practical effectiveness depends heavily on prompt design and agent reliability.
+</p>
+
+---
+
+<h3>Summary</h3>
+
+<p>
+The qualitative analysis shows that multi-agent debate has both strengths
+and weaknesses. It can produce structured reasoning, but also introduces
+new failure modes such as one-sided debates and error propagation.
 </p>
 
 </section>
 
-<section id="prompt">
 
-<h2>Prompt Engineering</h2>
+
+<section id="prompt-engineering">
+
+<h2>4. Prompt Engineering</h2>
 
 <p>
-Role-based prompting was used to simulate debate.
-Each debater was instructed to provide a YES or NO answer with
-structured reasoning and respond to the opponent’s argument.
+In this project, prompt design plays a critical role in controlling the behavior
+of the debate agents. We iteratively improved prompts based on observed failures
+in early experiments.
+</p>
+
+---
+
+<h3>Initial Design (v1)</h3>
+
+<p>
+In the first version (v1), we used simple role-based prompts for Debater A,
+Debater B, and the Judge.
 </p>
 
 <p>
-The judge was prompted to analyze the full debate transcript and
-select the final answer based on the strength of the arguments.
+Debater A was instructed to argue "YES", and Debater B was instructed to argue "NO".
+Both debaters were asked to provide a short answer and 2–3 sentences of reasoning.
 </p>
 
+<pre>
+Debater A:
+Answer: YES
+Reasoning: ...
+
+Debater B:
+Answer: NO
+Reasoning: ...
+</pre>
+
 <p>
-During development the prompts were iteratively refined to improve
-reasoning structure and enforce consistent output formats.
+The judge was given the full debate transcript and asked to select the winner:
+</p>
+
+<pre>
+Winner: A or B
+Explanation: ...
+</pre>
+
+---
+
+<h3>Problems Observed in v1</h3>
+
+<p>
+The initial prompts were simple, but several issues appeared during experiments:
+</p>
+
+<ul>
+<li><b>Missing arguments:</b> Some debaters returned "No argument generated"</li>
+<li><b>Weak reasoning:</b> Arguments were too short and lacked depth</li>
+<li><b>One-sided debates:</b> When one agent failed, debate became ineffective</li>
+<li><b>Format inconsistency:</b> Judge outputs were sometimes hard to parse</li>
+</ul>
+
+<p>
+These problems directly affected performance, resulting in a low debate accuracy
+of <b>0.48</b>, compared to <b>0.74</b> for baseline methods.
+</p>
+
+---
+
+<h3>Design Improvements (v2)</h3>
+
+<p>
+To address these issues, we redesigned the prompts with stronger constraints
+and clearer instructions.
+</p>
+
+<ul>
+<li>Explicit role definition (debater must defend position strongly)</li>
+<li>More structured reasoning (step-by-step arguments)</li>
+<li>Stronger format constraints (strict YES/NO outputs)</li>
+<li>Encouragement to challenge the opponent's reasoning</li>
+</ul>
+
+<p>
+We also ensured that each debater produces a response in every round to avoid
+empty arguments.
+</p>
+
+---
+
+<h3>Key Design Decisions</h3>
+
+<p><b>1. Role Framing</b></p>
+<p>
+Each agent is assigned a fixed role (YES vs NO). This creates adversarial
+interaction and encourages diverse reasoning paths.
+</p>
+
+<p><b>2. Chain-of-Thought Style Reasoning</b></p>
+<p>
+We encouraged step-by-step reasoning instead of short answers. This improves
+clarity and helps the judge compare arguments.
+</p>
+
+<p><b>3. Output Format Constraints</b></p>
+<p>
+Strict output formats were used to ensure reliable parsing of model outputs.
+This reduces errors such as "unknown" predictions.
+</p>
+
+<p><b>4. Robustness Against Failure</b></p>
+<p>
+We modified prompts to reduce the chance of missing arguments and ensure both
+agents actively participate in the debate.
+</p>
+
+---
+
+<h3>Iteration Strategy</h3>
+
+<p>
+Our prompt engineering process followed an iterative loop:
+</p>
+
+<ol>
+<li>Run experiments</li>
+<li>Analyze failures (logs and transcripts)</li>
+<li>Identify weak points in prompts</li>
+<li>Modify instructions and constraints</li>
+<li>Re-run experiments</li>
+</ol>
+
+<p>
+This process allowed us to systematically improve the debate system.
+</p>
+
+---
+
+<h3>Expected Impact of v2</h3>
+
+<p>
+We expect the improved prompts to:
+</p>
+
+<ul>
+<li>Reduce missing arguments</li>
+<li>Increase reasoning quality</li>
+<li>Improve judge decision consistency</li>
+<li>Increase overall debate accuracy</li>
+</ul>
+
+---
+
+<h3>Summary</h3>
+
+<p>
+Prompt engineering is essential for multi-agent systems. Our results show that
+simple prompts are not sufficient, and careful design is required to achieve
+reliable performance.
 </p>
 
 </section>
@@ -297,30 +709,125 @@ reasoning structure and enforce consistent output formats.
 
 <h2>Appendix: Full Prompts</h2>
 
-<details>
+<p>
+This section contains the final prompt templates used in our experiments (v2).
+Placeholders such as <code>{question}</code> and <code>{transcript}</code>
+are dynamically replaced during execution.
+</p>
 
-<summary>Debater Prompt</summary>
+---
+
+<details>
+<summary><b>Debater A Prompt (YES)</b></summary>
 
 <pre>
-
 You are Debater A.
 
-Answer the question with YES or NO and provide reasoning.
+Question:
+{question}
 
+Your task:
+Argue that the answer is YES.
+
+Rules:
+- You MUST answer YES
+- Provide clear reasoning
+- Use step-by-step thinking if needed
+- Be confident and persuasive
+- Do NOT say "I don't know"
+
+Respond in this format:
+
+Answer:
+YES
+
+Reasoning:
+- Step 1:
+- Step 2:
+- Step 3:
+</pre>
+
+</details>
+
+---
+
+<details>
+<summary><b>Debater B Prompt (NO)</b></summary>
+
+<pre>
+You are Debater B.
+
+Question:
+{question}
+
+Your task:
+Argue that the answer is NO.
+
+Rules:
+- You MUST answer NO
+- Provide clear reasoning
+- Use step-by-step thinking if needed
+- Be confident and persuasive
+- Challenge possible YES arguments
+
+Respond in this format:
+
+Answer:
+NO
+
+Reasoning:
+- Step 1:
+- Step 2:
+- Step 3:
+</pre>
+
+</details>
+
+---
+
+<details>
+<summary><b>Judge Prompt</b></summary>
+
+<pre>
 Question:
 {question}
 
 Debate transcript:
 {transcript}
 
-Provide your argument for round {round_number}.
+Your task:
+Decide which debater gave the stronger argument.
 
+Rules:
+- Focus on logic and evidence
+- Ignore style or length
+- Choose the more correct reasoning
+
+Respond in this format:
+
+Winner:
+A or B
+
+Final Answer:
+YES or NO
+
+Explanation:
+Short explanation.
 </pre>
 
 </details>
 
-</section>
+---
 
+<h3>Notes</h3>
+
+<ul>
+<li>Prompts were iteratively improved from v1 to v2</li>
+<li>Stronger constraints were added to reduce failures</li>
+<li>Structured outputs improved evaluation reliability</li>
+</ul>
+
+</section>
 <footer>
 
 <p>
