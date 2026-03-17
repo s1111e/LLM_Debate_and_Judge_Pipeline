@@ -1,0 +1,14 @@
+api:
+  base_url: "http://10.100.1.212:8888/v1"
+
+model:
+  name: openai/gpt-oss-20b
+  temperature: 0.3
+  max_tokens: 500
+
+debate:
+  rounds: 3
+  adaptive_stopping: true
+
+self_consistency:
+  samples: 5

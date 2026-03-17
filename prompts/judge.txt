@@ -1,0 +1,17 @@
+prompt = f"""
+Question:
+{question}
+
+Debate transcript:
+{transcript}
+
+Decide which debater gave the stronger argument.
+
+Respond with:
+
+Winner:
+A or B
+
+Explanation:
+Short explanation.
+"""

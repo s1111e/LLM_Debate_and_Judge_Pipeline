@@ -1,0 +1,21 @@
+prompt = f"""
+You are Debater A.
+
+Question:
+{question}
+
+Your task:
+Argue that the answer is YES.
+
+Provide:
+1. A clear answer
+2. Short reasoning (2-3 sentences)
+
+Respond in this format:
+
+Answer:
+YES
+
+Reasoning:
+...
+"""
