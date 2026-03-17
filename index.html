@@ -113,6 +113,7 @@ experiments/
     run_debate.py
     run_direct_qa.py
     run_self_consistency.py
+    run_jury.py
 
 utils/
     answer_utils.py
@@ -544,6 +545,22 @@ However, our findings also reveal limitations:
 <p>
 These observations suggest that while debate can improve reasoning in theory,
 its practical effectiveness depends heavily on prompt design and agent reliability.
+</p>
+
+h3>Multi-Agent Judge Panel Analysis</h3>
+
+<p>
+We observe that using multiple judges improves decision stability.
+When all judges agree, the answer is usually correct.
+</p>
+
+<p>
+Disagreement between judges often occurs in difficult or ambiguous questions.
+This suggests that disagreement can be used as a signal of question difficulty.
+</p>
+
+<p>
+Overall, the jury mechanism improves reliability compared to a single judge.
 </p>
 
 ---
