@@ -1,17 +1,24 @@
 body {
 
-font-family: Arial, sans-serif;
+font-family: Arial;
 margin: 0;
-background: #f7f7f7;
+background: #f4f6f8;
 
 }
 
-header {
+.hero {
 
-background: #222;
+background: #1f2937;
 color: white;
 text-align: center;
-padding: 40px;
+padding: 60px;
+
+}
+
+.subtitle {
+
+font-size: 18px;
+opacity: 0.9;
 
 }
 
@@ -26,8 +33,9 @@ text-decoration: none;
 section {
 
 background: white;
-margin: 40px;
-padding: 30px;
+margin: 40px auto;
+padding: 40px;
+width: 70%;
 border-radius: 10px;
 
 }
@@ -41,7 +49,7 @@ margin-top: 20px;
 
 td, th {
 
-border: 1px solid #ccc;
+border: 1px solid #ddd;
 padding: 10px;
 
 }
@@ -49,7 +57,7 @@ padding: 10px;
 footer {
 
 text-align: center;
-padding: 20px;
+padding: 30px;
 color: gray;
 
 }

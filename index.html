@@ -13,19 +13,23 @@
 
 <body>
 
-<header>
+<header class="hero">
 
 <h1>Multi-Agent Debate for StrategyQA</h1>
 
-<p>Evaluating whether multi-agent debate improves reasoning in large language models</p>
+<p class="subtitle">
+Evaluating whether multi-agent debate improves reasoning in large language models
+</p>
 
 <nav>
+
 <a href="#abstract">Abstract</a>
 <a href="#methodology">Methodology</a>
 <a href="#experiments">Experiments</a>
 <a href="#analysis">Analysis</a>
 <a href="#prompt">Prompt Engineering</a>
 <a href="#appendix">Appendix</a>
+
 </nav>
 
 </header>
@@ -35,7 +39,19 @@
 <h2>Abstract</h2>
 
 <p>
-This project investigates whether structured multi-agent debate can improve reasoning accuracy of large language models on the StrategyQA dataset. The system simulates a debate between two agents and a judge. We compare the debate pipeline with two baseline approaches: Direct Question Answering and Self Consistency. Results show that while debate can produce structured reasoning, it does not always outperform simpler baselines.
+Large language models often struggle with complex reasoning tasks.
+Recent research suggests that structured debate between multiple agents
+may improve reasoning quality by exposing incorrect arguments.
+
+In this project we implement a multi-agent debate system consisting of
+two debaters and a judge. The system is evaluated on the StrategyQA dataset.
+We compare debate reasoning against two baseline methods: Direct QA
+and Self Consistency.
+</p>
+
+<p>
+Our results show that although debate produces structured reasoning,
+it does not always outperform simpler baselines.
 </p>
 
 </section>
@@ -44,18 +60,39 @@ This project investigates whether structured multi-agent debate can improve reas
 
 <h2>Methodology</h2>
 
+<h3>System Architecture</h3>
+
 <p>
-The system consists of three agents: Debater A, Debater B, and a Judge. The debate process follows four stages:
+The system consists of three agents:
 </p>
 
 <ul>
-<li>Initial answers from both debaters</li>
-<li>Multi-round debate</li>
-<li>Judge evaluation</li>
-<li>Final prediction extraction</li>
+<li>Debater A</li>
+<li>Debater B</li>
+<li>Judge</li>
 </ul>
 
+<p>
+The debate follows a four-phase reasoning pipeline.
+</p>
+
 <img src="figures/architecture.png" width="600">
+
+<h3>Debate Protocol</h3>
+
+<p>
+Each debate begins with both agents producing an initial answer.
+Agents then respond to each other's arguments for several rounds.
+Finally, the judge evaluates the full transcript and determines the
+final answer.
+</p>
+
+<h3>Adaptive Stopping</h3>
+
+<p>
+To reduce unnecessary computation, the debate stops early when both
+agents converge to the same answer for two consecutive rounds.
+</p>
 
 </section>
 
@@ -63,9 +100,22 @@ The system consists of three agents: Debater A, Debater B, and a Judge. The deba
 
 <h2>Experiments</h2>
 
+<h3>Experimental Setup</h3>
+
 <p>
-Experiments are conducted using 100 StrategyQA questions. Three reasoning strategies are compared.
+Experiments were conducted using 100 questions from the StrategyQA dataset.
+Three reasoning strategies were evaluated:
 </p>
+
+<ul>
+
+<li>Debate Pipeline</li>
+<li>Direct Question Answering</li>
+<li>Self Consistency</li>
+
+</ul>
+
+<h3>Results</h3>
 
 <table>
 
@@ -99,12 +149,31 @@ Experiments are conducted using 100 StrategyQA questions. Three reasoning strate
 
 <h2>Analysis</h2>
 
-<p>
-Debate transcripts reveal both success and failure cases. When one agent produces strong factual reasoning, the judge often selects the correct answer. However, debate may also propagate incorrect assumptions when both agents rely on flawed premises.
-</p>
+<h3>Successful Debate Example</h3>
 
 <p>
-These findings align partially with the theoretical framework proposed by Irving et al., where debate exposes reasoning weaknesses through adversarial interaction.
+In several cases, debate successfully produced correct reasoning.
+For example, when answering whether kayaks are used at the summit
+of Mount Everest, one agent correctly explained that the summit
+contains no bodies of water, leading the judge to select the
+correct answer.
+</p>
+
+<h3>Failure Cases</h3>
+
+<p>
+Some debates failed when both agents relied on incorrect assumptions.
+In these cases the debate focused on irrelevant details, which caused
+the judge to rely on flawed reasoning.
+</p>
+
+<h3>Relation to Debate Theory</h3>
+
+<p>
+Irving et al. proposed debate as a method for improving reasoning
+transparency by allowing agents to challenge each other's arguments.
+However, our experiments suggest that debate may fail when both agents
+share the same incorrect premise.
 </p>
 
 </section>
@@ -114,7 +183,19 @@ These findings align partially with the theoretical framework proposed by Irving
 <h2>Prompt Engineering</h2>
 
 <p>
-Role-based prompting is used to simulate debate. Debaters are instructed to provide YES/NO answers with reasoning and respond to opponent arguments. The judge evaluates the debate transcript and determines the final answer.
+Role-based prompting was used to simulate debate.
+Each debater was instructed to provide a YES or NO answer with
+structured reasoning and respond to the opponent’s argument.
+</p>
+
+<p>
+The judge was prompted to analyze the full debate transcript and
+select the final answer based on the strength of the arguments.
+</p>
+
+<p>
+During development the prompts were iteratively refined to improve
+reasoning structure and enforce consistent output formats.
 </p>
 
 </section>
@@ -124,9 +205,11 @@ Role-based prompting is used to simulate debate. Debaters are instructed to prov
 <h2>Appendix: Full Prompts</h2>
 
 <details>
+
 <summary>Debater Prompt</summary>
 
 <pre>
+
 You are Debater A.
 
 Answer the question with YES or NO and provide reasoning.
@@ -138,6 +221,7 @@ Debate transcript:
 {transcript}
 
 Provide your argument for round {round_number}.
+
 </pre>
 
 </details>
@@ -146,7 +230,9 @@ Provide your argument for round {round_number}.
 
 <footer>
 
-<p>Multi-Agent Debate Project — StrategyQA Evaluation</p>
+<p>
+Multi-Agent Debate Project — StrategyQA Evaluation
+</p>
 
 </footer>
 
