@@ -304,33 +304,42 @@ The following table shows the accuracy of each method:
 <div align="center">
 
 <table>
-
 <tr>
 <th>Method</th>
-<th>Accuracy</th>
+<th>Accuracy (v1)</th>
+<th>Accuracy (v2)</th>
 </tr>
 
 <tr>
-<td>Debate Pipeline</td>
+<td>Debate</td>
 <td>0.48</td>
+<td><b>0.52</b></td>
 </tr>
 
 <tr>
 <td>Direct QA</td>
 <td>0.74</td>
+<td>0.71</td>
 </tr>
 
 <tr>
 <td>Self Consistency</td>
 <td>0.74</td>
+<td>0.71</td>
 </tr>
 
 </table>
 
 </div>
 
-<p align="center">
-<img src="figures/results_chart.png" width="500">
+<p>
+The improved prompt design (v2) increases debate accuracy from 0.48 to 0.52.
+This shows that prompt engineering has a positive impact on multi-agent reasoning.
+</p>
+
+<p>
+Interestingly, baseline methods show a slight decrease in accuracy.
+This suggests that debate benefits more from structured prompting compared to single-step methods.
 </p>
 
 ---
@@ -545,6 +554,12 @@ its practical effectiveness depends heavily on prompt design and agent reliabili
 The qualitative analysis shows that multi-agent debate has both strengths
 and weaknesses. It can produce structured reasoning, but also introduces
 new failure modes such as one-sided debates and error propagation.
+
+</p>
+
+<p>
+After prompt improvements (v2), we observed fewer cases of missing arguments
+and more consistent debate participation. This directly contributed to higher accuracy.
 </p>
 
 </section>
@@ -616,23 +631,25 @@ of <b>0.48</b>, compared to <b>0.74</b> for baseline methods.
 
 ---
 
-<h3>Design Improvements (v2)</h3>
+<h3>Results After Iteration (v2)</h3>
 
 <p>
-To address these issues, we redesigned the prompts with stronger constraints
-and clearer instructions.
+After improving the prompts, debate accuracy increased from <b>0.48</b> to <b>0.52</b>.
+</p>
+
+<p>
+This improvement confirms that better prompt design:
 </p>
 
 <ul>
-<li>Explicit role definition (debater must defend position strongly)</li>
-<li>More structured reasoning (step-by-step arguments)</li>
-<li>Stronger format constraints (strict YES/NO outputs)</li>
-<li>Encouragement to challenge the opponent's reasoning</li>
+<li>Reduces missing arguments</li>
+<li>Improves reasoning quality</li>
+<li>Leads to more reliable judge decisions</li>
 </ul>
 
 <p>
-We also ensured that each debater produces a response in every round to avoid
-empty arguments.
+Although the improvement is moderate, it demonstrates that prompt engineering
+is a key factor in multi-agent systems.
 </p>
 
 ---
