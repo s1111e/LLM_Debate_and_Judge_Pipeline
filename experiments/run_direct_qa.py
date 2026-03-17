@@ -43,15 +43,21 @@ Question:
     })
 
 
-# -------- save results safely --------
+# =========================
+# SAVE RESULTS
+# =========================
 
-log_path = os.path.abspath(
-    os.path.join(os.path.dirname(__file__), "logs", "direct_qa_results.json")
+logs_dir = os.path.abspath(
+    os.path.join(os.path.dirname(__file__), "..", "logs")
 )
 
-os.makedirs(os.path.dirname(log_path), exist_ok=True)
+os.makedirs(logs_dir, exist_ok=True)
 
-with open(log_path, "w") as f:
+save_path = os.path.join(logs_dir, "direct_qa_results.json")
+
+with open(save_path, "w") as f:
     json.dump(results, f, indent=2)
 
-print("Direct QA experiment finished.")
+
+print("\nDirect QA experiment finished.")
+print("Results saved to:", save_path)

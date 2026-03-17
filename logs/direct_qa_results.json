@@ -1,0 +1,602 @@
+[
+  {
+    "question": "Can Aerosmith fit in a 2020 Mitsubishi Outlander?",
+    "ground_truth": true,
+    "prediction": "yes",
+    "raw_output": "YES \u2013 a 2020 Mitsubishi Outlander seats five passengers, and Aerosmith\u2019s lineup consists of five members, so all of them can fit inside the vehicle."
+  },
+  {
+    "question": "Are kayaks used at the summit of Mount Everest?",
+    "ground_truth": true,
+    "prediction": "no",
+    "raw_output": "NO \u2013 kayaks are watercraft and there is no water at the summit of Mount Everest, so they are not used there."
+  },
+  {
+    "question": "Does the country that received the most gold medals during the 1976 Olympics still exist?",
+    "ground_truth": false,
+    "prediction": "yes",
+    "raw_output": "YES \u2013 The United States won the most gold medals (34) at the 1976 Montreal Olympics, and the United States still exists today."
+  },
+  {
+    "question": "Would a Common warthog starve in a greenhouse?",
+    "ground_truth": false,
+    "prediction": "no",
+    "raw_output": "NO \u2013 a common warthog would not find enough food or space in a typical greenhouse. Their diet requires diverse roots, tubers, insects and small animals, and a greenhouse\u2019s limited plant variety and confined area would leave them unable to sustain themselves."
+  },
+  {
+    "question": "Would a model be appropriate to star in a LA Femme Nikita remake?",
+    "ground_truth": true,
+    "prediction": "no",
+    "raw_output": "NO \u2013 a fashion model\u2019s primary skill set is visual presence, not the acting depth, emotional range, and stunt work required for a complex action\u2011drama like *La Femme Nikita*. While some models transition successfully, a typical model would likely lack the experience and versatility needed for a lead role in a remake."
+  },
+  {
+    "question": "Is eating a Dicopomorpha echmepterygis size Uranium pellet fatal?",
+    "ground_truth": false,
+    "prediction": "no",
+    "raw_output": "**NO** \u2013 A uranium pellet"
+  },
+  {
+    "question": "Did any of Maya Angelou's children follow in her footsteps?",
+    "ground_truth": true,
+    "prediction": "no",
+    "raw_output": "No argument generated."
+  },
+  {
+    "question": "Is chaff produced by hydropower?",
+    "ground_truth": true,
+    "prediction": "no",
+    "raw_output": "NO \u2013 chaff is a by\u2011product of oilseed processing (e.g., soybean or sunflower oil extraction), not a product of hydropower generation."
+  },
+  {
+    "question": "Could two newborn American Black Bear cubs fit on a king size bed?",
+    "ground_truth": true,
+    "prediction": "yes",
+    "raw_output": "**YES** \u2013 Newborn black\u2011bear cubs are only a few inches long and weigh a couple of pounds, so two of them would easily fit on the 76\u2011by\u201180\u2011inch surface of a king\u2011size bed."
+  },
+  {
+    "question": "Did Benito Mussolini wear bigger shoes than Haf\u00fe\u00f3r Bj\u00f6rnsson?",
+    "ground_truth": false,
+    "prediction": "no",
+    "raw_output": "NO \u2013 Mussolini\u2019s shoe size is not recorded and would have been much smaller than Haf\u00fe\u00f3r Bj\u00f6rnsson\u2019s known size\u201114 US (European 47)."
+  },
+  {
+    "question": "Did land owners elect their rulers in the Kingdom of Hungary?",
+    "ground_truth": false,
+    "prediction": "yes",
+    "raw_output": "**YES** \u2013 In the early Kingdom of Hungary the king was elected by the nobles (land\u2011owners). Even after the Golden Bull of 1222, the aristocracy retained a decisive role in choosing or approving the monarch, so land owners effectively elected their rulers."
+  },
+  {
+    "question": "Would Brian Warner be a good singer for a soul music band?",
+    "ground_truth": false,
+    "prediction": "no",
+    "raw_output": "No argument generated."
+  },
+  {
+    "question": "Are most books written as a Haiku?",
+    "ground_truth": false,
+    "prediction": "no",
+    "raw_output": "NO \u2013 a haiku is a very short, 17\u2011syllable poem, whereas most books are long prose or narrative works, not composed in that brief poetic form."
+  },
+  {
+    "question": "Will AC/DC album sales buy more B-52 bombers than Lil Wayne's?",
+    "ground_truth": true,
+    "prediction": "yes",
+    "raw_output": "YES \u2013 AC/DC has sold roughly 200\u202fmillion albums worldwide, far more than Lil\u202fWayne\u2019s ~50\u202fmillion, so AC/DC\u2019s sales would afford more B\u201152 bombers."
+  },
+  {
+    "question": "Can Kit & Kaboodle hypothetically help someone past the Underworld gates?",
+    "ground_truth": false,
+    "prediction": "no",
+    "raw_output": "NO \u2013 Kit &\u202fKaboodle is a children\u2019s clothing brand, not a mystical guide or artifact, so it cannot help anyone pass through the Underworld gates."
+  },
+  {
+    "question": "Are Saturn's famous rings solid?",
+    "ground_truth": false,
+    "prediction": "no",
+    "raw_output": "NO \u2013 Saturn\u2019s rings are not a single solid structure; they consist of countless individual ice and rock particles that orbit the planet, forming a cloud\u2011like, particulate ring rather than a continuous solid band."
+  },
+  {
+    "question": "Did Emma Stone pursue a higher education?",
+    "ground_truth": false,
+    "prediction": "no",
+    "raw_output": "NO \u2013 Emma Stone did not attend college or pursue a university degree; she left school after high school to focus on her acting career."
+  },
+  {
+    "question": "Does a person using tonsure have hair at the top of their scalp?",
+    "ground_truth": false,
+    "prediction": "no",
+    "raw_output": "NO \u2013 a tonsure is a hairstyle in which the top of the head is shaved or cut very short, so the scalp is bare (or almost bare) at the top."
+  },
+  {
+    "question": "Can an Asian black bear use chopsticks?",
+    "ground_truth": false,
+    "prediction": "no",
+    "raw_output": "NO \u2013 Asian black bears lack the fine\u2011motor dexterity and opposable thumbs required to pick up and manipulate chopsticks."
+  },
+  {
+    "question": "Would Roman Gallic Wars army struggle to build the pyramids faster?",
+    "ground_truth": false,
+    "prediction": "yes",
+    "raw_output": "YES \u2013 the Gallic\u2011war Roman army would still struggle to build pyramids faster. Their soldiers were trained for combat and rapid marches, not for the massive, long\u2011term engineering, logistics, and specialized labor needed to construct pyramids more quickly than the ancient Egyptians did."
+  },
+  {
+    "question": "Was Martin Luther same sect as Martin Luther King Jr.?",
+    "ground_truth": false,
+    "prediction": "no",
+    "raw_output": "NO \u2013 Martin Luther was a 16th\u2011century Protestant Reformer who founded Lutheranism, whereas Martin Luther King Jr. was a 20th\u2011century Baptist minister and civil\u2011rights leader."
+  },
+  {
+    "question": "Would four shoes be insufficient for a set of octuplets?",
+    "ground_truth": true,
+    "prediction": "yes",
+    "raw_output": "YES \u2013 octuplets are eight babies, and each would need at least a pair of shoes, so four shoes would not be enough."
+  },
+  {
+    "question": "Did the 40th president of the United States forward lolcats to his friends?",
+    "ground_truth": false,
+    "prediction": "no",
+    "raw_output": "NO \u2013 Ronald\u202fReagan (the 40th U.S. president) was not known to have forwarded lolcat memes to friends, and the lolcat phenomenon emerged after his presidency and death."
+  },
+  {
+    "question": "Should wool be hand washed only?",
+    "ground_truth": true,
+    "prediction": "yes",
+    "raw_output": "**YES** \u2013 Wool is best hand\u2011washed (or dry\u2011cleaned) because machine agitation and heat can cause felting, shrinkage, and damage to the fibers."
+  },
+  {
+    "question": "Would Tom Cruise ever insult L. Ron Hubbard?",
+    "ground_truth": false,
+    "prediction": "no",
+    "raw_output": "NO \u2013 Tom Cruise has never publicly insulted L. Ron Hubbard; he has consistently praised and defended the founder of Scientology."
+  },
+  {
+    "question": "Was Great Recession the period of severest unemployment?",
+    "ground_truth": false,
+    "prediction": "no",
+    "raw_output": "NO \u2013 While the Great Recession produced a sharp rise in unemployment, the Great Depression (1929\u20111939) reached far higher unemployment rates, making it the severest period overall."
+  },
+  {
+    "question": "Will the small intenstine break down a cotton ball?",
+    "ground_truth": false,
+    "prediction": "no",
+    "raw_output": "NO \u2013 the small intestine cannot digest cotton. Humans lack the enzymes (cellulase) needed to break down cellulose, so a cotton ball would not be broken down and would simply pass through or cause blockage."
+  },
+  {
+    "question": "Can the theory of cultural hegemony explain global warming?",
+    "ground_truth": false,
+    "prediction": "no",
+    "raw_output": "NO \u2013 Cultural hegemony deals with power relations and dominant ideas, not the physical processes that cause climate change. It can help explain how societal norms shape responses to warming, but it does not explain the science of global warming itself."
+  },
+  {
+    "question": "Does Carmen Electra own a junk?",
+    "ground_truth": false,
+    "prediction": "no",
+    "raw_output": "NO \u2013 there is no public record or credible source indicating that Carmen Electra owns a vehicle (or \u201cjunk\u201d) of that sort."
+  },
+  {
+    "question": "Would the number 666 appear in a church?",
+    "ground_truth": false,
+    "prediction": "no",
+    "raw_output": "NO \u2013 666 is not normally displayed or used in a church setting; it appears only in biblical texts, not as a physical element in most churches."
+  },
+  {
+    "question": "In baseball, is a \"Homer\" named after the poet Homer who wrote the Odyssey?",
+    "ground_truth": false,
+    "prediction": "no",
+    "raw_output": "NO \u2013 The baseball term \u201chomer\u201d comes from \u201chome run,\u201d not from the ancient poet Homer who wrote the Odyssey."
+  },
+  {
+    "question": "Did Metallica band members cutting their hair hurt their sales?",
+    "ground_truth": true,
+    "prediction": "no",
+    "raw_output": "NO \u2013 the members\u2019 haircuts had no measurable impact on sales.  Metallica\u2019s sales were driven by the album\u2019s reception, promotion, and market conditions, not by how the band members looked."
+  },
+  {
+    "question": "Did Easy Rider make a profit at the theater when it was released?",
+    "ground_truth": true,
+    "prediction": "yes",
+    "raw_output": "YES \u2013 The film was made for roughly $350,000 and went on to gross more than $40\u202fmillion worldwide, so it turned a substantial profit during its theatrical run."
+  },
+  {
+    "question": "Will Al Pacino and Margaret Qualley score same amount of Bacon Number points?",
+    "ground_truth": true,
+    "prediction": "no",
+    "raw_output": "No argument generated."
+  },
+  {
+    "question": "Did the lead singer of Led Zepplin ever perform with Ernest Chataway?",
+    "ground_truth": true,
+    "prediction": "no",
+    "raw_output": "NO \u2013 there is no record or evidence that Robert Plant, the lead singer of Led\u202fZeppelin, ever performed with Ernest Chataway."
+  },
+  {
+    "question": "Can a single honey bee sting multiple humans?",
+    "ground_truth": false,
+    "prediction": "no",
+    "raw_output": "NO \u2013 a honey bee\u2019s barbed stinger usually remains embedded in the first victim, causing the bee to die, so it cannot sting more than one person."
+  },
+  {
+    "question": "Do drag kings take testosterone to look masculine?",
+    "ground_truth": false,
+    "prediction": "no",
+    "raw_output": "NO \u2013 most drag kings are cisgender women who use makeup, costumes, and performance techniques to appear masculine; taking testosterone is not a standard or necessary part of their craft."
+  },
+  {
+    "question": "Does Dean Cain have less days to birthday than Will Ferrell every 4th of July?",
+    "ground_truth": false,
+    "prediction": "no",
+    "raw_output": "NO \u2013 On July\u202f4th Dean Cain\u2019s next birthday is almost a year away (\u2248354 days), while Will Ferrell\u2019s is only 12 days away."
+  },
+  {
+    "question": "Is Michael Vick on People for the Ethical Treatment of Animals's hypothetical blacklist?",
+    "ground_truth": true,
+    "prediction": "yes",
+    "raw_output": "YES \u2013 PETA has listed Michael\u202fVick on its \u201cblacklist\u201d of individuals who have been involved in animal cruelty, notably for his dog\u2011fighting conviction."
+  },
+  {
+    "question": "Can paratroopers be used in a vacuum?",
+    "ground_truth": false,
+    "prediction": "no",
+    "raw_output": "NO \u2013 a parachute needs air to generate drag; in a vacuum there is no atmosphere, so a paratrooper\u2019s chute would not deploy or slow descent."
+  },
+  {
+    "question": "Will Lhamo Thondup be considered by Catholic Church to be a saint?",
+    "ground_truth": false,
+    "prediction": "no",
+    "raw_output": "NO \u2013 The Catholic Church only canonizes individuals who are recognized as Christian saints, and the canonization process requires a formal investigation, miracles, and the subject\u2019s life to be within the Christian tradition. Lhamo\u202fThondup is a Tibetan Buddhist monk, so he would not be considered for sainthood by the Catholic Church."
+  },
+  {
+    "question": "Has Ringo Starr been in a relatively large number of bands?",
+    "ground_truth": false,
+    "prediction": "no",
+    "raw_output": "No argument generated."
+  },
+  {
+    "question": "Is double duty an incorrect phrase for host of Dancing With The Stars?",
+    "ground_truth": false,
+    "prediction": "no",
+    "raw_output": "NO \u2013 \u201cdouble duty\u201d is a perfectly acceptable way to describe a host who also performs another role (e.g., co\u2011hosting, judging, or handling production tasks) on *Dancing With the Stars*."
+  },
+  {
+    "question": "Can furniture be made of hair?",
+    "ground_truth": true,
+    "prediction": "yes",
+    "raw_output": "**YES** \u2013 Hair can be processed into fibers or composite materials that can be used in furniture (e.g., as a filler or reinforcement in upholstery or composite panels)."
+  },
+  {
+    "question": "Did Pedubastis I know Japanese people?",
+    "ground_truth": false,
+    "prediction": "no",
+    "raw_output": "NO \u2013 Pedubastis\u202fI ruled ancient Egypt around the 7th\u202fcentury\u202fBCE, long before Japan or its people existed."
+  },
+  {
+    "question": "Are some adherents to Christianity in China historic enemies of Catholic Church?",
+    "ground_truth": true,
+    "prediction": "yes",
+    "raw_output": "**YES** \u2013 Certain Christian groups in China, particularly some Protestant movements and indigenous Chinese churches, have historically opposed or resisted Catholic influence, making them adversaries of the Catholic Church."
+  },
+  {
+    "question": "Can someone from New England profit by growing coffee?",
+    "ground_truth": false,
+    "prediction": "no",
+    "raw_output": "NO \u2013 New England\u2019s cold winters, short growing season, and lack of tropical climate make it impractical to grow coffee profitably; the high costs of greenhouse or indoor cultivation would outweigh yields."
+  },
+  {
+    "question": "Can you write a whole Haiku in a single tweet?",
+    "ground_truth": true,
+    "prediction": "yes",
+    "raw_output": "YES \u2013 a haiku is only 17 syllables and a few words, well under Twitter\u2019s 280\u2011character limit, so it can fit in a single tweet."
+  },
+  {
+    "question": "Is electricity necessary to balance an account in Microsoft Excel?",
+    "ground_truth": true,
+    "prediction": "no",
+    "raw_output": "NO \u2013 balancing an account in Excel is a software calculation, not a physical process that requires electricity."
+  },
+  {
+    "question": "Do restaurants associate meatballs with the wrong country of origin?",
+    "ground_truth": true,
+    "prediction": "yes",
+    "raw_output": "**YES** \u2013 Many restaurants (especially in the U.S.) label meatballs as \u201cItalian\u201d or \u201cSwedish\u201d even though the dish is common to numerous cultures, so the country of origin is often misattributed."
+  },
+  {
+    "question": "Are peaches best eaten when firm?",
+    "ground_truth": false,
+    "prediction": "no",
+    "raw_output": "NO \u2013 peaches are best when they give slightly to gentle pressure, indicating ripeness; a firm peach is usually underripe."
+  },
+  {
+    "question": "Did original Nintendo have games in same format as Playstation 3?",
+    "ground_truth": false,
+    "prediction": "no",
+    "raw_output": "NO \u2013 Nintendo\u2019s early systems (NES, SNES, N64, GameCube) used cartridges or mini\u2011DVDs, not the Blu\u2011ray disc format that the PlayStation\u00a03 uses."
+  },
+  {
+    "question": "Does Nigella Lawson care about solubility?",
+    "ground_truth": true,
+    "prediction": "no",
+    "raw_output": "NO \u2013 Nigella Lawson is a food writer and TV chef, not a chemist, and she is not known to focus on the scientific concept of solubility."
+  },
+  {
+    "question": "Is the Sea of Japan landlocked within Japan?",
+    "ground_truth": false,
+    "prediction": "no",
+    "raw_output": "NO \u2013 The Sea of Japan is a marginal sea that borders Japan, Korea, and Russia; it opens to the Pacific Ocean and is not surrounded by land."
+  },
+  {
+    "question": "Are the events of Star Trek: The Next Generation in the history of the world?",
+    "ground_truth": false,
+    "prediction": "no",
+    "raw_output": "NO \u2013 the events depicted in *Star Trek: The Next Generation* are fictional and have not occurred in real-world history."
+  },
+  {
+    "question": "Was song of Roland protagonist friendly with group that had sagas?",
+    "ground_truth": false,
+    "prediction": "no",
+    "raw_output": "NO \u2013 Roland was a Frankish knight who fought the Saracens at Roncevaux; there is no friendly relationship depicted with the Norse/Viking group that is known for its sagas."
+  },
+  {
+    "question": "Could all of the 2008 Summer Olympics women find a hookup athlete partner?",
+    "ground_truth": true,
+    "prediction": "no",
+    "raw_output": "NO \u2013 it\u2019s unrealistic to assume every 2008 Olympic woman would have an athletic hookup partner; many factors (personal choice, availability, compatibility) would prevent that."
+  },
+  {
+    "question": "Snowboarding is a rarity in Hilo?",
+    "ground_truth": true,
+    "prediction": "yes",
+    "raw_output": "YES \u2013 Hilo is a tropical coastal town on Hawaii\u2019s Big Island, where there is no natural snow, so snowboarding is essentially nonexistent there."
+  },
+  {
+    "question": "Does Robert De Niro use a microscope at work?",
+    "ground_truth": false,
+    "prediction": "no",
+    "raw_output": "NO \u2013 Robert\u202fDe\u202fNiro is a film actor, not a scientist or laboratory professional, so he does not use a microscope in his work."
+  },
+  {
+    "question": "Was a Tiny House ceiling out of Osama bin Laden's reach?",
+    "ground_truth": false,
+    "prediction": "yes",
+    "raw_output": "YES \u2013 Osama bin\u202fLaden had no way to physically reach a tiny house\u2019s ceiling."
+  },
+  {
+    "question": "Did Jesus know anyone who spoke Estonian?",
+    "ground_truth": false,
+    "prediction": "no",
+    "raw_output": "NO \u2013 Estonian as a language did not exist during Jesus\u2019s lifetime, and there were no Estonian speakers in the region where Jesus lived."
+  },
+  {
+    "question": "Would nickel boil in the outer core of the earth?",
+    "ground_truth": true,
+    "prediction": "no",
+    "raw_output": "NO \u2013 The outer core is hot enough to keep nickel liquid, but the extreme pressure (~100\u2013300\u202fGPa) raises its boiling point far above the core temperature, so nickel would not boil there."
+  },
+  {
+    "question": "Can Stone Cold Steve Austin apply his finisher to a mule deer?",
+    "ground_truth": true,
+    "prediction": "no",
+    "raw_output": "NO \u2013 Stone Cold\u2019s finisher is a wrestling move performed on human opponents, not on wildlife. Applying it to a mule deer would be impractical, unsafe, and illegal."
+  },
+  {
+    "question": "Has the Holy Grail been featured in at least five films?",
+    "ground_truth": true,
+    "prediction": "no",
+    "raw_output": "No argument generated."
+  },
+  {
+    "question": "Is CEO of Nissan an internationally wanted fugitive?",
+    "ground_truth": true,
+    "prediction": "no",
+    "raw_output": "NO \u2013 The current CEO of Nissan, Makoto\u202fUchida, is not an internationally wanted fugitive. (The only former Nissan CEO who was wanted was Carlos\u202fGhosn, who is no longer in that position.)"
+  },
+  {
+    "question": "Did Jeremy Irons master sweep picking as a child?",
+    "ground_truth": false,
+    "prediction": "no",
+    "raw_output": "NO \u2013 Jeremy Irons is a renowned actor, not a guitarist, and there is no record of him mastering sweep picking (a technical guitar technique) during his childhood."
+  },
+  {
+    "question": "Is starving Hamas agent eating pig bad?",
+    "ground_truth": false,
+    "prediction": "yes",
+    "raw_output": "**YES** \u2013 A Hamas agent eating pig is considered bad, because it violates Islamic dietary laws (pork is forbidden) and is viewed as morally and religiously inappropriate for a member of that organization."
+  },
+  {
+    "question": "Can children become lieutenants?",
+    "ground_truth": true,
+    "prediction": "no",
+    "raw_output": "NO \u2013 a lieutenant is a commissioned officer rank that requires legal adulthood, citizenship, and completion of officer training, all of which children do not meet."
+  },
+  {
+    "question": "Can a human heart last from NYC to Raleigh NC by Toyota Hiux?",
+    "ground_truth": true,
+    "prediction": "no",
+    "raw_output": "NO \u2013 a human heart cannot survive the journey from NYC to Raleigh NC in a Toyota Hiux; it\u2019s a biological organ, not a vehicle, and it would not last that distance."
+  },
+  {
+    "question": "Could Saint Peter watch television?",
+    "ground_truth": false,
+    "prediction": "no",
+    "raw_output": "NO \u2013 Saint Peter lived in the 1st\u202fcentury AD, long before television existed, so he could not have watched it."
+  },
+  {
+    "question": "Did Melania Trump have same profession as Olga Kurylenko?",
+    "ground_truth": true,
+    "prediction": "no",
+    "raw_output": "NO \u2013 Melania Trump\u2019s primary profession is a model (and former First Lady), while Olga\u202fKurylenko is primarily known as an actress."
+  },
+  {
+    "question": "Can second row of QWERTY keyboard spell Abdastartus's kingdom?",
+    "ground_truth": true,
+    "prediction": "no",
+    "raw_output": "NO \u2013 the second row of a QWERTY keyboard contains only the letters Q\u202fW\u202fE\u202fR\u202fT\u202fY\u202fU\u202fI\u202fO\u202fP, while \u201cAbdastartus's kingdom\u201d includes many letters (A, B, D, S, K, N, G, M, etc.) that are not on that row."
+  },
+  {
+    "question": "Has a baby ever had a moustache?",
+    "ground_truth": true,
+    "prediction": "yes",
+    "raw_output": "YES \u2013 In rare cases of congenital hypertrichosis or other hair\u2011growth disorders, newborns can grow hair on their upper lip that resembles a moustache."
+  },
+  {
+    "question": "Would a northern fur seal pass a driving test?",
+    "ground_truth": false,
+    "prediction": "no",
+    "raw_output": "NO \u2013 a northern fur seal cannot understand driving instructions, operate a vehicle, or meet the legal requirements for a driver\u2019s license."
+  },
+  {
+    "question": "Are Tom and Jerry featured in a ride at Disneyland?",
+    "ground_truth": false,
+    "prediction": "no",
+    "raw_output": "NO \u2013 Disneyland does not have a ride that features Tom and Jerry. The park\u2019s attractions are based on Disney characters and other franchises, but Tom and Jerry are not part of any current Disneyland ride lineup."
+  },
+  {
+    "question": "Do most college students own a fax machine?",
+    "ground_truth": false,
+    "prediction": "no",
+    "raw_output": "NO \u2013 Fax machines are largely obsolete and not used by the majority of college students, who rely on email, cloud services, and smartphones instead."
+  },
+  {
+    "question": "Is a person with St. Vitus's Dance likely to win a ballet competition?",
+    "ground_truth": false,
+    "prediction": "no",
+    "raw_output": "NO \u2013 St.\u202fVitus's Dance (chorea) causes uncontrolled, jerky movements that would severely hinder the precise, controlled technique required to win a ballet competition."
+  },
+  {
+    "question": "Is the Yellow Pages the fastest way to find a phone number?",
+    "ground_truth": false,
+    "prediction": "no",
+    "raw_output": "NO \u2013 a search engine or online directory lookup is typically faster than consulting the Yellow Pages."
+  },
+  {
+    "question": "Could Christopher Nolan's movies finance Cyprus's entire GDP?",
+    "ground_truth": false,
+    "prediction": "no",
+    "raw_output": "NO \u2013 Christopher Nolan\u2019s films, even at their peak worldwide grosses, generate only a few billion dollars, far below Cyprus\u2019s GDP of roughly $25\u202fbillion."
+  },
+  {
+    "question": "Is Lionel Richie related to Sheila E?",
+    "ground_truth": false,
+    "prediction": "no",
+    "raw_output": "NO \u2013 there is no known family connection between Lionel Richie and Sheila E.; they are not related."
+  },
+  {
+    "question": "Would a human following a hyena diet be unwelcome at a vegan festival?",
+    "ground_truth": true,
+    "prediction": "yes",
+    "raw_output": "YES \u2013 a hyena diet is carnivorous, so a human eating meat would violate the vegan festival\u2019s no\u2011animal\u2011product rule and would likely be unwelcome."
+  },
+  {
+    "question": "Does the name C-SPAN refer to a form of telecommunications that utilizes outer space?",
+    "ground_truth": true,
+    "prediction": "yes",
+    "raw_output": "YES \u2013 C\u2011SPAN stands for \u201cCable\u2011Satellite Public Affairs Network,\u201d and the \u201cSatellite\u201d part indicates that the service uses satellite\u2011based telecommunications, which operate in outer space."
+  },
+  {
+    "question": "Did Teri Hatcher last twice as many episodes on Desperate Housewives as her Superman show?",
+    "ground_truth": true,
+    "prediction": "yes",
+    "raw_output": "**YES** \u2013 Teri Hatcher appeared in 180 episodes of *Desperate Housewives* (8 seasons) versus 86 episodes of *Lois & Clark: The New Adventures of Superman* (4 seasons). 180 is more than twice 86."
+  },
+  {
+    "question": "Did Johann Sebastian Bach ever win a Grammy Award?",
+    "ground_truth": false,
+    "prediction": "no",
+    "raw_output": "NO \u2013 Bach died in 1750, long before the Grammy Awards were established in 1959."
+  },
+  {
+    "question": "Are you likely to hear Rammstein playing in smooth jazz clubs?",
+    "ground_truth": false,
+    "prediction": "no",
+    "raw_output": "NO \u2013 Rammstein\u2019s heavy industrial\u2011metal style is far from the mellow, sax\u2011driven repertoire that smooth jazz clubs normally feature."
+  },
+  {
+    "question": "Do Star Wars fans say \"beam me up\" often?",
+    "ground_truth": false,
+    "prediction": "no",
+    "raw_output": "NO \u2013 \u201cbeam me up\u201d is a Star\u202fTrek catch\u2011phrase, not a common line used by Star\u202fWars fans."
+  },
+  {
+    "question": "Are there any official American knights?",
+    "ground_truth": false,
+    "prediction": "no",
+    "raw_output": "NO \u2013 the United States has no state\u2011sanctioned knighthood system.  While Americans can receive foreign honors (e.g., a British knighthood), there is no official American title of \u201cknight\u201d conferred by the U.S. government."
+  },
+  {
+    "question": "Do workers at Nissan's headquarters eat with chopsticks?",
+    "ground_truth": true,
+    "prediction": "yes",
+    "raw_output": "YES \u2013 Nissan\u2019s headquarters is in Japan, where the norm for eating is to use chopsticks, so the workers there typically eat with them."
+  },
+  {
+    "question": "Are Sable's a good choice of Mustelidae to weigh down a scale?",
+    "ground_truth": false,
+    "prediction": "no",
+    "raw_output": "NO \u2013 Sables are small mustelids (\u22482\u20133\u202fkg) and not heavy or stable enough to serve as a reliable weight for a scale, plus using animals for this purpose is impractical and unethical."
+  },
+  {
+    "question": "Is the referee at a soccer match highly visible against the field?",
+    "ground_truth": true,
+    "prediction": "yes",
+    "raw_output": "YES \u2013 referees wear bright yellow/orange kits that contrast sharply with the green pitch, making them highly visible to players, fans, and cameras."
+  },
+  {
+    "question": "Is helium the cause of the Hindenburg explosion?",
+    "ground_truth": false,
+    "prediction": "no",
+    "raw_output": "NO \u2013 the Hindenburg was filled with hydrogen, not helium. The disaster was caused by a rapid combustion of that hydrogen, not by helium."
+  },
+  {
+    "question": "If you're running focal fossa, are you using linux?",
+    "ground_truth": true,
+    "prediction": "yes",
+    "raw_output": "YES \u2013 Focal\u202fFossa is the codename for Ubuntu\u202f20.04, which is a Linux distribution that runs on the Linux kernel."
+  },
+  {
+    "question": "Would the tunnels at CERN fit onto the High Speed 1 rails?",
+    "ground_truth": true,
+    "prediction": "no",
+    "raw_output": "NO \u2013 the CERN tunnels are circular, only a few metres in diameter and highly curved, whereas HS1 requires straight, standard\u2011gauge tracks in much larger, purpose\u2011built tunnels."
+  },
+  {
+    "question": "Would someone go to San Francisco for a nature escape?",
+    "ground_truth": false,
+    "prediction": "no",
+    "raw_output": "NO \u2013 San\u202fFrancisco is primarily an urban destination; while it has parks and coastal views, it isn\u2019t typically chosen for a wilderness\u2011style nature escape."
+  },
+  {
+    "question": "Was only woman to serve as U.S. Speaker of the House alive during the attack on Pearl Harbor?",
+    "ground_truth": true,
+    "prediction": "yes",
+    "raw_output": "YES \u2013 Nancy\u202fPelosi, the only woman to have served as Speaker of the U.S. House, was alive in 1941 when Pearl Harbor was attacked."
+  },
+  {
+    "question": "Does Northern fur seal make good pet for six year old?",
+    "ground_truth": false,
+    "prediction": "no",
+    "raw_output": "NO \u2013 Northern fur seals are wild marine mammals that require specialized, large aquatic environments and expert care; they are not domesticated or safe for a six\u2011year\u2011old child to keep as a pet."
+  },
+  {
+    "question": "Is Christianity better for global warming than Satanism?",
+    "ground_truth": true,
+    "prediction": "no",
+    "raw_output": "NO \u2013 the question compares two very different belief systems on a single environmental issue, and neither religion is inherently \u201cbetter\u201d for global warming; both have diverse teachings and practices that can either help or hinder environmental stewardship."
+  },
+  {
+    "question": "Can a firewall protect against a short circuit?",
+    "ground_truth": false,
+    "prediction": "no",
+    "raw_output": "NO \u2013 a firewall is a network security device that filters traffic; it has no ability to interrupt or prevent an electrical short circuit."
+  },
+  {
+    "question": "Was San Antonio the site of a major battle in the 19th century?",
+    "ground_truth": true,
+    "prediction": "yes",
+    "raw_output": "YES \u2013 The Battle of the Alamo in 1836, a decisive engagement of the Texas Revolution, took place in San Antonio and is considered a major 19th\u2011century battle."
+  },
+  {
+    "question": "Would Matt Damon be afraid of parachuting?",
+    "ground_truth": true,
+    "prediction": "no",
+    "raw_output": "NO \u2013 there\u2019s no evidence that Matt Damon has expressed fear of parachuting; he\u2019s performed high\u2011risk stunts in films and has no publicly known phobia of skydiving."
+  }
+]

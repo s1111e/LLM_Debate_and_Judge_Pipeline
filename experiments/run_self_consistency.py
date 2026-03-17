@@ -53,16 +53,21 @@ Question:
         "majority": majority
     })
 
+# =========================
+# SAVE RESULTS
+# =========================
 
-# -------- save results safely --------
-
-log_path = os.path.abspath(
-    os.path.join(os.path.dirname(__file__), "logs", "self_consistency_results.json")
+logs_dir = os.path.abspath(
+    os.path.join(os.path.dirname(__file__), "..", "logs")
 )
 
-os.makedirs(os.path.dirname(log_path), exist_ok=True)
+os.makedirs(logs_dir, exist_ok=True)
 
-with open(log_path, "w") as f:
+save_path = os.path.join(logs_dir, "self_consistency_results.json")
+
+with open(save_path, "w") as f:
     json.dump(results, f, indent=2)
 
-print("Self-consistency experiment finished.")
+
+print("\n Self-consistency  experiment finished.")
+print("Results saved to:", save_path)
