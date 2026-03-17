@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<meta charset="UTF-8">
+
+<title>Multi-Agent Debate for StrategyQA</title>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<header>
+
+<h1>Multi-Agent Debate for StrategyQA</h1>
+
+<p>Evaluating whether multi-agent debate improves reasoning in large language models</p>
+
+<nav>
+<a href="#abstract">Abstract</a>
+<a href="#methodology">Methodology</a>
+<a href="#experiments">Experiments</a>
+<a href="#analysis">Analysis</a>
+<a href="#prompt">Prompt Engineering</a>
+<a href="#appendix">Appendix</a>
+</nav>
+
+</header>
+
+<section id="abstract">
+
+<h2>Abstract</h2>
+
+<p>
+This project investigates whether structured multi-agent debate can improve reasoning accuracy of large language models on the StrategyQA dataset. The system simulates a debate between two agents and a judge. We compare the debate pipeline with two baseline approaches: Direct Question Answering and Self Consistency. Results show that while debate can produce structured reasoning, it does not always outperform simpler baselines.
+</p>
+
+</section>
+
+<section id="methodology">
+
+<h2>Methodology</h2>
+
+<p>
+The system consists of three agents: Debater A, Debater B, and a Judge. The debate process follows four stages:
+</p>
+
+<ul>
+<li>Initial answers from both debaters</li>
+<li>Multi-round debate</li>
+<li>Judge evaluation</li>
+<li>Final prediction extraction</li>
+</ul>
+
+<img src="figures/architecture.png" width="600">
+
+</section>
+
+<section id="experiments">
+
+<h2>Experiments</h2>
+
+<p>
+Experiments are conducted using 100 StrategyQA questions. Three reasoning strategies are compared.
+</p>
+
+<table>
+
+<tr>
+<th>Method</th>
+<th>Accuracy</th>
+</tr>
+
+<tr>
+<td>Debate Pipeline</td>
+<td>0.54</td>
+</tr>
+
+<tr>
+<td>Direct QA</td>
+<td>0.72</td>
+</tr>
+
+<tr>
+<td>Self Consistency</td>
+<td>0.72</td>
+</tr>
+
+</table>
+
+<img src="figures/results_chart.png" width="500">
+
+</section>
+
+<section id="analysis">
+
+<h2>Analysis</h2>
+
+<p>
+Debate transcripts reveal both success and failure cases. When one agent produces strong factual reasoning, the judge often selects the correct answer. However, debate may also propagate incorrect assumptions when both agents rely on flawed premises.
+</p>
+
+<p>
+These findings align partially with the theoretical framework proposed by Irving et al., where debate exposes reasoning weaknesses through adversarial interaction.
+</p>
+
+</section>
+
+<section id="prompt">
+
+<h2>Prompt Engineering</h2>
+
+<p>
+Role-based prompting is used to simulate debate. Debaters are instructed to provide YES/NO answers with reasoning and respond to opponent arguments. The judge evaluates the debate transcript and determines the final answer.
+</p>
+
+</section>
+
+<section id="appendix">
+
+<h2>Appendix: Full Prompts</h2>
+
+<details>
+<summary>Debater Prompt</summary>
+
+<pre>
+You are Debater A.
+
+Answer the question with YES or NO and provide reasoning.
+
+Question:
+{question}
+
+Debate transcript:
+{transcript}
+
+Provide your argument for round {round_number}.
+</pre>
+
+</details>
+
+</section>
+
+<footer>
+
+<p>Multi-Agent Debate Project — StrategyQA Evaluation</p>
+
+</footer>
+
+</body>
+
+</html>
