@@ -56,45 +56,138 @@ it does not always outperform simpler baselines.
 
 </section>
 
+
+
 <section id="methodology">
 
-<h2>Methodology</h2>
+<h2>1. Methodology</h2>
 
 <h3>System Architecture</h3>
 
 <p>
-The system consists of three agents:
+The proposed system implements a multi-agent debate framework designed to
+improve reasoning quality of large language models. The system consists of
+three agents: Debater A, Debater B, and a Judge. Each debater produces an
+initial answer and then participates in a structured debate where agents
+challenge and respond to each other's reasoning. After the debate rounds,
+a judge agent analyzes the full transcript and determines the final answer.
+</p>
+
+<p>
+The overall architecture follows a four-stage pipeline:
 </p>
 
 <ul>
-<li>Debater A</li>
-<li>Debater B</li>
-<li>Judge</li>
+<li>Initial answer generation by both debaters</li>
+<li>Multi-round debate between agents</li>
+<li>Judge evaluation of the debate transcript</li>
+<li>Final answer extraction and logging</li>
 </ul>
 
-<p>
-The debate follows a four-phase reasoning pipeline.
+<p align="center">
+<img src="figures/architecture.png" width="600">
 </p>
 
-<img src="figures/architecture.png" width="600">
+<h3>Project Structure</h3>
+
+<p>
+The system is implemented using a modular Python architecture. The repository
+is organized into several components responsible for agent logic, debate
+control, utilities, and experimental evaluation.
+</p>
+
+<pre>
+
+LLM_Debate_and_Judge_Pipeline
+
+agents/
+    debater.py
+    judge.py
+
+debate/
+    debate_orchestrator.py
+
+experiments/
+    run_debate.py
+    run_direct_qa.py
+    run_self_consistency.py
+
+utils/
+    answer_utils.py
+    config_loader.py
+
+config/
+    config.yaml
+
+logs/
+    experiment results
+
+</pre>
+
+<p>
+This modular design allows easy modification of agents, debate parameters,
+and evaluation pipelines.
+</p>
 
 <h3>Debate Protocol</h3>
 
 <p>
-Each debate begins with both agents producing an initial answer.
-Agents then respond to each other's arguments for several rounds.
-Finally, the judge evaluates the full transcript and determines the
-final answer.
+Each debate begins with both debaters generating an initial YES or NO answer.
+The debate then proceeds through multiple rounds where agents respond to
+each other's arguments using the previous transcript as context.
 </p>
 
-<h3>Adaptive Stopping</h3>
+<p>
+To reduce unnecessary debate rounds, an adaptive stopping rule is used.
+If both agents produce the same answer for two consecutive rounds,
+the debate terminates early.
+</p>
+
+<h3>Model Choices</h3>
 
 <p>
-To reduce unnecessary computation, the debate stops early when both
-agents converge to the same answer for two consecutive rounds.
+The system uses large language models accessed through the OpenAI API.
+These models were selected because they demonstrate strong natural
+language reasoning abilities and can generate structured arguments.
+</p>
+
+<p>
+Using the same model for both debaters ensures fairness and allows the
+debate structure itself to influence reasoning outcomes.
+</p>
+
+<h3>Configuration and Hyperparameters</h3>
+
+<p>
+All experimental parameters are defined in a configuration file
+(config/config.yaml). This ensures reproducibility and allows easy
+adjustment of debate settings.
+</p>
+
+<p>
+Key parameters include:
+</p>
+
+<ul>
+<li>Number of debate rounds</li>
+<li>Temperature for generation</li>
+<li>Number of samples for self-consistency</li>
+<li>Stopping criteria for debate convergence</li>
+</ul>
+
+<p>
+These parameters were selected to balance reasoning quality and
+computational efficiency.
 </p>
 
 </section>
+
+
+
+
+
+
+
 
 <section id="experiments">
 

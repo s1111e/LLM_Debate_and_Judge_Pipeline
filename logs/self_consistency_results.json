@@ -1,0 +1,1202 @@
+[
+  {
+    "question": "Can Aerosmith fit in a 2020 Mitsubishi Outlander?",
+    "ground_truth": true,
+    "answers": [
+      "yes",
+      "yes",
+      "yes",
+      "yes",
+      "no"
+    ],
+    "majority": "yes"
+  },
+  {
+    "question": "Are kayaks used at the summit of Mount Everest?",
+    "ground_truth": true,
+    "answers": [
+      "no",
+      "no",
+      "no",
+      "no",
+      "no"
+    ],
+    "majority": "no"
+  },
+  {
+    "question": "Does the country that received the most gold medals during the 1976 Olympics still exist?",
+    "ground_truth": false,
+    "answers": [
+      "no",
+      "no",
+      "yes",
+      "no",
+      "no"
+    ],
+    "majority": "no"
+  },
+  {
+    "question": "Would a Common warthog starve in a greenhouse?",
+    "ground_truth": false,
+    "answers": [
+      "no",
+      "yes",
+      "yes",
+      "no",
+      "yes"
+    ],
+    "majority": "yes"
+  },
+  {
+    "question": "Would a model be appropriate to star in a LA Femme Nikita remake?",
+    "ground_truth": true,
+    "answers": [
+      "no",
+      "no",
+      "no",
+      "no",
+      "no"
+    ],
+    "majority": "no"
+  },
+  {
+    "question": "Is eating a Dicopomorpha echmepterygis size Uranium pellet fatal?",
+    "ground_truth": false,
+    "answers": [
+      "no",
+      "yes",
+      "no",
+      "no",
+      "yes"
+    ],
+    "majority": "no"
+  },
+  {
+    "question": "Did any of Maya Angelou's children follow in her footsteps?",
+    "ground_truth": true,
+    "answers": [
+      "no",
+      "no",
+      "no",
+      "no",
+      "no"
+    ],
+    "majority": "no"
+  },
+  {
+    "question": "Is chaff produced by hydropower?",
+    "ground_truth": true,
+    "answers": [
+      "no",
+      "no",
+      "no",
+      "no",
+      "no"
+    ],
+    "majority": "no"
+  },
+  {
+    "question": "Could two newborn American Black Bear cubs fit on a king size bed?",
+    "ground_truth": true,
+    "answers": [
+      "yes",
+      "yes",
+      "yes",
+      "yes",
+      "yes"
+    ],
+    "majority": "yes"
+  },
+  {
+    "question": "Did Benito Mussolini wear bigger shoes than Haf\u00fe\u00f3r Bj\u00f6rnsson?",
+    "ground_truth": false,
+    "answers": [
+      "no",
+      "no",
+      "no",
+      "no",
+      "no"
+    ],
+    "majority": "no"
+  },
+  {
+    "question": "Did land owners elect their rulers in the Kingdom of Hungary?",
+    "ground_truth": false,
+    "answers": [
+      "yes",
+      "no",
+      "no",
+      "yes",
+      "yes"
+    ],
+    "majority": "yes"
+  },
+  {
+    "question": "Would Brian Warner be a good singer for a soul music band?",
+    "ground_truth": false,
+    "answers": [
+      "no",
+      "no",
+      "no",
+      "no",
+      "no"
+    ],
+    "majority": "no"
+  },
+  {
+    "question": "Are most books written as a Haiku?",
+    "ground_truth": false,
+    "answers": [
+      "no",
+      "no",
+      "no",
+      "no",
+      "no"
+    ],
+    "majority": "no"
+  },
+  {
+    "question": "Will AC/DC album sales buy more B-52 bombers than Lil Wayne's?",
+    "ground_truth": true,
+    "answers": [
+      "yes",
+      "yes",
+      "yes",
+      "yes",
+      "yes"
+    ],
+    "majority": "yes"
+  },
+  {
+    "question": "Can Kit & Kaboodle hypothetically help someone past the Underworld gates?",
+    "ground_truth": false,
+    "answers": [
+      "no",
+      "no",
+      "no",
+      "no",
+      "no"
+    ],
+    "majority": "no"
+  },
+  {
+    "question": "Are Saturn's famous rings solid?",
+    "ground_truth": false,
+    "answers": [
+      "no",
+      "no",
+      "no",
+      "no",
+      "no"
+    ],
+    "majority": "no"
+  },
+  {
+    "question": "Did Emma Stone pursue a higher education?",
+    "ground_truth": false,
+    "answers": [
+      "no",
+      "yes",
+      "yes",
+      "no",
+      "no"
+    ],
+    "majority": "no"
+  },
+  {
+    "question": "Does a person using tonsure have hair at the top of their scalp?",
+    "ground_truth": false,
+    "answers": [
+      "no",
+      "yes",
+      "yes",
+      "no",
+      "no"
+    ],
+    "majority": "no"
+  },
+  {
+    "question": "Can an Asian black bear use chopsticks?",
+    "ground_truth": false,
+    "answers": [
+      "no",
+      "no",
+      "no",
+      "no",
+      "no"
+    ],
+    "majority": "no"
+  },
+  {
+    "question": "Would Roman Gallic Wars army struggle to build the pyramids faster?",
+    "ground_truth": false,
+    "answers": [
+      "yes",
+      "no",
+      "yes",
+      "no",
+      "yes"
+    ],
+    "majority": "yes"
+  },
+  {
+    "question": "Was Martin Luther same sect as Martin Luther King Jr.?",
+    "ground_truth": false,
+    "answers": [
+      "no",
+      "no",
+      "no",
+      "no",
+      "no"
+    ],
+    "majority": "no"
+  },
+  {
+    "question": "Would four shoes be insufficient for a set of octuplets?",
+    "ground_truth": true,
+    "answers": [
+      "yes",
+      "yes",
+      "yes",
+      "yes",
+      "yes"
+    ],
+    "majority": "yes"
+  },
+  {
+    "question": "Did the 40th president of the United States forward lolcats to his friends?",
+    "ground_truth": false,
+    "answers": [
+      "no",
+      "no",
+      "no",
+      "no",
+      "no"
+    ],
+    "majority": "no"
+  },
+  {
+    "question": "Should wool be hand washed only?",
+    "ground_truth": true,
+    "answers": [
+      "yes",
+      "yes",
+      "yes",
+      "yes",
+      "yes"
+    ],
+    "majority": "yes"
+  },
+  {
+    "question": "Would Tom Cruise ever insult L. Ron Hubbard?",
+    "ground_truth": false,
+    "answers": [
+      "no",
+      "no",
+      "no",
+      "no",
+      "no"
+    ],
+    "majority": "no"
+  },
+  {
+    "question": "Was Great Recession the period of severest unemployment?",
+    "ground_truth": false,
+    "answers": [
+      "no",
+      "no",
+      "no",
+      "no",
+      "no"
+    ],
+    "majority": "no"
+  },
+  {
+    "question": "Will the small intenstine break down a cotton ball?",
+    "ground_truth": false,
+    "answers": [
+      "no",
+      "no",
+      "no",
+      "no",
+      "no"
+    ],
+    "majority": "no"
+  },
+  {
+    "question": "Can the theory of cultural hegemony explain global warming?",
+    "ground_truth": false,
+    "answers": [
+      "no",
+      "no",
+      "no",
+      "no",
+      "no"
+    ],
+    "majority": "no"
+  },
+  {
+    "question": "Does Carmen Electra own a junk?",
+    "ground_truth": false,
+    "answers": [
+      "no",
+      "no",
+      "no",
+      "no",
+      "no"
+    ],
+    "majority": "no"
+  },
+  {
+    "question": "Would the number 666 appear in a church?",
+    "ground_truth": false,
+    "answers": [
+      "no",
+      "no",
+      "no",
+      "no",
+      "no"
+    ],
+    "majority": "no"
+  },
+  {
+    "question": "In baseball, is a \"Homer\" named after the poet Homer who wrote the Odyssey?",
+    "ground_truth": false,
+    "answers": [
+      "no",
+      "no",
+      "no",
+      "no",
+      "no"
+    ],
+    "majority": "no"
+  },
+  {
+    "question": "Did Metallica band members cutting their hair hurt their sales?",
+    "ground_truth": true,
+    "answers": [
+      "no",
+      "no",
+      "no",
+      "no",
+      "no"
+    ],
+    "majority": "no"
+  },
+  {
+    "question": "Did Easy Rider make a profit at the theater when it was released?",
+    "ground_truth": true,
+    "answers": [
+      "yes",
+      "yes",
+      "yes",
+      "yes",
+      "yes"
+    ],
+    "majority": "yes"
+  },
+  {
+    "question": "Will Al Pacino and Margaret Qualley score same amount of Bacon Number points?",
+    "ground_truth": true,
+    "answers": [
+      "no",
+      "no",
+      "no",
+      "no",
+      "no"
+    ],
+    "majority": "no"
+  },
+  {
+    "question": "Did the lead singer of Led Zepplin ever perform with Ernest Chataway?",
+    "ground_truth": true,
+    "answers": [
+      "no",
+      "no",
+      "no",
+      "no",
+      "no"
+    ],
+    "majority": "no"
+  },
+  {
+    "question": "Can a single honey bee sting multiple humans?",
+    "ground_truth": false,
+    "answers": [
+      "no",
+      "no",
+      "no",
+      "no",
+      "no"
+    ],
+    "majority": "no"
+  },
+  {
+    "question": "Do drag kings take testosterone to look masculine?",
+    "ground_truth": false,
+    "answers": [
+      "no",
+      "no",
+      "no",
+      "no",
+      "no"
+    ],
+    "majority": "no"
+  },
+  {
+    "question": "Does Dean Cain have less days to birthday than Will Ferrell every 4th of July?",
+    "ground_truth": false,
+    "answers": [
+      "no",
+      "no",
+      "no",
+      "no",
+      "no"
+    ],
+    "majority": "no"
+  },
+  {
+    "question": "Is Michael Vick on People for the Ethical Treatment of Animals's hypothetical blacklist?",
+    "ground_truth": true,
+    "answers": [
+      "yes",
+      "no",
+      "yes",
+      "no",
+      "no"
+    ],
+    "majority": "no"
+  },
+  {
+    "question": "Can paratroopers be used in a vacuum?",
+    "ground_truth": false,
+    "answers": [
+      "no",
+      "no",
+      "no",
+      "no",
+      "no"
+    ],
+    "majority": "no"
+  },
+  {
+    "question": "Will Lhamo Thondup be considered by Catholic Church to be a saint?",
+    "ground_truth": false,
+    "answers": [
+      "no",
+      "no",
+      "no",
+      "no",
+      "no"
+    ],
+    "majority": "no"
+  },
+  {
+    "question": "Has Ringo Starr been in a relatively large number of bands?",
+    "ground_truth": false,
+    "answers": [
+      "no",
+      "no",
+      "no",
+      "no",
+      "no"
+    ],
+    "majority": "no"
+  },
+  {
+    "question": "Is double duty an incorrect phrase for host of Dancing With The Stars?",
+    "ground_truth": false,
+    "answers": [
+      "no",
+      "no",
+      "no",
+      "no",
+      "no"
+    ],
+    "majority": "no"
+  },
+  {
+    "question": "Can furniture be made of hair?",
+    "ground_truth": true,
+    "answers": [
+      "yes",
+      "yes",
+      "yes",
+      "yes",
+      "yes"
+    ],
+    "majority": "yes"
+  },
+  {
+    "question": "Did Pedubastis I know Japanese people?",
+    "ground_truth": false,
+    "answers": [
+      "no",
+      "no",
+      "no",
+      "no",
+      "no"
+    ],
+    "majority": "no"
+  },
+  {
+    "question": "Are some adherents to Christianity in China historic enemies of Catholic Church?",
+    "ground_truth": true,
+    "answers": [
+      "yes",
+      "yes",
+      "yes",
+      "yes",
+      "yes"
+    ],
+    "majority": "yes"
+  },
+  {
+    "question": "Can someone from New England profit by growing coffee?",
+    "ground_truth": false,
+    "answers": [
+      "no",
+      "no",
+      "no",
+      "no",
+      "no"
+    ],
+    "majority": "no"
+  },
+  {
+    "question": "Can you write a whole Haiku in a single tweet?",
+    "ground_truth": true,
+    "answers": [
+      "yes",
+      "yes",
+      "yes",
+      "yes",
+      "yes"
+    ],
+    "majority": "yes"
+  },
+  {
+    "question": "Is electricity necessary to balance an account in Microsoft Excel?",
+    "ground_truth": true,
+    "answers": [
+      "no",
+      "no",
+      "yes",
+      "no",
+      "yes"
+    ],
+    "majority": "no"
+  },
+  {
+    "question": "Do restaurants associate meatballs with the wrong country of origin?",
+    "ground_truth": true,
+    "answers": [
+      "yes",
+      "yes",
+      "yes",
+      "yes",
+      "yes"
+    ],
+    "majority": "yes"
+  },
+  {
+    "question": "Are peaches best eaten when firm?",
+    "ground_truth": false,
+    "answers": [
+      "no",
+      "no",
+      "no",
+      "no",
+      "no"
+    ],
+    "majority": "no"
+  },
+  {
+    "question": "Did original Nintendo have games in same format as Playstation 3?",
+    "ground_truth": false,
+    "answers": [
+      "no",
+      "no",
+      "no",
+      "no",
+      "no"
+    ],
+    "majority": "no"
+  },
+  {
+    "question": "Does Nigella Lawson care about solubility?",
+    "ground_truth": true,
+    "answers": [
+      "no",
+      "no",
+      "no",
+      "no",
+      "no"
+    ],
+    "majority": "no"
+  },
+  {
+    "question": "Is the Sea of Japan landlocked within Japan?",
+    "ground_truth": false,
+    "answers": [
+      "no",
+      "no",
+      "no",
+      "no",
+      "no"
+    ],
+    "majority": "no"
+  },
+  {
+    "question": "Are the events of Star Trek: The Next Generation in the history of the world?",
+    "ground_truth": false,
+    "answers": [
+      "no",
+      "no",
+      "no",
+      "no",
+      "no"
+    ],
+    "majority": "no"
+  },
+  {
+    "question": "Was song of Roland protagonist friendly with group that had sagas?",
+    "ground_truth": false,
+    "answers": [
+      "no",
+      "no",
+      "no",
+      "no",
+      "no"
+    ],
+    "majority": "no"
+  },
+  {
+    "question": "Could all of the 2008 Summer Olympics women find a hookup athlete partner?",
+    "ground_truth": true,
+    "answers": [
+      "no",
+      "no",
+      "no",
+      "no",
+      "no"
+    ],
+    "majority": "no"
+  },
+  {
+    "question": "Snowboarding is a rarity in Hilo?",
+    "ground_truth": true,
+    "answers": [
+      "yes",
+      "yes",
+      "yes",
+      "yes",
+      "yes"
+    ],
+    "majority": "yes"
+  },
+  {
+    "question": "Does Robert De Niro use a microscope at work?",
+    "ground_truth": false,
+    "answers": [
+      "no",
+      "no",
+      "no",
+      "no",
+      "no"
+    ],
+    "majority": "no"
+  },
+  {
+    "question": "Was a Tiny House ceiling out of Osama bin Laden's reach?",
+    "ground_truth": false,
+    "answers": [
+      "no",
+      "no",
+      "no",
+      "yes",
+      "no"
+    ],
+    "majority": "no"
+  },
+  {
+    "question": "Did Jesus know anyone who spoke Estonian?",
+    "ground_truth": false,
+    "answers": [
+      "no",
+      "no",
+      "no",
+      "no",
+      "no"
+    ],
+    "majority": "no"
+  },
+  {
+    "question": "Would nickel boil in the outer core of the earth?",
+    "ground_truth": true,
+    "answers": [
+      "no",
+      "no",
+      "no",
+      "no",
+      "no"
+    ],
+    "majority": "no"
+  },
+  {
+    "question": "Can Stone Cold Steve Austin apply his finisher to a mule deer?",
+    "ground_truth": true,
+    "answers": [
+      "no",
+      "no",
+      "no",
+      "no",
+      "no"
+    ],
+    "majority": "no"
+  },
+  {
+    "question": "Has the Holy Grail been featured in at least five films?",
+    "ground_truth": true,
+    "answers": [
+      "yes",
+      "yes",
+      "yes",
+      "yes",
+      "no"
+    ],
+    "majority": "yes"
+  },
+  {
+    "question": "Is CEO of Nissan an internationally wanted fugitive?",
+    "ground_truth": true,
+    "answers": [
+      "no",
+      "no",
+      "no",
+      "no",
+      "no"
+    ],
+    "majority": "no"
+  },
+  {
+    "question": "Did Jeremy Irons master sweep picking as a child?",
+    "ground_truth": false,
+    "answers": [
+      "no",
+      "no",
+      "no",
+      "no",
+      "no"
+    ],
+    "majority": "no"
+  },
+  {
+    "question": "Is starving Hamas agent eating pig bad?",
+    "ground_truth": false,
+    "answers": [
+      "yes",
+      "yes",
+      "yes",
+      "yes",
+      "yes"
+    ],
+    "majority": "yes"
+  },
+  {
+    "question": "Can children become lieutenants?",
+    "ground_truth": true,
+    "answers": [
+      "no",
+      "no",
+      "no",
+      "no",
+      "no"
+    ],
+    "majority": "no"
+  },
+  {
+    "question": "Can a human heart last from NYC to Raleigh NC by Toyota Hiux?",
+    "ground_truth": true,
+    "answers": [
+      "no",
+      "no",
+      "no",
+      "no",
+      "no"
+    ],
+    "majority": "no"
+  },
+  {
+    "question": "Could Saint Peter watch television?",
+    "ground_truth": false,
+    "answers": [
+      "no",
+      "no",
+      "no",
+      "no",
+      "no"
+    ],
+    "majority": "no"
+  },
+  {
+    "question": "Did Melania Trump have same profession as Olga Kurylenko?",
+    "ground_truth": true,
+    "answers": [
+      "yes",
+      "no",
+      "no",
+      "yes",
+      "yes"
+    ],
+    "majority": "yes"
+  },
+  {
+    "question": "Can second row of QWERTY keyboard spell Abdastartus's kingdom?",
+    "ground_truth": true,
+    "answers": [
+      "no",
+      "no",
+      "no",
+      "no",
+      "no"
+    ],
+    "majority": "no"
+  },
+  {
+    "question": "Has a baby ever had a moustache?",
+    "ground_truth": true,
+    "answers": [
+      "no",
+      "no",
+      "no",
+      "yes",
+      "no"
+    ],
+    "majority": "no"
+  },
+  {
+    "question": "Would a northern fur seal pass a driving test?",
+    "ground_truth": false,
+    "answers": [
+      "no",
+      "no",
+      "no",
+      "no",
+      "no"
+    ],
+    "majority": "no"
+  },
+  {
+    "question": "Are Tom and Jerry featured in a ride at Disneyland?",
+    "ground_truth": false,
+    "answers": [
+      "no",
+      "no",
+      "no",
+      "no",
+      "no"
+    ],
+    "majority": "no"
+  },
+  {
+    "question": "Do most college students own a fax machine?",
+    "ground_truth": false,
+    "answers": [
+      "no",
+      "no",
+      "no",
+      "no",
+      "no"
+    ],
+    "majority": "no"
+  },
+  {
+    "question": "Is a person with St. Vitus's Dance likely to win a ballet competition?",
+    "ground_truth": false,
+    "answers": [
+      "no",
+      "no",
+      "no",
+      "no",
+      "no"
+    ],
+    "majority": "no"
+  },
+  {
+    "question": "Is the Yellow Pages the fastest way to find a phone number?",
+    "ground_truth": false,
+    "answers": [
+      "no",
+      "no",
+      "no",
+      "no",
+      "no"
+    ],
+    "majority": "no"
+  },
+  {
+    "question": "Could Christopher Nolan's movies finance Cyprus's entire GDP?",
+    "ground_truth": false,
+    "answers": [
+      "no",
+      "no",
+      "no",
+      "no",
+      "no"
+    ],
+    "majority": "no"
+  },
+  {
+    "question": "Is Lionel Richie related to Sheila E?",
+    "ground_truth": false,
+    "answers": [
+      "no",
+      "no",
+      "no",
+      "no",
+      "no"
+    ],
+    "majority": "no"
+  },
+  {
+    "question": "Would a human following a hyena diet be unwelcome at a vegan festival?",
+    "ground_truth": true,
+    "answers": [
+      "yes",
+      "yes",
+      "yes",
+      "yes",
+      "yes"
+    ],
+    "majority": "yes"
+  },
+  {
+    "question": "Does the name C-SPAN refer to a form of telecommunications that utilizes outer space?",
+    "ground_truth": true,
+    "answers": [
+      "no",
+      "no",
+      "yes",
+      "yes",
+      "no"
+    ],
+    "majority": "no"
+  },
+  {
+    "question": "Did Teri Hatcher last twice as many episodes on Desperate Housewives as her Superman show?",
+    "ground_truth": true,
+    "answers": [
+      "no",
+      "no",
+      "no",
+      "no",
+      "no"
+    ],
+    "majority": "no"
+  },
+  {
+    "question": "Did Johann Sebastian Bach ever win a Grammy Award?",
+    "ground_truth": false,
+    "answers": [
+      "no",
+      "no",
+      "no",
+      "no",
+      "no"
+    ],
+    "majority": "no"
+  },
+  {
+    "question": "Are you likely to hear Rammstein playing in smooth jazz clubs?",
+    "ground_truth": false,
+    "answers": [
+      "no",
+      "no",
+      "no",
+      "no",
+      "no"
+    ],
+    "majority": "no"
+  },
+  {
+    "question": "Do Star Wars fans say \"beam me up\" often?",
+    "ground_truth": false,
+    "answers": [
+      "no",
+      "no",
+      "no",
+      "no",
+      "no"
+    ],
+    "majority": "no"
+  },
+  {
+    "question": "Are there any official American knights?",
+    "ground_truth": false,
+    "answers": [
+      "no",
+      "no",
+      "no",
+      "no",
+      "no"
+    ],
+    "majority": "no"
+  },
+  {
+    "question": "Do workers at Nissan's headquarters eat with chopsticks?",
+    "ground_truth": true,
+    "answers": [
+      "yes",
+      "yes",
+      "yes",
+      "yes",
+      "yes"
+    ],
+    "majority": "yes"
+  },
+  {
+    "question": "Are Sable's a good choice of Mustelidae to weigh down a scale?",
+    "ground_truth": false,
+    "answers": [
+      "no",
+      "no",
+      "no",
+      "no",
+      "no"
+    ],
+    "majority": "no"
+  },
+  {
+    "question": "Is the referee at a soccer match highly visible against the field?",
+    "ground_truth": true,
+    "answers": [
+      "yes",
+      "yes",
+      "yes",
+      "yes",
+      "yes"
+    ],
+    "majority": "yes"
+  },
+  {
+    "question": "Is helium the cause of the Hindenburg explosion?",
+    "ground_truth": false,
+    "answers": [
+      "no",
+      "no",
+      "no",
+      "no",
+      "no"
+    ],
+    "majority": "no"
+  },
+  {
+    "question": "If you're running focal fossa, are you using linux?",
+    "ground_truth": true,
+    "answers": [
+      "yes",
+      "yes",
+      "yes",
+      "yes",
+      "yes"
+    ],
+    "majority": "yes"
+  },
+  {
+    "question": "Would the tunnels at CERN fit onto the High Speed 1 rails?",
+    "ground_truth": true,
+    "answers": [
+      "no",
+      "no",
+      "no",
+      "no",
+      "no"
+    ],
+    "majority": "no"
+  },
+  {
+    "question": "Would someone go to San Francisco for a nature escape?",
+    "ground_truth": false,
+    "answers": [
+      "no",
+      "yes",
+      "no",
+      "no",
+      "no"
+    ],
+    "majority": "no"
+  },
+  {
+    "question": "Was only woman to serve as U.S. Speaker of the House alive during the attack on Pearl Harbor?",
+    "ground_truth": true,
+    "answers": [
+      "yes",
+      "yes",
+      "no",
+      "yes",
+      "yes"
+    ],
+    "majority": "yes"
+  },
+  {
+    "question": "Does Northern fur seal make good pet for six year old?",
+    "ground_truth": false,
+    "answers": [
+      "no",
+      "no",
+      "no",
+      "no",
+      "no"
+    ],
+    "majority": "no"
+  },
+  {
+    "question": "Is Christianity better for global warming than Satanism?",
+    "ground_truth": true,
+    "answers": [
+      "no",
+      "yes",
+      "yes",
+      "yes",
+      "no"
+    ],
+    "majority": "yes"
+  },
+  {
+    "question": "Can a firewall protect against a short circuit?",
+    "ground_truth": false,
+    "answers": [
+      "no",
+      "no",
+      "no",
+      "no",
+      "no"
+    ],
+    "majority": "no"
+  },
+  {
+    "question": "Was San Antonio the site of a major battle in the 19th century?",
+    "ground_truth": true,
+    "answers": [
+      "yes",
+      "yes",
+      "yes",
+      "yes",
+      "yes"
+    ],
+    "majority": "yes"
+  },
+  {
+    "question": "Would Matt Damon be afraid of parachuting?",
+    "ground_truth": true,
+    "answers": [
+      "no",
+      "no",
+      "no",
+      "no",
+      "no"
+    ],
+    "majority": "no"
+  }
+]
