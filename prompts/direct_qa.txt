@@ -1,0 +1,10 @@
+Answer the following StrategyQA question directly.
+
+Question:
+{question}
+
+Rules:
+- Start with exactly one line: Answer: YES or Answer: NO
+- Provide a concise visible rationale.
+
+Answer:

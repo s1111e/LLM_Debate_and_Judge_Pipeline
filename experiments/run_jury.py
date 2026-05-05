@@ -1,79 +1,73 @@
-import sys
+import json
 import os
+import sys
 
-# allow imports from project root
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
 
-import json
+from agents.jury import JuryPanel
 from debate.debate_orchestrator import DebateOrchestrator
-from utils.answer_utils import extract_answer
+from utils.config_loader import load_config
 
 
-# =========================
-# LOAD DATASET
-# =========================
+config = load_config()
 
 data_path = os.path.abspath(
     os.path.join(os.path.dirname(__file__), "..", "data", "strategyqa_100.json")
 )
 
-with open(data_path) as f:
+with open(data_path, encoding="utf-8") as f:
     questions = json.load(f)
 
-
-# =========================
-# INITIALIZE DEBATE SYSTEM
-# =========================
-
-debate = DebateOrchestrator()
+debate = DebateOrchestrator(config=config)
+jury_config = config.get("jury", {})
+jury = JuryPanel(
+    judges=jury_config["judges"],
+    temperature=jury_config["temperature"],
+    config=config
+)
 
 results = []
 
-
-# =========================
-# RUN EXPERIMENT
-# =========================
-
 for i, item in enumerate(questions):
-
     question = item["question"]
     gt = item["answer"]
 
     print("\n==============================")
-    print(f"QUESTION {i+1}: {question}")
+    print(f"QUESTION {i + 1}: {question}")
 
-    transcript, judge_result = debate.run_debate(question)
+    transcript, debate_log = debate.run_debate(question, ground_truth=gt, save_log=False)
+    transcript_text = json.dumps({
+        "initial_positions": debate_log["initial_positions"],
+        "rounds": debate_log["rounds"],
+        "single_judge": debate_log["judge_result"]
+    }, indent=2)
 
-    # extract YES / NO prediction from judge output
-    pred = extract_answer(str(judge_result))
-
-    # fallback if extraction fails
-    if pred is None:
-        pred = "unknown"
+    jury_result = jury.evaluate(question, transcript_text)
 
     results.append({
         "question": question,
         "ground_truth": gt,
-        "prediction": pred,
-        "judge_output": str(judge_result)
+        "final_answer": jury_result["majority"],
+        "single_judge_prediction": debate_log["prediction"],
+        "single_judge_final_answer": debate_log["final_answer"],
+        "single_judge_confidence": debate_log.get("confidence"),
+        "initial_positions": debate_log["initial_positions"],
+        "rounds": debate_log["rounds"],
+        "single_judge_output": debate_log["judge_result"],
+        "jury_prediction": jury_result["majority"],
+        "jury_disagreement": jury_result["disagreement"],
+        "jury_decisions": jury_result["decisions"]
     })
-
-
-# =========================
-# SAVE RESULTS
-# =========================
 
 logs_dir = os.path.abspath(
     os.path.join(os.path.dirname(__file__), "..", "logs")
 )
-
 os.makedirs(logs_dir, exist_ok=True)
 
-save_path = os.path.join(logs_dir, "debate_results.json")
+save_path = os.path.join(logs_dir, "jury_results.json")
 
-with open(save_path, "w") as f:
+with open(save_path, "w", encoding="utf-8") as f:
     json.dump(results, f, indent=2)
 
-
-print("\nDebate experiment finished.")
+print("\nJury experiment finished.")
 print("Results saved to:", save_path)

@@ -1,78 +1,110 @@
 import json
+import math
 import os
+import sys
+
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
+
+from utils.answer_utils import normalize_answer
+
+
+def get_prediction(item):
+    for key in ("final_answer", "prediction", "majority", "jury_prediction", "verdict"):
+        if key in item:
+            answer = normalize_answer(item[key])
+            if answer in {"yes", "no"}:
+                return answer
+    return "unknown"
+
+
+def is_correct(item):
+    return get_prediction(item) == normalize_answer(item.get("ground_truth"))
 
 
 def compute_accuracy(results):
+    if not results:
+        return 0
+    return sum(1 for item in results if is_correct(item)) / len(results)
 
-    correct = 0
-    total = 0
-
-    for item in results:
-
-        gt = item["ground_truth"]
-
-        # convert ground truth to yes/no
-        if gt is True:
-            gt = "yes"
-        elif gt is False:
-            gt = "no"
-        else:
-            gt = str(gt).lower()
-
-        pred = item.get("prediction", item.get("majority", "unknown"))
-        pred = str(pred).lower()
-
-        if pred == gt:
-            correct += 1
-
-        total += 1
-
-    return correct / total if total > 0 else 0
 
 def load_results(path):
-
     if not os.path.exists(path):
-        print("File not found:", path)
         return []
 
-    with open(path) as f:
+    with open(path, encoding="utf-8") as f:
         return json.load(f)
 
 
-# =============================
-# Load experiment outputs
-# =============================
+def paired_mcnemar(results_a, results_b):
+    by_question_b = {item["question"]: item for item in results_b}
+    b = 0
+    c = 0
 
-debate_results = load_results("logs/debate_results.json")
-direct_results = load_results("logs/direct_qa_results.json")
-self_results = load_results("logs/self_consistency_results.json")
+    for item_a in results_a:
+        item_b = by_question_b.get(item_a["question"])
+        if item_b is None:
+            continue
+
+        a_correct = is_correct(item_a)
+        b_correct = is_correct(item_b)
+
+        if a_correct and not b_correct:
+            b += 1
+        elif not a_correct and b_correct:
+            c += 1
+
+    if b + c == 0:
+        return {"b": b, "c": c, "statistic": 0, "p_value": 1}
+
+    statistic = ((abs(b - c) - 1) ** 2) / (b + c)
+    p_value = math.erfc(math.sqrt(statistic / 2))
+    return {"b": b, "c": c, "statistic": statistic, "p_value": p_value}
 
 
-# =============================
-# Compute accuracies
-# =============================
+def print_accuracy_table(named_results):
+    print("\nRESULT TABLE")
+    print("| Method | N | Accuracy |")
+    print("|------|---:|------:|")
+    for name, results in named_results:
+        print(f"| {name} | {len(results)} | {compute_accuracy(results):.3f} |")
 
-debate_acc = compute_accuracy(debate_results)
-direct_acc = compute_accuracy(direct_results)
-self_acc = compute_accuracy(self_results)
+
+def print_significance_table(named_results):
+    debate_results = dict(named_results).get("Debate")
+    if not debate_results:
+        return
+
+    print("\nPAIRED MCNEMAR TESTS VS DEBATE")
+    print("| Comparison | Debate-only correct | Baseline-only correct | Chi-square | p-value |")
+    print("|------|---:|---:|---:|---:|")
+
+    for name, results in named_results:
+        if name == "Debate" or not results:
+            continue
+        stats = paired_mcnemar(debate_results, results)
+        print(
+            f"| Debate vs {name} | {stats['b']} | {stats['c']} | "
+            f"{stats['statistic']:.3f} | {stats['p_value']:.4f} |"
+        )
 
 
-# =============================
-# Print results table
-# =============================
+def main():
+    named_results = [
+        ("Debate", load_results("logs/debate_results.json")),
+        ("Direct QA", load_results("logs/direct_qa_results.json")),
+        ("Self Consistency", load_results("logs/self_consistency_results.json")),
+        ("Jury Panel", load_results("logs/jury_results.json"))
+    ]
 
-print("\n==============================")
-print("EXPERIMENT RESULTS")
-print("==============================")
+    named_results = [(name, results) for name, results in named_results if results]
 
-print(f"Debate Accuracy: {debate_acc:.3f}")
-print(f"Direct QA Accuracy: {direct_acc:.3f}")
-print(f"Self Consistency Accuracy: {self_acc:.3f}")
+    print("\n==============================")
+    print("EXPERIMENT RESULTS")
+    print("==============================")
 
-print("\nRESULT TABLE")
+    print_accuracy_table(named_results)
+    print_significance_table(named_results)
 
-print("| Method | Accuracy |")
-print("|------|------|")
-print(f"| Debate | {debate_acc:.3f} |")
-print(f"| Direct QA | {direct_acc:.3f} |")
-print(f"| Self Consistency | {self_acc:.3f} |")
+
+if __name__ == "__main__":
+    main()

@@ -1,15 +1,4 @@
-prompt = f"""
-You are Debater A in a structured reasoning debate.
-
-Your task is to determine whether the answer to the question is YES or NO.
-
-You must always produce an argument.
-
-Rules:
-- Always start your answer with "Answer: YES" or "Answer: NO".
-- Provide clear reasoning.
-- Critically analyze the opponent's argument if one exists.
-- Never return an empty response.
+You are Debater B, the opponent in a structured reasoning debate.
 
 Question:
 {question}
@@ -17,5 +6,20 @@ Question:
 Debate transcript so far:
 {transcript}
 
-Provide your argument for round {round_number}.
-"""
+Round:
+{round_number}
+
+Current position:
+{position}
+
+Task:
+{task}
+
+Rules:
+- Start with exactly one line: Answer: YES or Answer: NO
+- Give a concise visible rationale using evidence from the question or commonsense facts.
+- In debate rounds, challenge Debater A's latest reasoning and defend your current position.
+- Do not repeat earlier arguments unless you are correcting them.
+- Do not output hidden reasoning, XML tags, or empty responses.
+
+Answer:

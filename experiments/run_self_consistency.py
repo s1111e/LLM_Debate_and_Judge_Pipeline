@@ -6,6 +6,7 @@ import json
 from api_basics import query_llm
 from utils.answer_utils import extract_answer
 from utils.config_loader import load_config
+from utils.prompt_loader import render_prompt
 from collections import Counter
 
 config = load_config()
@@ -31,14 +32,12 @@ for item in questions:
 
     for i in range(N):
 
-        prompt = f"""
-Answer the following question with YES or NO.
+        prompt = render_prompt("self_consistency.txt", question=question)
 
-Question:
-{question}
-"""
-
-        response, tokens = query_llm(prompt, temperature=0.7)
+        response, tokens = query_llm(
+            prompt,
+            temperature=config["baselines"]["self_consistency_temperature"]
+        )
 
         ans = extract_answer(response)
 
@@ -49,8 +48,10 @@ Question:
     results.append({
         "question": question,
         "ground_truth": gt,
+        "final_answer": majority,
         "answers": answers,
-        "majority": majority
+        "majority": majority,
+        "samples": N
     })
 
 # =========================

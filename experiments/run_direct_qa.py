@@ -6,6 +6,7 @@ import json
 from api_basics import query_llm
 from utils.answer_utils import extract_answer
 from utils.config_loader import load_config
+from utils.prompt_loader import render_prompt
 
 config = load_config()
 
@@ -24,22 +25,22 @@ for item in questions:
     question = item["question"]
     gt = item["answer"]
 
-    prompt = f"""
-Answer the following question with YES or NO and provide short reasoning.
+    prompt = render_prompt("direct_qa.txt", question=question)
 
-Question:
-{question}
-"""
-
-    response, tokens = query_llm(prompt)
+    response, tokens = query_llm(
+        prompt,
+        temperature=config["baselines"]["direct_temperature"]
+    )
 
     pred = extract_answer(response)
 
     results.append({
         "question": question,
         "ground_truth": gt,
+        "final_answer": pred,
         "prediction": pred,
-        "raw_output": response
+        "raw_output": response,
+        "tokens": tokens
     })
 
 

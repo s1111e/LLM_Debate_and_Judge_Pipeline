@@ -1,14 +1,29 @@
 api:
   base_url: "http://10.100.1.212:8888/v1"
+  timeout: 60
 
 model:
   name: openai/gpt-oss-20b
   temperature: 0.3
-  max_tokens: 500
+  max_tokens: 900
 
 debate:
   rounds: 3
   adaptive_stopping: true
+  convergence_rounds: 2
+  log_path: logs/debate_logs.json
+
+baselines:
+  direct_temperature: 0.3
+  self_consistency_temperature: 0.7
 
 self_consistency:
-  samples: 5
+  # 2 initial calls + 2 calls per debate round + 1 judge call = 9 calls for 3 rounds.
+  samples: 9
+
+jury:
+  judges: 3
+  temperature: 0.2
+
+logging:
+  verbose_model_output: false

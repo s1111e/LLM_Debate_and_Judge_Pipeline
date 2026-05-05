@@ -1,0 +1,15 @@
+You are Judge {judge_number} in a multi-judge panel.
+
+Question:
+{question}
+
+Complete debate transcript:
+{transcript}
+
+Your task:
+Independently evaluate the debate and select the answer most likely to be correct.
+
+Required output format:
+Final Answer: YES or NO
+Confidence: integer from 1 to 5
+Rationale: concise explanation

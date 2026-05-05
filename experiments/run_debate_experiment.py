@@ -7,6 +7,9 @@ sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
 import json
 from debate.debate_orchestrator import DebateOrchestrator
 from utils.answer_utils import extract_answer
+from utils.config_loader import load_config
+
+config = load_config()
 
 
 # =========================
@@ -25,7 +28,7 @@ with open(data_path) as f:
 # INITIALIZE DEBATE SYSTEM
 # =========================
 
-debate = DebateOrchestrator()
+debate = DebateOrchestrator(config=config)
 
 results = []
 
@@ -42,10 +45,12 @@ for i, item in enumerate(questions):
     print("\n==============================")
     print(f"QUESTION {i+1}: {question}")
 
-    transcript, judge_result = debate.run_debate(question)
+    transcript, debate_log = debate.run_debate(question, ground_truth=gt)
 
     # extract YES / NO prediction from judge output
-    pred = extract_answer(str(judge_result))
+    pred = debate_log.get("prediction", "unknown")
+    if pred == "unknown":
+        pred = extract_answer(str(debate_log.get("judge_result", "")))
 
     # fallback if extraction fails
     if pred is None:
@@ -54,8 +59,13 @@ for i, item in enumerate(questions):
     results.append({
         "question": question,
         "ground_truth": gt,
+        "final_answer": pred,
         "prediction": pred,
-        "judge_output": str(judge_result)
+        "confidence": debate_log.get("confidence"),
+        "initial_positions": debate_log.get("initial_positions"),
+        "rounds": debate_log.get("rounds"),
+        "fallback_source": debate_log.get("fallback_source"),
+        "judge_output": str(debate_log.get("judge_result", ""))
     })
 
 

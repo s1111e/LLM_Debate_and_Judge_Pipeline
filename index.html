@@ -1,880 +1,1053 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 <head>
-
-<meta charset="UTF-8">
-
-<title>Multi-Agent Debate for StrategyQA</title>
-
-<link rel="stylesheet" href="style.css">
-
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LLM Debate and Judge Pipeline</title>
+  <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
-
-<header class="hero">
-
-<h1>Multi-Agent Debate for StrategyQA</h1>
-
-<p class="subtitle">
-Evaluating whether multi-agent debate improves reasoning in large language models
-</p>
-
-<nav>
-
-<a href="#abstract">Abstract</a>
-<a href="#methodology">Methodology</a>
-<a href="#experiments">Experiments</a>
-<a href="#analysis">Analysis</a>
-<a href="#prompt">Prompt Engineering</a>
-<a href="#appendix">Appendix</a>
-
-<p>
-📄 <a href="https://github.com/s1111e/LLM_Debate_and_Judge_Pipeline/blob/main/report.md">Report</a> |
-📘 <a href="https://github.com/s1111e/LLM_Debate_and_Judge_Pipeline">README</a>
-</p>
-
-</nav>
-
-</header>
-
-<section id="abstract">
-
-<h2>Abstract</h2>
-
-<p>
-Large language models often struggle with complex reasoning tasks.
-Recent research suggests that structured debate between multiple agents
-may improve reasoning quality by exposing incorrect arguments.
-
-In this project we implement a multi-agent debate system consisting of
-two debaters and a judge. The system is evaluated on the StrategyQA dataset.
-We compare debate reasoning against two baseline methods: Direct QA
-and Self Consistency.
-</p>
-
-<p>
-Our results show that although debate produces structured reasoning,
-it does not always outperform simpler baselines.
-</p>
-
-</section>
-
-
-
-<section id="methodology">
-
-<h2>1. Methodology</h2>
-
-<h3>System Architecture</h3>
-
-<p>
-The proposed system implements a multi-agent debate framework designed to
-improve reasoning quality of large language models. The system consists of
-three agents: Debater A, Debater B, and a Judge. Each debater produces an
-initial answer and then participates in a structured debate where agents
-challenge and respond to each other's reasoning. After the debate rounds,
-a judge agent analyzes the full transcript and determines the final answer.
-</p>
-
-<p>
-The overall architecture follows a four-stage pipeline:
-</p>
-
-<ul>
-<li>Initial answer generation by both debaters</li>
-<li>Multi-round debate between agents</li>
-<li>Judge evaluation of the debate transcript</li>
-<li>Final answer extraction and logging</li>
-</ul>
-
-
-<h3>Project Structure</h3>
-
-<p>
-The system is implemented using a modular Python architecture. The repository
-is organized into several components responsible for agent logic, debate
-control, utilities, and experimental evaluation.
-</p>
-
-<pre>
-
-LLM_Debate_and_Judge_Pipeline
-
-agents/
-    debater.py
-    judge.py
-
-debate/
-    debate_orchestrator.py
-
-experiments/
-    run_debate.py
-    run_direct_qa.py
-    run_self_consistency.py
-    run_jury.py
-
-utils/
-    answer_utils.py
-    config_loader.py
-
-config/
-    config.yaml
-
-logs/
-    experiment results
-
-</pre>
-
-<p>
-This modular design allows easy modification of agents, debate parameters,
-and evaluation pipelines.
-</p>
-
-<h3>Debate Protocol</h3>
-
-<p>
-Each debate begins with both debaters generating an initial YES or NO answer.
-The debate then proceeds through multiple rounds where agents respond to
-each other's arguments using the previous transcript as context.
-</p>
-
-<p>
-To reduce unnecessary debate rounds, an adaptive stopping rule is used.
-If both agents produce the same answer for two consecutive rounds,
-the debate terminates early.
-</p>
-
-<h3>Model Choices</h3>
-
-<p>
-The system uses large language models accessed through the OpenAI API.
-These models were selected because they demonstrate strong natural
-language reasoning abilities and can generate structured arguments.
-</p>
-
-<p>
-Using the same model for both debaters ensures fairness and allows the
-debate structure itself to influence reasoning outcomes.
-</p>
-
-<h3>Configuration and Hyperparameters</h3>
-
-<p>
-All experimental parameters are defined in a configuration file
-(config/config.yaml). This ensures reproducibility and allows easy
-adjustment of debate settings.
-</p>
-
-<p>
-Key parameters include:
-</p>
-
-<ul>
-<li>Number of debate rounds</li>
-<li>Temperature for generation</li>
-<li>Number of samples for self-consistency</li>
-<li>Stopping criteria for debate convergence</li>
-</ul>
-
-<p>
-These parameters were selected to balance reasoning quality and
-computational efficiency.
-</p>
-
-</section>
-
-
-
-
-
-
-
-
-
-<section id="experiments">
-
-<h2>2. Experiments</h2>
-
-<h3>Experimental Setup</h3>
-
-<p>
-To evaluate the effectiveness of the debate framework, we conducted experiments
-on the StrategyQA dataset. StrategyQA is a benchmark dataset that requires
-multi-step reasoning and implicit knowledge to answer binary (YES/NO) questions.
-</p>
-
-<p>
-We selected a subset of 100 questions for evaluation. Each question includes a
-ground-truth answer used to compute accuracy.
-</p>
-
-<p>
-We compare three reasoning methods:
-</p>
-
-<ul>
-<li><b>Debate Pipeline</b> – multi-agent reasoning with two debaters and a judge</li>
-<li><b>Direct QA</b> – single-step answer generation without debate</li>
-<li><b>Self Consistency</b> – multiple sampled answers with majority voting</li>
-</ul>
-
----
-
-<h3>Implementation Details</h3>
-
-<p>
-All experiments are implemented in Python and executed using the OpenAI API.
-The system is modular and consists of separate scripts for each method:
-</p>
-
-<pre>
-experiments/run_debate.py
-experiments/run_direct_qa.py
-experiments/run_self_consistency.py
-</pre>
-
-<p>
-Results are stored as JSON files for reproducibility:
-</p>
-
-<pre>
-logs/debate_results.json
-logs/direct_qa_results.json
-logs/self_consistency_results.json
-</pre>
-
----
-
-<h3>Evaluation Metric</h3>
-
-<p>
-We use <b>accuracy</b> as the main evaluation metric.
-Accuracy is computed as:
-</p>
-
-<pre>
-Accuracy = (Number of Correct Predictions) / (Total Number of Questions)
-</pre>
-
-<p>
-Predictions are extracted from model outputs and compared with the
-ground-truth labels from the dataset.
-</p>
-
----
-
-<h3>Debate Configuration</h3>
-
-<p>
-The debate system is configured using a YAML configuration file. Key parameters include:
-</p>
-
-<ul>
-<li>Number of debate rounds (default: 3)</li>
-<li>Adaptive stopping based on answer convergence</li>
-<li>Temperature for generation</li>
-</ul>
-
-<p>
-Each debate produces a full transcript, which is later evaluated by the judge.
-</p>
-
----
-
-<h3>Baseline Configuration</h3>
-
-<p>
-For Direct QA, the model generates a single response for each question.
-</p>
-
-<p>
-For Self Consistency, multiple responses are generated using temperature sampling,
-and the final answer is determined by majority vote.
-</p>
-
----
-
-<h3>Results</h3>
-
-<p>
-The following table shows the accuracy of each method:
-</p>
-
-<div align="center">
-
-<table>
-<tr>
-<th>Method</th>
-<th>Accuracy (v1)</th>
-<th>Accuracy (v2)</th>
-</tr>
-
-<tr>
-<td>Debate</td>
-<td>0.48</td>
-<td><b>0.52</b></td>
-</tr>
-
-<tr>
-<td>Direct QA</td>
-<td>0.74</td>
-<td>0.71</td>
-</tr>
-
-<tr>
-<td>Self Consistency</td>
-<td>0.74</td>
-<td>0.71</td>
-</tr>
-
-</table>
-
-</div>
-
-<p>
-The improved prompt design (v2) increases debate accuracy from 0.48 to 0.52.
-This shows that prompt engineering has a positive impact on multi-agent reasoning.
-</p>
-
-<p>
-Interestingly, baseline methods show a slight decrease in accuracy.
-This suggests that debate benefits more from structured prompting compared to single-step methods.
-</p>
-
----
-
-<h3>Observations</h3>
-
-<p>
-The debate pipeline achieves lower accuracy compared to both baseline methods.
-This indicates that structured debate does not always improve reasoning performance.
-</p>
-
-<p>
-Direct QA and Self Consistency achieve higher accuracy. Self Consistency benefits
-from sampling multiple independent answers, which reduces random errors.
-</p>
-
-<p>
-In contrast, the debate system introduces additional reasoning steps that may
-propagate incorrect assumptions across multiple rounds.
-</p>
-
----
-
-<h3>Error Analysis (Quantitative)</h3>
-
-<p>
-During evaluation, several types of errors were observed:
-</p>
-
-<ul>
-<li>Missing arguments from one debater</li>
-<li>Incorrect assumptions propagated across rounds</li>
-<li>Judge selecting the strongest but incorrect argument</li>
-<li>Unclear or inconsistent output formats</li>
-</ul>
-
-<p>
-These errors contribute to the lower performance of the debate system.
-</p>
-
----
-
-<h3>Statistical Considerations</h3>
-
-<p>
-Although the dataset size is relatively small (100 questions), the difference
-between debate accuracy (0.48) and baseline methods (0.74) is significant.
-</p>
-
-<p>
-This suggests that the observed performance gap is not due to random variation,
-but reflects systematic differences between reasoning approaches.
-</p>
-
-<p>
-A larger dataset could provide more reliable statistical validation,
-but the current results already indicate a clear trend.
-</p>
-
----
-
-<h3>Summary</h3>
-
-<p>
-Overall, the experimental results show that:
-</p>
-
-<ul>
-<li>Debate reasoning produces structured arguments but lower accuracy</li>
-<li>Direct QA is simple and effective</li>
-<li>Self Consistency improves robustness through sampling</li>
-</ul>
-
-<p>
-These findings highlight important limitations of multi-agent debate systems.
-</p>
-
-</section>
-
-
-
-
-
-<section id="analysis">
-
-<h2>3. Analysis</h2>
-
-<p>
-To better understand the behavior of the debate system, we analyze several
-debate transcripts collected during experiments. These examples highlight
-both successful reasoning cases and common failure modes.
-</p>
-
----
-
-<h3>Case 1: Successful Debate</h3>
-
-<p><b>Question:</b> Are kayaks used at the summit of Mount Everest?</p>
-
-<p>
-In this example, Debater B consistently argues that kayaks cannot be used
-because there is no water at the summit and the environment is extremely cold.
-The reasoning is grounded in physical constraints and real-world knowledge.
-</p>
-
-<p>
-Even though Debater A fails to produce an argument, the judge correctly
-identifies the stronger reasoning and returns the correct answer: <b>NO</b>.
-</p>
-
-<p>
-This example shows that debate can succeed when at least one agent provides
-clear and correct reasoning.
-</p>
-
----
-
-<h3>Case 2: One-Sided Debate (Failure Mode)</h3>
-
-<p><b>Observation:</b> Debater A produced no argument.</p>
-
-<p>
-In several transcripts, one debater failed to generate any response and returned
-"No argument generated". This leads to a one-sided debate where only one agent
-provides reasoning.
-</p>
-
-<p>
-As a result, the judge has no alternative perspective to compare, and the final
-decision depends entirely on a single argument. This reduces the effectiveness
-of the debate framework.
-</p>
-
-<p>
-This failure mode highlights the importance of robust prompt design to ensure
-both agents actively participate in the debate.
-</p>
-
----
-
-<h3>Case 3: Incorrect Assumption Propagation</h3>
-
-<p><b>Question:</b> Can Aerosmith fit in a 2020 Mitsubishi Outlander?</p>
-
-<p>
-In this example, both debaters focus on the cargo capacity and equipment size.
-However, they introduce approximate and potentially incorrect numerical values
-for volume and weight.
-</p>
-
-<p>
-The debate becomes centered around these assumptions rather than verifying
-the actual facts. As a result, the judge selects the stronger argument,
-but the reasoning itself may still be flawed.
-</p>
-
-<p>
-This demonstrates a key limitation of debate systems: incorrect assumptions
-can propagate through multiple rounds and influence the final decision.
-</p>
-
----
-
-<h3>Case 4: Output Format Failure</h3>
-
-<p>
-In some cases, the judge output does not follow a strict YES/NO format,
-which leads to extraction failures and "unknown" predictions.
-</p>
-
-<p>
-This type of error is not related to reasoning ability, but rather to
-output formatting. It highlights the importance of enforcing structured
-outputs in prompt design.
-</p>
-
----
-
-<h3>Connection to Debate Theory (Irving et al.)</h3>
-
-<p>
-Irving et al. (2018) proposed debate as a method to improve AI alignment
-by allowing agents to challenge each other's reasoning. The key idea is
-that incorrect arguments can be exposed through adversarial interaction.
-</p>
-
-<p>
-Our experimental results partially support this theory. In some cases,
-strong arguments successfully dominate weak ones and lead to correct answers.
-</p>
-
-<p>
-However, our findings also reveal limitations:
-</p>
-
-<ul>
-<li>If one agent fails to participate, debate becomes ineffective</li>
-<li>If both agents rely on incorrect assumptions, errors propagate</li>
-<li>The judge may select the strongest argument even if it is incorrect</li>
-</ul>
-
-<p>
-These observations suggest that while debate can improve reasoning in theory,
-its practical effectiveness depends heavily on prompt design and agent reliability.
-</p>
-
-h3>Multi-Agent Judge Panel Analysis</h3>
-
-<p>
-We observe that using multiple judges improves decision stability.
-When all judges agree, the answer is usually correct.
-</p>
-
-<p>
-Disagreement between judges often occurs in difficult or ambiguous questions.
-This suggests that disagreement can be used as a signal of question difficulty.
-</p>
-
-<p>
-Overall, the jury mechanism improves reliability compared to a single judge.
-</p>
-
----
-
-<h3>Summary</h3>
-
-<p>
-The qualitative analysis shows that multi-agent debate has both strengths
-and weaknesses. It can produce structured reasoning, but also introduces
-new failure modes such as one-sided debates and error propagation.
-
-</p>
-
-<p>
-After prompt improvements (v2), we observed fewer cases of missing arguments
-and more consistent debate participation. This directly contributed to higher accuracy.
-</p>
-
-</section>
-
-
-
-<section id="prompt-engineering">
-
-<h2>4. Prompt Engineering</h2>
-
-<p>
-In this project, prompt design plays a critical role in controlling the behavior
-of the debate agents. We iteratively improved prompts based on observed failures
-in early experiments.
-</p>
-
----
-
-<h3>Initial Design (v1)</h3>
-
-<p>
-In the first version (v1), we used simple role-based prompts for Debater A,
-Debater B, and the Judge.
-</p>
-
-<p>
-Debater A was instructed to argue "YES", and Debater B was instructed to argue "NO".
-Both debaters were asked to provide a short answer and 2–3 sentences of reasoning.
-</p>
-
-<pre>
-Debater A:
-Answer: YES
-Reasoning: ...
-
-Debater B:
-Answer: NO
-Reasoning: ...
-</pre>
-
-<p>
-The judge was given the full debate transcript and asked to select the winner:
-</p>
-
-<pre>
-Winner: A or B
-Explanation: ...
-</pre>
-
----
-
-<h3>Problems Observed in v1</h3>
-
-<p>
-The initial prompts were simple, but several issues appeared during experiments:
-</p>
-
-<ul>
-<li><b>Missing arguments:</b> Some debaters returned "No argument generated"</li>
-<li><b>Weak reasoning:</b> Arguments were too short and lacked depth</li>
-<li><b>One-sided debates:</b> When one agent failed, debate became ineffective</li>
-<li><b>Format inconsistency:</b> Judge outputs were sometimes hard to parse</li>
-</ul>
-
-<p>
-These problems directly affected performance, resulting in a low debate accuracy
-of <b>0.48</b>, compared to <b>0.74</b> for baseline methods.
-</p>
-
----
-
-<h3>Results After Iteration (v2)</h3>
-
-<p>
-After improving the prompts, debate accuracy increased from <b>0.48</b> to <b>0.52</b>.
-</p>
-
-<p>
-This improvement confirms that better prompt design:
-</p>
-
-<ul>
-<li>Reduces missing arguments</li>
-<li>Improves reasoning quality</li>
-<li>Leads to more reliable judge decisions</li>
-</ul>
-
-<p>
-Although the improvement is moderate, it demonstrates that prompt engineering
-is a key factor in multi-agent systems.
-</p>
-
----
-
-<h3>Key Design Decisions</h3>
-
-<p><b>1. Role Framing</b></p>
-<p>
-Each agent is assigned a fixed role (YES vs NO). This creates adversarial
-interaction and encourages diverse reasoning paths.
-</p>
-
-<p><b>2. Chain-of-Thought Style Reasoning</b></p>
-<p>
-We encouraged step-by-step reasoning instead of short answers. This improves
-clarity and helps the judge compare arguments.
-</p>
-
-<p><b>3. Output Format Constraints</b></p>
-<p>
-Strict output formats were used to ensure reliable parsing of model outputs.
-This reduces errors such as "unknown" predictions.
-</p>
-
-<p><b>4. Robustness Against Failure</b></p>
-<p>
-We modified prompts to reduce the chance of missing arguments and ensure both
-agents actively participate in the debate.
-</p>
-
----
-
-<h3>Iteration Strategy</h3>
-
-<p>
-Our prompt engineering process followed an iterative loop:
-</p>
-
-<ol>
-<li>Run experiments</li>
-<li>Analyze failures (logs and transcripts)</li>
-<li>Identify weak points in prompts</li>
-<li>Modify instructions and constraints</li>
-<li>Re-run experiments</li>
-</ol>
-
-<p>
-This process allowed us to systematically improve the debate system.
-</p>
-
----
-
-<h3>Expected Impact of v2</h3>
-
-<p>
-We expect the improved prompts to:
-</p>
-
-<ul>
-<li>Reduce missing arguments</li>
-<li>Increase reasoning quality</li>
-<li>Improve judge decision consistency</li>
-<li>Increase overall debate accuracy</li>
-</ul>
-
----
-
-<h3>Summary</h3>
-
-<p>
-Prompt engineering is essential for multi-agent systems. Our results show that
-simple prompts are not sufficient, and careful design is required to achieve
-reliable performance.
-</p>
-
-</section>
-
-<section id="appendix">
-
-<h2>Appendix: Full Prompts</h2>
-
-<p>
-This section contains the final prompt templates used in our experiments (v2).
-Placeholders such as <code>{question}</code> and <code>{transcript}</code>
-are dynamically replaced during execution.
-</p>
-
----
-
-<details>
-<summary><b>Debater A Prompt (YES)</b></summary>
-
-<pre>
-You are Debater A.
+  <header class="topbar">
+    <div>
+      <p class="eyebrow">StrategyQA Multi-Agent Reasoning</p>
+      <h1>LLM Debate and Judge Pipeline</h1>
+    </div>
+    <nav>
+      <a href="#overview">Overview</a>
+      <a href="#lab">UI</a>
+      <a href="#results">Results</a>
+      <a href="#method">Method</a>
+      <a href="#analysis">Analysis</a>
+      <a href="#prompts">Prompts</a>
+      <a href="#repo-map">Repo</a>
+      <a href="#coverage">Coverage</a>
+      <a href="#appendix-transcripts">Transcripts</a>
+      <a href="REPORT.md">Report</a>
+    </nav>
+  </header>
+
+  <main>
+    <section id="overview" class="content-band overview-band">
+      <h2>Abstract</h2>
+      <p>This project studies whether a structured multi-agent debate can improve yes/no reasoning on StrategyQA. Two LLM debaters first answer independently, debate only when they disagree, and then a judge selects the final answer from the transcript. The system is compared against Direct QA, Self Consistency, and a bonus three-judge jury panel.</p>
+
+      <div class="overview-grid">
+        <article>
+          <h3>Project Logic</h3>
+          <p>The central idea is that adversarial discussion can expose weak assumptions that a single direct answer may hide. The final run shows debate is competitive with the baselines and produces inspectable transcripts for qualitative analysis.</p>
+        </article>
+        <article>
+          <h3>Methods</h3>
+          <p>The evaluation includes four methods: debate with a single judge, Direct QA, 9-sample Self Consistency, and a 3-judge jury panel. Accuracy and paired McNemar tests are computed from saved JSON logs.</p>
+        </article>
+        <article>
+          <h3>Site Structure</h3>
+          <p>The UI section loads saved transcripts or runs a live Flask debate. The Results, Methodology, Analysis, Prompt Engineering, and Coverage sections summarize the experiment and link back to the full report.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="lab" class="lab-shell">
+      <div class="lab-header">
+        <div>
+          <h2>Debate Runner</h2>
+          <p>Run locally through Flask, or inspect saved transcripts on GitHub Pages.</p>
+        </div>
+        <span id="status" class="status">Ready</span>
+      </div>
+
+      <form id="debate-form" class="question-row">
+        <input id="question-input" name="question" autocomplete="off" value="Can Aerosmith fit in a 2020 Mitsubishi Outlander?">
+        <button type="submit">Show Saved</button>
+        <button type="button" id="live-button">Live Run</button>
+        <button type="button" id="sample-button">Sample</button>
+      </form>
+
+      <div class="workspace-grid">
+        <section class="panel">
+          <h3>Initial Positions</h3>
+          <div id="initial-output" class="stack"></div>
+        </section>
+
+        <section class="panel transcript-panel">
+          <h3>Rounds</h3>
+          <div id="round-output" class="stack"></div>
+        </section>
+
+        <section class="panel verdict-panel">
+          <h3>Judge Verdict</h3>
+          <div id="verdict-output" class="verdict"></div>
+        </section>
+      </div>
+    </section>
+
+    <section id="results" class="content-band">
+      <h2>Results</h2>
+      <p>The saved 100-question StrategyQA run shows that the revised debate pipeline is competitive with the baselines and outperforms Direct QA in this run. Self-consistency achieves the highest accuracy. The goal was not only to maximize accuracy, but also to test whether adversarial interaction creates better evidence for a judge than a single direct answer.</p>
+      <table>
+        <thead>
+          <tr>
+            <th>Method</th>
+            <th>N</th>
+            <th>Accuracy</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>Debate</td><td>100</td><td>0.700</td></tr>
+          <tr><td>Direct QA</td><td>100</td><td>0.680</td></tr>
+          <tr><td>Self Consistency</td><td>100</td><td>0.710</td></tr>
+          <tr><td>Jury Panel</td><td>100</td><td>0.660</td></tr>
+        </tbody>
+      </table>
+      <div class="metric-grid">
+        <article>
+          <strong>Debate vs Direct QA</strong>
+          <span>p = 0.7728</span>
+          <p>Debate is 2 points higher, but the paired test does not show a significant difference at 0.05.</p>
+        </article>
+        <article>
+          <strong>Debate vs Self Consistency</strong>
+          <span>p = 1.0000</span>
+          <p>Self-consistency is 1 point higher, suggesting independent sampling remains a strong inference-time baseline.</p>
+        </article>
+        <article>
+          <strong>Debate vs Jury Panel</strong>
+          <span>p = 0.3428</span>
+          <p>The jury panel completes the bonus extension but is lower than the single-judge debate result in this saved run.</p>
+        </article>
+      </div>
+      <p>Jury panel note: the implemented panel uses 3 independent LLM judges and majority vote. The jury logs contain 1 internal disagreement out of 100 questions and 5 cases where the panel answer differed from the single judge recorded during the jury run, so disagreement was too sparse to show a strong question-difficulty correlation.</p>
+      <p>The interpretation is cautious: debate improved substantially after prompt and logging fixes, and its difference from the baselines is not statistically significant in this 100-question run. This supports a practical lesson from multi-agent reasoning work: debate helps only when both agents produce reliable, parseable, non-empty arguments and the judge receives enough structure to compare them.</p>
+    </section>
+
+    <section id="method" class="content-band">
+      <h2>Methodology</h2>
+      <p>The implementation follows the assignment's four-phase debate protocol and keeps agent behavior, prompts, configuration, logs, and evaluation separated into modules. The current model profile is selected through environment variables, while hyperparameters such as rounds, temperature, max tokens, adaptive stopping, and self-consistency samples live in <code>config/config.yaml</code>.</p>
+      <div class="method-grid">
+        <article>
+          <h3>Phase 1: Initialization</h3>
+          <p>Debater A and Debater B answer independently before seeing each other. Their initial responses are logged with extracted YES/NO labels.</p>
+        </article>
+        <article>
+          <h3>Phase 2: Debate</h3>
+          <p>If the initial answers disagree, the debate runs for up to 3 rounds. Debater A argues first, then Debater B responds after seeing A's current-round argument and the previous transcript.</p>
+        </article>
+        <article>
+          <h3>Phase 3: Judgment</h3>
+          <p>The judge receives the original question, initial positions, and all rounds. It must return analysis, strongest and weakest arguments, final answer, and confidence.</p>
+        </article>
+        <article>
+          <h3>Phase 4: Evaluation</h3>
+          <p>Predictions are compared with StrategyQA ground truth. The evaluator computes accuracy and paired McNemar tests against debate.</p>
+        </article>
+      </div>
+      <h3>Implementation Details</h3>
+      <ul class="tight-list">
+        <li><code>agents/debater.py</code>, <code>agents/judge.py</code>, and <code>agents/jury.py</code> implement the agents.</li>
+        <li><code>debate/debate_orchestrator.py</code> controls initialization, consensus, rounds, judgment, and logging.</li>
+        <li><code>experiments/</code> contains runners for debate, direct QA, self-consistency, and the bonus jury panel.</li>
+        <li><code>evaluation/evaluate_accuracy.py</code> reads JSON logs and prints the result tables used in this page.</li>
+        <li><code>app.py</code> serves the web UI and exposes the live debate endpoint.</li>
+      </ul>
+    </section>
+
+    <section id="analysis" class="content-band">
+      <h2>Analysis</h2>
+      <p>The transcript review now uses ten saved examples. The main pattern is clear: debate helps when one agent introduces a missing distinction, but it fails when both agents share the same premise or when the judge chooses a plausible interpretation that does not match the StrategyQA label.</p>
+      <div class="case-grid">
+        <article>
+          <h3>Firewall</h3>
+          <p>Correct consensus. Both debaters separate cybersecurity/fire-safety language from electrical short circuits, so no debate rounds were needed.</p>
+          <dl class="case-stats">
+            <div><dt>GT</dt><dd>NO</dd></div>
+            <div><dt>Pred</dt><dd>NO</dd></div>
+            <div><dt>Rounds</dt><dd>0</dd></div>
+          </dl>
+          <details class="analysis-detail">
+            <summary>Transcript data</summary>
+            <div class="analysis-transcript" data-analysis-question="Can a firewall protect against a short circuit?">Loading saved transcript...</div>
+          </details>
+        </article>
+        <article>
+          <h3>Aerosmith</h3>
+          <p>Correct debate. The judge resolves whether the band name means an abstract group or five physical people who can fit in the vehicle.</p>
+          <dl class="case-stats">
+            <div><dt>GT</dt><dd>YES</dd></div>
+            <div><dt>Pred</dt><dd>YES</dd></div>
+            <div><dt>Rounds</dt><dd>3</dd></div>
+          </dl>
+          <details class="analysis-detail">
+            <summary>Transcript data</summary>
+            <div class="analysis-transcript" data-analysis-question="Can Aerosmith fit in a 2020 Mitsubishi Outlander?">Loading saved transcript...</div>
+          </details>
+        </article>
+        <article>
+          <h3>Baseball Homer</h3>
+          <p>Correct debate. A fluent literary-origin story is challenged, and the judge rejects the unsupported connection to Homer the poet.</p>
+          <dl class="case-stats">
+            <div><dt>GT</dt><dd>NO</dd></div>
+            <div><dt>Pred</dt><dd>NO</dd></div>
+            <div><dt>Rounds</dt><dd>3</dd></div>
+          </dl>
+          <details class="analysis-detail">
+            <summary>Transcript data</summary>
+            <div class="analysis-transcript" data-analysis-question="In baseball, is a &quot;Homer&quot; named after the poet Homer who wrote the Odyssey?">Loading saved transcript...</div>
+          </details>
+        </article>
+        <article>
+          <h3>Hilo</h3>
+          <p>Correct debate. The winning argument distinguishes local rarity in Hilo from regional access to snowboarding elsewhere in Hawaii.</p>
+          <dl class="case-stats">
+            <div><dt>GT</dt><dd>YES</dd></div>
+            <div><dt>Pred</dt><dd>YES</dd></div>
+            <div><dt>Rounds</dt><dd>3</dd></div>
+          </dl>
+          <details class="analysis-detail">
+            <summary>Transcript data</summary>
+            <div class="analysis-transcript" data-analysis-question="Snowboarding is a rarity in Hilo?">Loading saved transcript...</div>
+          </details>
+        </article>
+        <article>
+          <h3>C-SPAN</h3>
+          <p>Correct recovery. One debater surfaces that "Satellite" implies space-based telecommunications infrastructure.</p>
+          <dl class="case-stats">
+            <div><dt>GT</dt><dd>YES</dd></div>
+            <div><dt>Pred</dt><dd>YES</dd></div>
+            <div><dt>Rounds</dt><dd>3</dd></div>
+          </dl>
+          <details class="analysis-detail">
+            <summary>Transcript data</summary>
+            <div class="analysis-transcript" data-analysis-question="Does the name C-SPAN refer to a form of telecommunications that utilizes outer space?">Loading saved transcript...</div>
+          </details>
+        </article>
+        <article>
+          <h3>Kayaks</h3>
+          <p>Wrong consensus. Both debaters assume kayak only means watercraft, so the system skips the adversarial phase and locks in NO.</p>
+          <dl class="case-stats">
+            <div><dt>GT</dt><dd>YES</dd></div>
+            <div><dt>Pred</dt><dd>NO</dd></div>
+            <div><dt>Rounds</dt><dd>0</dd></div>
+          </dl>
+          <details class="analysis-detail">
+            <summary>Transcript data</summary>
+            <div class="analysis-transcript" data-analysis-question="Are kayaks used at the summit of Mount Everest?">Loading saved transcript...</div>
+          </details>
+        </article>
+        <article>
+          <h3>Wool</h3>
+          <p>Wrong debate. The judge overweights modern washing-machine exceptions and misses the conservative meaning of "hand washed only."</p>
+          <dl class="case-stats">
+            <div><dt>GT</dt><dd>YES</dd></div>
+            <div><dt>Pred</dt><dd>NO</dd></div>
+            <div><dt>Rounds</dt><dd>3</dd></div>
+          </dl>
+          <details class="analysis-detail">
+            <summary>Transcript data</summary>
+            <div class="analysis-transcript" data-analysis-question="Should wool be hand washed only?">Loading saved transcript...</div>
+          </details>
+        </article>
+        <article>
+          <h3>Michael Vick</h3>
+          <p>Wrong debate. The judge treats a hypothetical PETA blacklist as if the question required evidence of an official public list.</p>
+          <dl class="case-stats">
+            <div><dt>GT</dt><dd>YES</dd></div>
+            <div><dt>Pred</dt><dd>NO</dd></div>
+            <div><dt>Rounds</dt><dd>3</dd></div>
+          </dl>
+          <details class="analysis-detail">
+            <summary>Transcript data</summary>
+            <div class="analysis-transcript" data-analysis-question="Is Michael Vick on People for the Ethical Treatment of Animals's hypothetical blacklist?">Loading saved transcript...</div>
+          </details>
+        </article>
+        <article>
+          <h3>Meatballs</h3>
+          <p>Wrong debate. Broad culinary-history reasoning beats the narrower StrategyQA framing about restaurant associations.</p>
+          <dl class="case-stats">
+            <div><dt>GT</dt><dd>YES</dd></div>
+            <div><dt>Pred</dt><dd>NO</dd></div>
+            <div><dt>Rounds</dt><dd>3</dd></div>
+          </dl>
+          <details class="analysis-detail">
+            <summary>Transcript data</summary>
+            <div class="analysis-transcript" data-analysis-question="Do restaurants associate meatballs with the wrong country of origin?">Loading saved transcript...</div>
+          </details>
+        </article>
+        <article>
+          <h3>San Francisco</h3>
+          <p>Wrong debate with low confidence. The transcript exposes ambiguity, but the judge accepts a broad urban-nature interpretation.</p>
+          <dl class="case-stats">
+            <div><dt>GT</dt><dd>NO</dd></div>
+            <div><dt>Pred</dt><dd>YES</dd></div>
+            <div><dt>Rounds</dt><dd>3</dd></div>
+          </dl>
+          <details class="analysis-detail">
+            <summary>Transcript data</summary>
+            <div class="analysis-transcript" data-analysis-question="Would someone go to San Francisco for a nature escape?">Loading saved transcript...</div>
+          </details>
+        </article>
+      </div>
+    </section>
+
+    <section id="prompts" class="content-band">
+      <h2>Prompt Engineering</h2>
+      <p>Prompt design was iterated after inspecting failures in early logs. The first prompts were too loose: one debater sometimes produced no argument, judge outputs were hard to parse, and some answers were truncated before the final verdict. The final prompts use role framing, explicit answer labels, visible rationales, and strict judge output fields.</p>
+      <ul class="tight-list">
+        <li><strong>Role framing:</strong> Debater A is the proponent and Debater B is the opponent, but initial answers are not forced to fixed YES/NO stances.</li>
+        <li><strong>Output constraints:</strong> Every debater response starts with <code>Answer: YES</code> or <code>Answer: NO</code>.</li>
+        <li><strong>Round context:</strong> Debater B receives Debater A's current-round argument before responding.</li>
+        <li><strong>Judge structure:</strong> The judge must include analysis, strongest arguments, weakest arguments, final answer, and confidence.</li>
+        <li><strong>Baselines:</strong> Direct QA and self-consistency use separate prompts so their behavior is not accidentally debate-shaped.</li>
+      </ul>
+      <table>
+        <thead>
+          <tr>
+            <th>Observed Failure</th>
+            <th>Prompt/Config Change</th>
+            <th>Effect</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>Empty or one-sided debates</td><td>Required labeled YES/NO answers and non-empty rationale</td><td>More reliable participation</td></tr>
+          <tr><td>Forced initial stances</td><td>Allowed independent initial answers</td><td>Meaningful consensus detection</td></tr>
+          <tr><td>B did not rebut A's latest point</td><td>Passed A's current-round argument to B</td><td>Better round-by-round interaction</td></tr>
+          <tr><td>Judge verdict hard to parse</td><td>Required <code>Final Answer</code> and <code>Confidence</code></td><td>Fewer unknown predictions</td></tr>
+          <tr><td>Judge output truncation</td><td>Raised max-token budget</td><td>More complete verdicts</td></tr>
+        </tbody>
+      </table>
+      <details>
+        <summary>Debater A Prompt</summary>
+        <pre><code>You are Debater A, the proponent in a structured reasoning debate.
 
 Question:
 {question}
 
-Your task:
-Argue that the answer is YES.
+Debate transcript so far:
+{transcript}
+
+Round:
+{round_number}
+
+Current position:
+{position}
+
+Task:
+{task}
 
 Rules:
-- You MUST answer YES
-- Provide clear reasoning
-- Use step-by-step thinking if needed
-- Be confident and persuasive
-- Do NOT say "I don't know"
+- Start with exactly one line: Answer: YES or Answer: NO
+- Give a concise visible rationale using evidence from the question or commonsense facts.
+- In debate rounds, defend your current position and respond to Debater B's strongest point.
+- Do not repeat earlier arguments unless you are correcting them.
+- Do not output hidden reasoning, XML tags, or empty responses.
 
-Respond in this format:
-
-Answer:
-YES
-
-Reasoning:
-- Step 1:
-- Step 2:
-- Step 3:
-</pre>
-
-</details>
-
----
-
-<details>
-<summary><b>Debater B Prompt (NO)</b></summary>
-
-<pre>
-You are Debater B.
+Answer:</code></pre>
+      </details>
+      <details>
+        <summary>Debater B Prompt</summary>
+        <pre><code>You are Debater B, the opponent in a structured reasoning debate.
 
 Question:
 {question}
 
-Your task:
-Argue that the answer is NO.
+Debate transcript so far:
+{transcript}
+
+Round:
+{round_number}
+
+Current position:
+{position}
+
+Task:
+{task}
 
 Rules:
-- You MUST answer NO
-- Provide clear reasoning
-- Use step-by-step thinking if needed
-- Be confident and persuasive
-- Challenge possible YES arguments
+- Start with exactly one line: Answer: YES or Answer: NO
+- Give a concise visible rationale using evidence from the question or commonsense facts.
+- In debate rounds, challenge Debater A's latest reasoning and defend your current position.
+- Do not repeat earlier arguments unless you are correcting them.
+- Do not output hidden reasoning, XML tags, or empty responses.
 
-Respond in this format:
+Answer:</code></pre>
+      </details>
+      <details>
+        <summary>Judge Prompt</summary>
+        <pre><code>You are a neutral judge evaluating a structured debate.
 
-Answer:
-NO
-
-Reasoning:
-- Step 1:
-- Step 2:
-- Step 3:
-</pre>
-
-</details>
-
----
-
-<details>
-<summary><b>Judge Prompt</b></summary>
-
-<pre>
 Question:
 {question}
 
-Debate transcript:
+Complete debate transcript:
 {transcript}
 
 Your task:
-Decide which debater gave the stronger argument.
+Evaluate both debaters' arguments and select the answer most likely to be correct.
+
+Required output format:
+Final Answer: YES or NO
+Confidence: integer from 1 to 5
+Winning Debater: A, B, or Consensus
+
+Analysis:
+- Debater A:
+- Debater B:
+
+Strongest Arguments:
+- Debater A:
+- Debater B:
+
+Weakest Arguments:
+- Debater A:
+- Debater B:
 
 Rules:
-- Focus on logic and evidence
-- Ignore style or length
-- Choose the more correct reasoning
+- Base the verdict on logic and evidence, not style or verbosity.
+- Give a concise visible rationale, not hidden reasoning.
+- Put Final Answer and Confidence at the very top before analysis.
+- Always include Final Answer and Confidence exactly as labeled.</code></pre>
+      </details>
+      <details>
+        <summary>Direct QA Prompt</summary>
+        <pre><code>Answer the following StrategyQA question directly.
 
-Respond in this format:
+Question:
+{question}
 
-Winner:
-A or B
+Rules:
+- Start with exactly one line: Answer: YES or Answer: NO
+- Provide a concise visible rationale.
 
-Final Answer:
-YES or NO
+Answer:</code></pre>
+      </details>
+      <details>
+        <summary>Self Consistency Prompt</summary>
+        <pre><code>Answer the following StrategyQA question independently.
 
-Explanation:
-Short explanation.
-</pre>
+Question:
+{question}
 
-</details>
+Rules:
+- Start with exactly one line: Answer: YES or Answer: NO
+- Provide a brief reason.
 
----
+Answer:</code></pre>
+      </details>
+      <details>
+        <summary>Jury Judge Prompt</summary>
+        <pre><code>You are Judge {judge_number} in a multi-judge panel.
 
-<h3>Notes</h3>
+Question:
+{question}
 
-<ul>
-<li>Prompts were iteratively improved from v1 to v2</li>
-<li>Stronger constraints were added to reduce failures</li>
-<li>Structured outputs improved evaluation reliability</li>
-</ul>
+Complete debate transcript:
+{transcript}
 
-</section>
-<footer>
+Your task:
+Independently evaluate the debate and select the answer most likely to be correct.
 
-<p>
-Multi-Agent Debate Project — StrategyQA Evaluation
-</p>
+Required output format:
+Final Answer: YES or NO
+Confidence: integer from 1 to 5
+Rationale: concise explanation</code></pre>
+      </details>
+    </section>
 
-</footer>
+    <section id="repo-map" class="content-band">
+      <h2>Repository Map</h2>
+      <p>The repository is organized so that agents, orchestration, prompts, experiments, logs, and evaluation can be inspected independently.</p>
+      <div class="repo-map">
+        <pre><code>HW2/
+├── agents/
+│   ├── debater.py          Debater A/B agent wrapper
+│   ├── judge.py            Single judge agent
+│   └── jury.py             3-judge panel agent
+├── debate/
+│   └── debate_orchestrator.py
+│                           Debate protocol, consensus, rounds, logging
+├── experiments/
+│   ├── run_debate_experiment.py
+│   ├── run_direct_qa.py
+│   ├── run_self_consistency.py
+│   └── run_jury.py
+├── evaluation/
+│   └── evaluate_accuracy.py
+│                           Accuracy and paired McNemar tables
+├── prompts/
+│   ├── debaterA.txt
+│   ├── debaterB.txt
+│   ├── judge.txt
+│   ├── direct_qa.txt
+│   ├── self_consistency.txt
+│   └── jury_judge.txt
+├── config/
+│   └── config.yaml         Model, temperature, rounds, tokens, jury settings
+├── data/
+│   └── strategyqa_100.json 100 StrategyQA questions
+├── logs/
+│   ├── debate_logs.json
+│   ├── debate_results.json
+│   ├── direct_qa_results.json
+│   ├── self_consistency_results.json
+│   └── jury_results.json
+├── app.py                  Flask backend for live UI runs
+├── index.html              Web report and transcript viewer
+├── style.css               Web UI styles
+├── README.md               Setup and reproduction instructions
+├── REPORT.md               Full written report
+└── requirements.txt        Python dependencies</code></pre>
 
+        <div class="repo-notes">
+          <article>
+            <h3>Core Pipeline</h3>
+            <p><code>agents/</code> and <code>debate/</code> contain the live debate system: independent initial answers, optional rounds, judge verdict, and JSON logging.</p>
+          </article>
+          <article>
+            <h3>Reproducibility</h3>
+            <p><code>config/</code>, <code>prompts/</code>, <code>requirements.txt</code>, and <code>README.md</code> define the exact settings and commands needed to rerun the experiments.</p>
+          </article>
+          <article>
+            <h3>Evidence</h3>
+            <p><code>logs/</code> stores the complete saved outputs used by the results table, qualitative analysis, and the 100-question transcript appendix below.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="coverage" class="content-band">
+      <h2>Requirement Coverage</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Requirement</th>
+            <th>Status</th>
+            <th>Evidence</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>100+ reasoning questions</td><td>Complete</td><td><code>data/strategyqa_100.json</code></td></tr>
+          <tr><td>Debater, judge, orchestrator modules</td><td>Complete</td><td><code>agents/</code>, <code>debate/</code></td></tr>
+          <tr><td>Initialization, rounds, judgment, evaluation</td><td>Complete</td><td><code>debate_orchestrator.py</code>, <code>evaluation/</code></td></tr>
+          <tr><td>Direct QA and self-consistency baselines</td><td>Complete</td><td><code>experiments/run_direct_qa.py</code>, <code>run_self_consistency.py</code></td></tr>
+          <tr><td>Prompt templates</td><td>Complete</td><td><code>prompts/</code></td></tr>
+          <tr><td>JSON logging</td><td>Complete</td><td><code>logs/*.json</code></td></tr>
+          <tr><td>Web UI</td><td>Complete</td><td><code>index.html</code>, <code>app.py</code></td></tr>
+          <tr><td>requirements.txt</td><td>Complete</td><td><code>requirements.txt</code></td></tr>
+          <tr><td>Bonus jury panel</td><td>Complete</td><td><code>agents/jury.py</code>, <code>logs/jury_results.json</code></td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section id="appendix-transcripts" class="content-band">
+      <h2>Appendix: Saved Debate Transcripts</h2>
+      <p>All 100 saved StrategyQA debate records are listed below. Open any question to inspect Debater A, Debater B, debate rounds, judge output, ground truth, final answer, and confidence.</p>
+      <div id="transcript-appendix" class="transcript-appendix">
+        <p class="muted">Loading saved debate records...</p>
+      </div>
+    </section>
+  </main>
+
+  <script>
+    const form = document.querySelector("#debate-form");
+    const input = document.querySelector("#question-input");
+    const liveButton = document.querySelector("#live-button");
+    const sampleButton = document.querySelector("#sample-button");
+    const statusEl = document.querySelector("#status");
+    const initialOutput = document.querySelector("#initial-output");
+    const roundOutput = document.querySelector("#round-output");
+    const verdictOutput = document.querySelector("#verdict-output");
+
+    const fallbackSamples = [
+      "Can Aerosmith fit in a 2020 Mitsubishi Outlander?",
+      "Could two newborn American Black Bear cubs fit on a king size bed?",
+      "Would nickel boil in the outer core of the earth?",
+      "Can a firewall protect against a short circuit?",
+      "Are kayaks used at the summit of Mount Everest?",
+      "Did Johann Sebastian Bach ever win a Grammy Award?",
+      "Does the name C-SPAN refer to a form of telecommunications that utilizes outer space?"
+    ];
+    let sampleCursor = -1;
+    let savedLogsCache = null;
+
+    function setStatus(text, tone = "neutral") {
+      statusEl.textContent = text;
+      statusEl.dataset.tone = tone;
+    }
+
+    function escapeHtml(value) {
+      return String(value ?? "").replace(/[&<>"']/g, char => ({
+        "&": "&amp;",
+        "<": "&lt;",
+        ">": "&gt;",
+        '"': "&quot;",
+        "'": "&#039;"
+      }[char]));
+    }
+
+    function agentBlock(label, text, answer) {
+      return `
+        <article class="agent-block">
+          <div class="agent-meta">
+            <strong>${label}</strong>
+            <span>${escapeHtml((answer || "unknown").toUpperCase())}</span>
+          </div>
+          <p>${escapeHtml(text || "No argument recorded.")}</p>
+        </article>
+      `;
+    }
+
+    function extractAnswer(text) {
+      const raw = String(text || "").toLowerCase();
+      const patterns = [
+        /final\s+answer\s*[:\-]?\s*\**\s*(yes|no)\b/i,
+        /verdict\s*[:\-]?\s*\**\s*(yes|no)\b/i,
+        /answer\s*[:\-]?\s*\**\s*(yes|no)\b/i,
+        /\b(yes|no)\b\s*[-:]\s*/i
+      ];
+
+      for (const pattern of patterns) {
+        const match = raw.match(pattern);
+        if (match) return match[1].toLowerCase();
+      }
+
+      return "unknown";
+    }
+
+    function knownAnswer(value) {
+      const answer = String(value || "").toLowerCase();
+      return answer === "yes" || answer === "no" ? answer : "";
+    }
+
+    function normalizeLabel(value) {
+      if (value === true) return "yes";
+      if (value === false) return "no";
+
+      const raw = String(value || "").toLowerCase();
+      if (raw === "true" || raw === "1") return "yes";
+      if (raw === "false" || raw === "0") return "no";
+      return knownAnswer(raw) || "unknown";
+    }
+
+    function normalizeAgent(value) {
+      if (!value) return { text: "", answer: "unknown" };
+
+      if (typeof value === "string") {
+        return {
+          text: value,
+          answer: extractAnswer(value)
+        };
+      }
+
+      const text = value.text || value.argument || value.raw_output || "";
+      return {
+        text,
+        answer: knownAnswer(value.answer) || extractAnswer(text)
+      };
+    }
+
+    function normalizeRound(item) {
+      const agentA = normalizeAgent(item.A);
+      const agentB = normalizeAgent(item.B);
+
+      return {
+        round: item.round,
+        A: {
+          argument: agentA.text,
+          answer: agentA.answer
+        },
+        B: {
+          argument: agentB.text,
+          answer: agentB.answer
+        }
+      };
+    }
+
+    function savedRoundCount(item) {
+      if (Array.isArray(item.rounds)) return item.rounds.length;
+      if (Array.isArray(item.transcript)) return Math.max(0, item.transcript.length - 1);
+      return 0;
+    }
+
+    function logText(item) {
+      return JSON.stringify(item).toLowerCase();
+    }
+
+    function scoreSavedLog(item) {
+      const text = logText(item);
+      let value = item._logIndex || 0;
+      const knownPrediction = knownAnswer(item.final_answer) || knownAnswer(item.prediction) || knownAnswer(item.verdict) || knownAnswer(item.consensus);
+      const judgeAnswer = extractAnswer(item.judge_result || item.judge_reasoning || "");
+      const initialA = normalizeAgent(item.initial_positions?.A || item.transcript?.[0]?.A);
+      const initialB = normalizeAgent(item.initial_positions?.B || item.transcript?.[0]?.B);
+
+      if (item.initial_positions) value += 10000;
+      if (knownPrediction) value += 3000;
+      if (knownAnswer(judgeAnswer)) value += 5000;
+      if (knownAnswer(initialA.answer) && knownAnswer(initialB.answer)) value += 2000;
+      if (item.confidence) value += 2000;
+      if (!text.includes("no argument generated")) value += 5000;
+      if (savedRoundCount(item) > 0 || item.consensus) value += 1000;
+      if (text.includes("request failed after retries")) value -= 20000;
+      if (text.includes("judge evaluation failed")) value -= 10000;
+      return value;
+    }
+
+    function isWeakSavedLog(item) {
+      const text = logText(item);
+      return text.includes("no argument generated")
+        || text.includes("request failed after retries")
+        || text.includes("judge evaluation failed");
+    }
+
+    function normalizeLog(raw) {
+      const initial = raw.initial_positions || {};
+      const rounds = raw.rounds || [];
+
+      if (raw.transcript && !raw.initial_positions) {
+        const first = raw.transcript[0] || {};
+        const initialA = normalizeAgent(first.A);
+        const initialB = normalizeAgent(first.B);
+        const judgeText = raw.judge_result || raw.judge_reasoning || raw.judge_output || "";
+        return {
+          question: raw.question,
+          initial_positions: {
+            A: initialA,
+            B: initialB
+        },
+          rounds: raw.transcript.slice(1).map(normalizeRound),
+          judge_result: judgeText,
+          prediction: knownAnswer(raw.final_answer) || knownAnswer(raw.prediction) || knownAnswer(raw.verdict) || knownAnswer(raw.consensus) || extractAnswer(judgeText),
+          confidence: raw.confidence || null
+        };
+      }
+
+      const judgeText = raw.judge_result || raw.judge_reasoning || raw.judge_output || "";
+      return {
+        question: raw.question,
+        initial_positions: {
+          A: normalizeAgent(initial.A),
+          B: normalizeAgent(initial.B)
+        },
+        rounds: rounds.map(normalizeRound),
+        judge_result: judgeText,
+        prediction: knownAnswer(raw.final_answer) || knownAnswer(raw.prediction) || knownAnswer(raw.verdict) || knownAnswer(raw.consensus) || extractAnswer(judgeText),
+        confidence: raw.confidence || null
+      };
+    }
+
+    function renderDebate(raw) {
+      const log = normalizeLog(raw);
+      const initialA = log.initial_positions.A || {};
+      const initialB = log.initial_positions.B || {};
+
+      initialOutput.innerHTML = [
+        agentBlock("Debater A", initialA.text, initialA.answer),
+        agentBlock("Debater B", initialB.text, initialB.answer)
+      ].join("");
+
+      if (!log.rounds.length) {
+        roundOutput.innerHTML = `
+          <p class="muted">
+            Consensus reached before debate rounds. Use Sample to inspect saved transcripts with full debate rounds,
+            or Live Run on a more ambiguous question to generate new rounds.
+          </p>
+        `;
+      } else {
+        roundOutput.innerHTML = log.rounds.map(round => `
+          <article class="round-block">
+            <h4>Round ${escapeHtml(round.round)}</h4>
+            ${agentBlock("Debater A", round.A?.argument, round.A?.answer)}
+            ${agentBlock("Debater B", round.B?.argument, round.B?.answer)}
+          </article>
+        `).join("");
+      }
+
+      verdictOutput.innerHTML = `
+        <div class="verdict-line">
+          <span>Final Answer</span>
+          <strong>${escapeHtml((log.prediction || "unknown").toUpperCase())}</strong>
+        </div>
+        <div class="verdict-line">
+          <span>Confidence</span>
+          <strong>${escapeHtml(log.confidence ?? "n/a")}</strong>
+        </div>
+        <pre>${escapeHtml(log.judge_result || "No judge output recorded.")}</pre>
+      `;
+    }
+
+    function renderMessage(title, message) {
+      initialOutput.innerHTML = `<p class="muted">${escapeHtml(title)}</p>`;
+      roundOutput.innerHTML = `<p class="muted">${escapeHtml(message)}</p>`;
+      verdictOutput.innerHTML = `<pre>${escapeHtml(message)}</pre>`;
+    }
+
+    async function loadSavedLogs() {
+      if (savedLogsCache) return savedLogsCache;
+
+      const response = await fetch("logs/debate_logs.json", { cache: "no-store" });
+      if (!response.ok) throw new Error("Saved logs unavailable");
+      savedLogsCache = (await response.json()).map((item, index) => ({ ...item, _logIndex: index }));
+      return savedLogsCache;
+    }
+
+    async function loadDebateResults() {
+      const response = await fetch("logs/debate_results.json", { cache: "no-store" });
+      if (!response.ok) throw new Error("Saved debate results unavailable");
+      return (await response.json()).map((item, index) => ({ ...item, _resultIndex: index }));
+    }
+
+    async function loadSavedDebate(question) {
+      const logs = await loadSavedLogs();
+      const query = question.toLowerCase();
+
+      const exact = logs.filter(item => item.question?.toLowerCase() === query);
+      const partial = logs.filter(item => item.question?.toLowerCase().includes(query));
+      const candidates = exact.length ? exact : (partial.length ? partial : logs);
+      if (!candidates.length) throw new Error("No saved logs available");
+
+      const roundCandidates = candidates.filter(item => savedRoundCount(item) > 0 && !isWeakSavedLog(item));
+
+      return (roundCandidates.length ? roundCandidates : candidates)
+        .sort((a, b) => scoreSavedLog(b) - scoreSavedLog(a))[0];
+    }
+
+    async function pickSavedSampleWithRounds() {
+      const logs = await loadSavedLogs();
+      const bestByQuestion = new Map();
+
+      logs
+        .filter(item => item.question && savedRoundCount(item) > 0 && !isWeakSavedLog(item))
+        .forEach(item => {
+          const key = item.question.toLowerCase();
+          const current = bestByQuestion.get(key);
+          if (!current || scoreSavedLog(item) > scoreSavedLog(current)) {
+            bestByQuestion.set(key, item);
+          }
+        });
+
+      const candidates = Array.from(bestByQuestion.values())
+        .sort((a, b) => scoreSavedLog(b) - scoreSavedLog(a));
+
+      if (!candidates.length) {
+        sampleCursor = (sampleCursor + 1) % fallbackSamples.length;
+        input.value = fallbackSamples[sampleCursor];
+        return loadSavedDebate(input.value);
+      }
+
+      sampleCursor = (sampleCursor + 1) % candidates.length;
+      input.value = candidates[sampleCursor].question;
+      return candidates[sampleCursor];
+    }
+
+    function analysisAgentBlock(label, text, answer) {
+      const badge = answer
+        ? `<em>${escapeHtml(String(answer).toUpperCase())}</em>`
+        : "";
+
+      return `
+        <details class="agent-detail">
+          <summary>
+            <span>${escapeHtml(label)}</span>
+            ${badge}
+          </summary>
+          <pre><code>${escapeHtml(text || "No recorded response.")}</code></pre>
+        </details>
+      `;
+    }
+
+    function renderAnalysisTranscript(raw) {
+      const log = normalizeLog(raw);
+      const initialA = log.initial_positions.A || {};
+      const initialB = log.initial_positions.B || {};
+      const rounds = log.rounds || [];
+      const groundTruth = normalizeLabel(raw.ground_truth);
+      const finalAnswer = normalizeLabel(raw.final_answer || raw.prediction || raw.verdict || log.prediction);
+
+      const roundsHtml = rounds.length
+        ? rounds.map(round => `
+            <details class="round-detail">
+              <summary>Round ${escapeHtml(round.round)}</summary>
+              ${analysisAgentBlock("Debater A", round.A?.argument, round.A?.answer)}
+              ${analysisAgentBlock("Debater B", round.B?.argument, round.B?.answer)}
+            </details>
+          `).join("")
+        : `<p class="muted">No debate rounds were run because both debaters initially agreed.</p>`;
+
+      return `
+        <div class="analysis-meta">
+          <span>Ground Truth<br><strong>${escapeHtml(groundTruth.toUpperCase())}</strong></span>
+          <span>Final Answer<br><strong>${escapeHtml(finalAnswer.toUpperCase())}</strong></span>
+          <span>Confidence<br><strong>${escapeHtml(raw.confidence ?? log.confidence ?? "n/a")}</strong></span>
+          <span>Rounds<br><strong>${escapeHtml(rounds.length)}</strong></span>
+        </div>
+        <details class="round-detail">
+          <summary>Initial Positions</summary>
+          ${analysisAgentBlock("Debater A", initialA.text, initialA.answer)}
+          ${analysisAgentBlock("Debater B", initialB.text, initialB.answer)}
+        </details>
+        ${roundsHtml}
+        ${analysisAgentBlock("Judge Output", log.judge_result || "No judge output recorded.", finalAnswer)}
+      `;
+    }
+
+    async function fillAnalysisTranscripts() {
+      const targets = Array.from(document.querySelectorAll("[data-analysis-question]"));
+      if (!targets.length) return;
+
+      await Promise.all(targets.map(async target => {
+        try {
+          const saved = await loadSavedDebate(target.dataset.analysisQuestion);
+          target.innerHTML = renderAnalysisTranscript(saved);
+        } catch (error) {
+          target.innerHTML = `
+            <p class="muted">
+              Transcript details load from <code>logs/debate_logs.json</code> when the site is served through Flask or GitHub Pages.
+            </p>
+          `;
+        }
+      }));
+    }
+
+    function renderTranscriptRecord(raw, index) {
+      const log = normalizeLog(raw);
+      const groundTruth = normalizeLabel(raw.ground_truth);
+      const finalAnswer = normalizeLabel(raw.final_answer || raw.prediction || raw.verdict || log.prediction);
+      const rounds = log.rounds?.length || 0;
+      const confidence = raw.confidence ?? log.confidence ?? "n/a";
+      const questionNumber = String(index + 1).padStart(3, "0");
+
+      return `
+        <details class="transcript-record">
+          <summary>
+            <span>${questionNumber}. ${escapeHtml(raw.question || "Untitled question")}</span>
+            <span class="record-badges">
+              <em>GT ${escapeHtml(groundTruth.toUpperCase())}</em>
+              <em>Pred ${escapeHtml(finalAnswer.toUpperCase())}</em>
+              <em>Rounds ${escapeHtml(rounds)}</em>
+              <em>Conf ${escapeHtml(confidence)}</em>
+            </span>
+          </summary>
+          <div class="analysis-transcript">
+            ${renderAnalysisTranscript(raw)}
+          </div>
+        </details>
+      `;
+    }
+
+    async function fillTranscriptAppendix() {
+      const target = document.querySelector("#transcript-appendix");
+      if (!target) return;
+
+      try {
+        const results = await loadDebateResults();
+        target.innerHTML = `
+          <p class="transcript-count">${results.length} saved debate records loaded from <code>logs/debate_results.json</code>.</p>
+          ${results.map(renderTranscriptRecord).join("")}
+        `;
+      } catch (error) {
+        try {
+          const logs = await loadSavedLogs();
+          const uniqueByQuestion = new Map();
+          logs.forEach(item => {
+            if (!item.question) return;
+            const current = uniqueByQuestion.get(item.question);
+            if (!current || scoreSavedLog(item) > scoreSavedLog(current)) {
+              uniqueByQuestion.set(item.question, item);
+            }
+          });
+          const records = Array.from(uniqueByQuestion.values()).sort((a, b) => (a._logIndex || 0) - (b._logIndex || 0));
+          target.innerHTML = `
+            <p class="transcript-count">${records.length} saved debate records loaded from <code>logs/debate_logs.json</code>.</p>
+            ${records.map(renderTranscriptRecord).join("")}
+          `;
+        } catch (fallbackError) {
+          target.innerHTML = `
+            <p class="muted">
+              Saved transcript appendix loads from <code>logs/debate_results.json</code> or <code>logs/debate_logs.json</code> when the site is served through Flask or GitHub Pages.
+            </p>
+          `;
+        }
+      }
+    }
+
+    async function showSavedDebate(question) {
+      setStatus("Loading saved", "busy");
+
+      try {
+        const saved = await loadSavedDebate(question);
+        renderDebate(saved);
+        setStatus("Saved transcript", "ok");
+      } catch (error) {
+        renderMessage(
+          "No saved transcript loaded.",
+          "Saved logs could not be loaded. If you opened index.html directly, run `python app.py` and use http://127.0.0.1:5000."
+        );
+        setStatus("Logs unavailable", "error");
+      }
+    }
+
+    async function runLiveDebate(question) {
+      setStatus("Running live", "busy");
+      renderMessage(
+        "Live debate is running.",
+        "This can take a few minutes because it calls multiple LLM agents. Keep this tab open."
+      );
+
+      try {
+        const response = await fetch("/api/debate", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ question })
+        });
+
+        const result = await response.json().catch(() => ({}));
+        if (!response.ok) {
+          throw new Error(result.error || "Backend unavailable");
+        }
+        renderDebate(result);
+        setStatus("Live result", "ok");
+      } catch (error) {
+        try {
+          const saved = await loadSavedDebate(question);
+          renderDebate(saved);
+          setStatus("Saved fallback", "ok");
+        } catch (fallbackError) {
+          renderMessage(
+            "Live run failed.",
+            `${error.message}. Saved fallback also failed. Start Flask with \`python app.py\` and make sure UTSA_API_KEY, UTSA_BASE_URL, and UTSA_MODEL are set in that terminal.`
+          );
+          setStatus("Run failed", "error");
+        }
+      }
+    }
+
+    form.addEventListener("submit", event => {
+      event.preventDefault();
+      const question = input.value.trim();
+      if (question) showSavedDebate(question);
+    });
+
+    liveButton.addEventListener("click", () => {
+      const question = input.value.trim();
+      if (question) runLiveDebate(question);
+    });
+
+    sampleButton.addEventListener("click", async () => {
+      setStatus("Picking sample", "busy");
+
+      try {
+        const sample = await pickSavedSampleWithRounds();
+        renderDebate(sample);
+        setStatus(savedRoundCount(sample) > 0 ? "Saved sample with rounds" : "Saved sample", "ok");
+      } catch (error) {
+        sampleCursor = (sampleCursor + 1) % fallbackSamples.length;
+        input.value = fallbackSamples[sampleCursor];
+        showSavedDebate(input.value);
+      }
+    });
+
+    showSavedDebate(input.value);
+    fillAnalysisTranscripts();
+    fillTranscriptAppendix();
+  </script>
 </body>
-
 </html>

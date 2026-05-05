@@ -19,15 +19,31 @@ from utils.config_loader import load_config
 # Load config file
 config = load_config()
 
-api_key = os.getenv("OPENAI_API_KEY")
+client = None
 
-if api_key is None:
-    raise ValueError("OPENAI_API_KEY environment variable not set")
 
-client = OpenAI(
-    base_url=config["api"]["base_url"],
-    api_key=os.getenv("OPENAI_API_KEY")
-)
+def get_client():
+    global client
+
+    if client is not None:
+        return client
+
+    api_key = os.getenv("UTSA_API_KEY") or os.getenv("OPENAI_API_KEY")
+    if api_key is None:
+        raise ValueError("UTSA_API_KEY or OPENAI_API_KEY environment variable not set")
+
+    base_url = (
+        os.getenv("UTSA_BASE_URL")
+        or os.getenv("OPENAI_BASE_URL")
+        or config["api"]["base_url"]
+    )
+
+    client = OpenAI(
+        base_url=base_url,
+        api_key=api_key,
+        timeout=config.get("api", {}).get("timeout", 60)
+    )
+    return client
 
 
 def query_llm(prompt, temperature=None, max_tokens=None, max_retries=3, remove_think=True):
@@ -54,14 +70,18 @@ def query_llm(prompt, temperature=None, max_tokens=None, max_retries=3, remove_t
     if max_tokens is None:
         max_tokens = config["model"]["max_tokens"]
 
-    model_name = config["model"]["name"]
+    model_name = (
+        os.getenv("UTSA_MODEL")
+        or os.getenv("OPENAI_MODEL")
+        or config["model"]["name"]
+    )
 
 
     for attempt in range(max_retries):
 
         try:
 
-            response = client.chat.completions.create(
+            response = get_client().chat.completions.create(
 
                 model=model_name,
 
@@ -91,11 +111,14 @@ def query_llm(prompt, temperature=None, max_tokens=None, max_retries=3, remove_t
 
             text = str(text)
 
-            print("MODEL RAW OUTPUT:", text)
+            if config.get("logging", {}).get("verbose_model_output", False):
+                print("MODEL RAW OUTPUT:", text)
 
 
             # Token usage
-            tokens_used = response.usage.total_tokens if hasattr(response, "usage") else 0
+            tokens_used = 0
+            if hasattr(response, "usage") and response.usage:
+                tokens_used = getattr(response.usage, "total_tokens", 0) or 0
 
 
             # Remove <think> blocks if present
@@ -146,7 +169,7 @@ def main():
         print(f"\n--- Prompt {i} ---")
         print("Input:", p)
 
-        result = query_llm(p, temperature=0.2, max_tokens=200)
+        result = query_llm(p)
 
         print("Output:")
         print(result)

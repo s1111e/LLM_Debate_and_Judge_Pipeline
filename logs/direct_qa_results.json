@@ -2,601 +2,801 @@
   {
     "question": "Can Aerosmith fit in a 2020 Mitsubishi Outlander?",
     "ground_truth": true,
+    "final_answer": "yes",
     "prediction": "yes",
-    "raw_output": "YES \u2013 a 2020 Mitsubishi Outlander has five seats, and Aerosmith\u2019s five members can all sit inside (though their instruments would likely need separate transport)."
+    "raw_output": "Answer: YES  \nRationale: Aerosmith has five members, and a 2020 Mitsubishi",
+    "tokens": 979
   },
   {
     "question": "Are kayaks used at the summit of Mount Everest?",
     "ground_truth": true,
+    "final_answer": "no",
     "prediction": "no",
-    "raw_output": "NO \u2013 kayaks are watercraft used on rivers, lakes, or oceans, and there is no water or suitable terrain at the summit of Mount Everest for their use."
+    "raw_output": "Answer: NO  \nRationale: Kayaks are watercraft designed for use in water environments, while Mount Everest's summit is a high-altitude mountain peak with no access to water. The extreme conditions and lack of water make kayaks impractical and unused there.",
+    "tokens": 338
   },
   {
     "question": "Does the country that received the most gold medals during the 1976 Olympics still exist?",
     "ground_truth": false,
-    "prediction": "yes",
-    "raw_output": "YES \u2013 The United States won the most gold medals at the 1976 Montreal Olympics, and it still exists today."
+    "final_answer": "no",
+    "prediction": "no",
+    "raw_output": "Answer: NO  \nThe Soviet Union, which won the most gold medals (11) at the 1976 Montreal Olympics, dissolved in 1991. It no longer exists as a sovereign state.",
+    "tokens": 453
   },
   {
     "question": "Would a Common warthog starve in a greenhouse?",
     "ground_truth": false,
-    "prediction": "yes",
-    "raw_output": "**YES** \u2013 A common warthog would likely starve in a greenhouse because the environment offers too little variety and quantity of food for its large, omnivorous diet, and the space is too confined for the amount of forage it requires."
+    "final_answer": "no",
+    "prediction": "no",
+    "raw_output": "Answer: NO  \nRationale: A greenhouse provides a controlled environment with plants and resources, but a warthog's diet and foraging behavior require specific conditions (e.g., open savanna, varied vegetation) not typically met in a greenhouse, leading to starvation if not properly sustained.",
+    "tokens": 572
   },
   {
     "question": "Would a model be appropriate to star in a LA Femme Nikita remake?",
     "ground_truth": true,
+    "final_answer": "no",
     "prediction": "no",
-    "raw_output": "NO \u2013 while a model can bring the right visual presence, the demanding action\u2011drama of a *Femme\u202fNikita* remake usually requires an actor with proven combat and dramatic skills, which a typical model may not yet possess."
+    "raw_output": "Answer: NO  \nRationale: A machine learning model cannot act in a TV show, as it lacks the physical and emotional capabilities required for performance.",
+    "tokens": 814
   },
   {
     "question": "Is eating a Dicopomorpha echmepterygis size Uranium pellet fatal?",
     "ground_truth": false,
+    "final_answer": "no",
     "prediction": "no",
-    "raw_output": "**NO** \u2013 a pellet the size of a Dicopomorpha echmepterygis would weigh only a few milligrams, far below the amount needed to deliver a lethal dose of radiation or chemical toxicity. The radiation dose and chemical burden from such a tiny amount of uranium would be too low to be fatal."
+    "raw_output": "Answer: NO  \nRationale: A Uranium pellet the size of Dicopomorpha echmepterygis (a minuscule fly, ~0.1 mm) would contain an extremely small mass of uranium. While uranium is toxic, the amount ingested would be negligible to cause immediate fatality. Fatal uranium poisoning typically requires significantly larger quantities.",
+    "tokens": 829
   },
   {
     "question": "Did any of Maya Angelou's children follow in her footsteps?",
     "ground_truth": true,
-    "prediction": "no",
-    "raw_output": "No argument generated."
+    "final_answer": "yes",
+    "prediction": "yes",
+    "raw_output": "Answer: YES  \nRationale: Maya Angelou's daughter, Maya Angelou Jr., became a writer and poet, and her son, Guy, was a civil rights activist, both following in her footsteps.",
+    "tokens": 354
   },
   {
     "question": "Is chaff produced by hydropower?",
     "ground_truth": true,
+    "final_answer": "no",
     "prediction": "no",
-    "raw_output": "NO \u2013 Chaff is a waste product of petroleum refining, not a byproduct of hydropower generation."
+    "raw_output": "Answer: NO  \nChaff is a byproduct of agricultural processes involving grains, not related to hydropower, which generates electricity using water flow.",
+    "tokens": 318
   },
   {
     "question": "Could two newborn American Black Bear cubs fit on a king size bed?",
     "ground_truth": true,
+    "final_answer": "yes",
     "prediction": "yes",
-    "raw_output": "YES \u2013 newborn black bear cubs are only a few inches long and weigh a few pounds, so two of them would easily fit on a king\u2011size bed."
+    "raw_output": "Answer: YES  \nRationale: A king-sized bed is 76 inches long and 60 inches wide. Newborn American Black Bear cubs are approximately 12-14 inches long and 6-8 inches wide. Two cubs would occupy about 24-28 inches in length and 12-16 inches in width, which comfortably fits within the bed's dimensions.",
+    "tokens": 549
   },
   {
     "question": "Did Benito Mussolini wear bigger shoes than Haf\u00fe\u00f3r Bj\u00f6rnsson?",
     "ground_truth": false,
+    "final_answer": "no",
     "prediction": "no",
-    "raw_output": "NO \u2013 Mussolini\u2019s shoe size was ordinary (around a 9\u201310 US), whereas Haf\u00fe\u00f3r Bj\u00f6rnsson is known for wearing huge shoes (about a 18 US)."
+    "raw_output": "Answer: NO  \nRationale: Haf\u00fe\u00f3r Bj\u00f6rnsson's shoe size is publicly known to be around 16-17 (US men's), while there is no documented evidence of Benito Mussolini's shoe size. Without specific data on Mussolini's size, a direct comparison cannot be made, making the claim unsupported.",
+    "tokens": 484
   },
   {
     "question": "Did land owners elect their rulers in the Kingdom of Hungary?",
     "ground_truth": false,
+    "final_answer": "yes",
     "prediction": "yes",
-    "raw_output": "YES \u2013 In medieval Hungary the king was chosen by the nobles (the land\u2011owning aristocracy). After a monarch\u2019s death, the Hungarian nobility elected a new king, a practice that continued until the monarchy became hereditary."
+    "raw_output": "Answer: YES  \nRationale: In the Kingdom of Hungary, the nobility (including landowners) elected the king through the Diet, a legislative assembly that held significant power in the feudal system.",
+    "tokens": 363
   },
   {
     "question": "Would Brian Warner be a good singer for a soul music band?",
     "ground_truth": false,
+    "final_answer": "no",
     "prediction": "no",
-    "raw_output": "NO \u2013 Brian Warner (Marilyn\u202fManson) is known for shock\u2011rock and heavy\u2011metal vocals, not the smooth, emotive style required for soul music."
+    "raw_output": "Answer: NO  \nRationale: Brian Warner, known for his rock and glam rock style with Meat Loaf, has a vocal delivery and genre association that diverge from the soul music's emphasis on emotive vocal techniques, melisma, and gospel influences. His natural voice type and career trajectory do not align with the typical characteristics of a soul singer.",
+    "tokens": 428
   },
   {
     "question": "Are most books written as a Haiku?",
     "ground_truth": false,
+    "final_answer": "no",
     "prediction": "no",
-    "raw_output": "NO \u2013 Haiku are very short, structured poems (5\u20117\u20115 syllables). Most books are lengthy prose or longer narrative poems, not composed in that concise form."
+    "raw_output": "Answer: NO  \nRationale: Haiku is a specific 5-7-5 syllable Japanese poem form. Most books are written in diverse formats (novels, essays, textbooks, etc.) and lengths, not constrained by Haiku's structure. Only a small fraction of books are dedicated to poetry, and even fewer use Haiku exclusively.",
+    "tokens": 398
   },
   {
     "question": "Will AC/DC album sales buy more B-52 bombers than Lil Wayne's?",
     "ground_truth": true,
-    "prediction": "yes",
-    "raw_output": "**YES** \u2013 AC/DC has sold roughly 200\u202fmillion albums worldwide, while Lil\u202fWayne has sold about 50\u202fmillion. Even at modest royalty rates, AC/DC\u2019s revenue far exceeds Lil\u202fWayne\u2019s, so AC/DC\u2019s album sales could afford more B\u201152 bombers than Lil\u202fWayne\u2019s."
+    "final_answer": "no",
+    "prediction": "no",
+    "raw_output": "Answer: NO  \nRationale: AC/DC's total album sales are estimated around 200 million units, while Lil Wayne's exceed 250 million. At $130 million per B-52 bomber, Lil Wayne's sales would fund more bombers (\u22481.9) than AC/DC's (\u22481.5).",
+    "tokens": 783
   },
   {
     "question": "Can Kit & Kaboodle hypothetically help someone past the Underworld gates?",
     "ground_truth": false,
+    "final_answer": "no",
     "prediction": "no",
-    "raw_output": "NO \u2013 Kit &\u202fKaboodle is a toy brand, not a supernatural entity or magical helper, so it cannot aid anyone in passing through the mythic gates of the Underworld."
+    "raw_output": "Answer: NO  \nRationale: Kit & Kaboodle is a brand of products, not a mythological entity or figure associated with the Underworld. The Underworld gates require specific mythological means (e.g., Charon's ferry, proper offerings), which a commercial brand cannot provide.",
+    "tokens": 484
   },
   {
     "question": "Are Saturn's famous rings solid?",
     "ground_truth": false,
+    "final_answer": "no",
     "prediction": "no",
-    "raw_output": "NO \u2013 Saturn\u2019s rings are made of countless loose ice and rock particles, not a single solid structure."
+    "raw_output": "Answer: NO  \nSaturn's rings are composed of countless small ice and rock particles, not a single solid structure. They appear as a disk due to the collective gravitational pull and orbital motion of these particles.",
+    "tokens": 280
   },
   {
     "question": "Did Emma Stone pursue a higher education?",
     "ground_truth": false,
+    "final_answer": "yes",
     "prediction": "yes",
-    "raw_output": "YES \u2013 Emma Stone enrolled at the University of Southern California\u2019s School of Dramatic Arts, so she did pursue higher education (though she left after one semester)."
+    "raw_output": "Answer: YES  \nEmma Stone attended the University of Southern California (USC) School of Dramatic Arts, though she left after one year to pursue her acting career. This enrollment qualifies as pursuing higher education.",
+    "tokens": 410
   },
   {
     "question": "Does a person using tonsure have hair at the top of their scalp?",
     "ground_truth": false,
+    "final_answer": "no",
     "prediction": "no",
-    "raw_output": "NO \u2013 a tonsure is a haircut in which the top of the head is shaved or cut very short, leaving only a ring of hair around the sides and back."
+    "raw_output": "Answer: NO  \nRationale: A tonsure traditionally involves shaving the top of the scalp, leaving hair only around the sides and back, typically in a circular pattern. Thus, the top is hairless.",
+    "tokens": 499
   },
   {
     "question": "Can an Asian black bear use chopsticks?",
     "ground_truth": false,
+    "final_answer": "no",
     "prediction": "no",
-    "raw_output": "NO \u2013 bears lack the fine\u2011motor skills and opposable thumbs needed to pick up and manipulate chopsticks."
+    "raw_output": "Answer: NO  \nRationale: Asian black bears lack the dexterous hand structure and fine motor control required to manipulate chopsticks effectively. Their paws are adapted for strength and digging, not precise tool use. While some animals can be trained for specific tasks, there is no evidence that bears naturally or through training can use chopsticks.",
+    "tokens": 520
   },
   {
     "question": "Would Roman Gallic Wars army struggle to build the pyramids faster?",
     "ground_truth": false,
-    "prediction": "yes",
-    "raw_output": "YES \u2013 The Roman Gallic\u2011Wars army, while highly organized, lacked the specialized engineering knowledge, massive labor organization, and material logistics that the ancient Egyptians had developed over centuries to construct pyramids. Even with disciplined troops, they would still struggle to speed up the monumental building process."
+    "final_answer": "no",
+    "prediction": "no",
+    "raw_output": "Answer: NO  \nRationale: The Roman Gallic Wars (1st century BCE) occurred millennia after the construction of the Egyptian pyramids (circa 2600 BCE). The Romans lacked the labor force, tools, and organizational methods required for pyramid-building, making it impossible for them to replicate or surpass the original construction speed.",
+    "tokens": 606
   },
   {
     "question": "Was Martin Luther same sect as Martin Luther King Jr.?",
     "ground_truth": false,
+    "final_answer": "no",
     "prediction": "no",
-    "raw_output": "NO \u2013 Martin Luther was a 16th\u2011century Protestant Reformer who founded Lutheranism, whereas Martin\u202fLuther\u202fKing\u202fJr. was a 20th\u2011century Baptist minister and civil\u2011rights leader."
+    "raw_output": "Answer: NO  \nRationale: Martin Luther (16th century) founded Lutheranism, a Protestant denomination, while Martin Luther King Jr. (20th century) was a Baptist minister. Though both are Protestant, they belonged to distinct sects.",
+    "tokens": 427
   },
   {
     "question": "Would four shoes be insufficient for a set of octuplets?",
     "ground_truth": true,
+    "final_answer": "yes",
     "prediction": "yes",
-    "raw_output": "**YES** \u2013 Four shoes (two pairs) cannot cover the needs of eight babies; each baby would need at least one pair of shoes."
+    "raw_output": "Answer: YES  \nRationale: Octuplets consist of eight babies, each requiring at least two shoes (one pair). Four shoes provide only two pairs, insufficient for eight infants.",
+    "tokens": 410
   },
   {
     "question": "Did the 40th president of the United States forward lolcats to his friends?",
     "ground_truth": false,
+    "final_answer": "no",
     "prediction": "no",
-    "raw_output": "NO \u2013 Ronald\u202fReagan (the 40th U.S. president) died in 2004, before the lolcat meme craze of the mid\u20112000s, so he could not have forwarded them."
+    "raw_output": "Answer: NO  \nRationale: The 40th president, Ronald Reagan, served from 1981 to 1989, while \"lolcats\" emerged as an internet meme in the late 2000s. Since lolcats did not exist during Reagan's presidency, he could not have forwarded them.",
+    "tokens": 817
   },
   {
     "question": "Should wool be hand washed only?",
     "ground_truth": true,
-    "prediction": "yes",
-    "raw_output": "**YES** \u2013 Wool is delicate and can shrink or felt if washed harshly. Hand washing (or a gentle, wool\u2011specific machine cycle) keeps the fibers intact and preserves the garment\u2019s shape and softness."
+    "final_answer": "no",
+    "prediction": "no",
+    "raw_output": "Answer: NO  \nRationale: Wool care depends on the specific item; some wool garments are machine washable if labeled as such, while others require hand washing to prevent shrinkage or damage. Always check care labels for instructions.",
+    "tokens": 396
   },
   {
     "question": "Would Tom Cruise ever insult L. Ron Hubbard?",
     "ground_truth": false,
+    "final_answer": "no",
     "prediction": "no",
-    "raw_output": "NO \u2013 Tom Cruise has never publicly insulted L.\u202fRon Hubbard. As a prominent Scientologist, Cruise has consistently praised Hubbard and has no record of any disparaging remarks toward him."
+    "raw_output": "Answer: NO  \nRationale: Tom Cruise has been a long-time public supporter of Scientology, founded by L. Ron Hubbard. There is no evidence of Cruise insulting Hubbard, and his advocacy for the religion suggests loyalty rather than antagonism.",
+    "tokens": 310
   },
   {
     "question": "Was Great Recession the period of severest unemployment?",
     "ground_truth": false,
+    "final_answer": "no",
     "prediction": "no",
-    "raw_output": "NO \u2013 The Great Recession peaked at about 10% unemployment, whereas the Great Depression reached roughly 25%, making the latter the severest period of unemployment."
+    "raw_output": "Answer: NO  \nThe Great Recession (2007-2009) caused severe unemployment, peaking at ~10% in the U.S., but not the highest. The Great Depression (1929-1939) had far worse unemployment, peaking at ~25% in the U.S., making it the period of severest unemployment.",
+    "tokens": 486
   },
   {
     "question": "Will the small intenstine break down a cotton ball?",
     "ground_truth": false,
+    "final_answer": "no",
     "prediction": "no",
-    "raw_output": "NO \u2013 the small intestine cannot digest cotton. Humans lack cellulase, so cotton (cellulose) passes through unchanged and is not broken down by intestinal enzymes."
+    "raw_output": "Answer: NO  \nRationale: The small intestine lacks the enzymes (e.g., cellulase) required to break down cellulose, the primary component of cotton. While it can digest proteins, fats, and simple carbohydrates, cellulose remains undigested and passes through the digestive tract intact.",
+    "tokens": 330
   },
   {
     "question": "Can the theory of cultural hegemony explain global warming?",
     "ground_truth": false,
+    "final_answer": "no",
     "prediction": "no",
-    "raw_output": "NO \u2013 Cultural hegemony is a sociopolitical theory that explains how dominant ideas shape public perception, not the physical science behind global warming. It can help analyze how climate narratives are constructed, but it does not explain the underlying climatic processes."
+    "raw_output": "Answer: NO  \nCultural hegemony explains the dominance of certain ideologies and social structures, not the scientific causes of global warming. Global warming is driven by physical processes like greenhouse gas emissions, which require scientific analysis, not cultural theory.",
+    "tokens": 373
   },
   {
     "question": "Does Carmen Electra own a junk?",
     "ground_truth": false,
+    "final_answer": "no",
     "prediction": "no",
-    "raw_output": "NO \u2013 there is no public evidence or reliable source indicating that Carmen\u202fElectra owns a \u201cjunk\u201d (boat, vehicle, or otherwise)."
+    "raw_output": "Answer: NO  \nRationale: There is no credible public information or evidence indicating that Carmen Electra owns a junk (e.g., a non-functional vehicle). Her public persona and documented activities do not mention ownership of such an item.",
+    "tokens": 427
   },
   {
     "question": "Would the number 666 appear in a church?",
     "ground_truth": false,
-    "prediction": "yes",
-    "raw_output": "YES \u2013 the number 666 is mentioned in the Book of Revelation (the \u201cNumber of the Beast\u201d), which is part of the Christian Bible and is read in churches."
+    "final_answer": "no",
+    "prediction": "no",
+    "raw_output": "Answer: NO  \nRationale: The number 666 is associated with the \"number of the beast\" in the Book of Revelation, symbolizing evil or the Antichrist. Churches, as places of worship, typically avoid such symbolic representations and focus on positive, faith-based imagery. Thus, 666 would not appear in a church.",
+    "tokens": 430
   },
   {
     "question": "In baseball, is a \"Homer\" named after the poet Homer who wrote the Odyssey?",
     "ground_truth": false,
+    "final_answer": "no",
     "prediction": "no",
-    "raw_output": "NO \u2013 the baseball slang \u201chomer\u201d comes from \u201chome run,\u201d not from the ancient poet Homer."
+    "raw_output": "Answer: NO  \nRationale: The term \"Homer\" in baseball refers to a home run, originating from the game's terminology rather than the poet Homer. The name likely comes from the 19th-century player Homer Jones or the idea of \"homing in\" on the scoreboard, not from the ancient poet.",
+    "tokens": 597
   },
   {
     "question": "Did Metallica band members cutting their hair hurt their sales?",
     "ground_truth": true,
+    "final_answer": "no",
     "prediction": "no",
-    "raw_output": "NO \u2013 there is no evidence that Metallica members cutting their hair caused a drop in sales. Their commercial performance remained strong before and after the haircut change, and no credible source links the hairstyle to any decline in album or ticket revenue."
+    "raw_output": "Answer: NO  \nRationale: Metallica's 1996 hair cut was part of a publicity stunt for their album \"Load,\" which was commercially successful. Sales did not decline post-haircut, and the band's overall trajectory remained strong, indicating the change did not hurt sales.",
+    "tokens": 495
   },
   {
     "question": "Did Easy Rider make a profit at the theater when it was released?",
     "ground_truth": true,
+    "final_answer": "yes",
     "prediction": "yes",
-    "raw_output": "YES \u2013 The film cost only about $350,000 to make and earned roughly $2.5\u202fmillion in U.S. theaters, so it turned a profit at its initial release."
+    "raw_output": "Answer: YES  \nRationale: \"Easy Rider\" (1969) grossed over $27 million in the U.S. and $10 million internationally, far exceeding its $400,000 production budget, resulting in significant profitability.",
+    "tokens": 444
   },
   {
     "question": "Will Al Pacino and Margaret Qualley score same amount of Bacon Number points?",
     "ground_truth": true,
+    "final_answer": "no",
     "prediction": "no",
-    "raw_output": "No argument generated."
+    "raw_output": "<think>\nOkay, let's tackle this question. The user is asking if Al Pacino and Margaret Qualley will score the same amount of Bacon Number points. First, I need to recall what the Bacon Number is. The Bacon Number is a measure of an actor's connection to Kevin Bacon through shared film roles. It's part of the Kevin Bacon game.\n\nSo, Al Pacino is a well-known actor. I know he's been in several movies, but I'm not sure about his exact Bacon Number. Let me think. He's been in films like \"The Godfather,\" \"Scarface,\" and \"Ocean's Eleven.\" But does he have a direct connection to Kevin Bacon? I don't remember him being in a movie with Kevin Bacon. Wait, maybe through another actor. For example, if he's been in a movie with someone who's connected to Kevin Bacon. But I'm not certain. \n\nNow, Margaret Qualley. She's an actress who has been in some indie films. I think she's been in \"The Lost Daughter\" and \"The Power of the Dog.\" Let me check if she's connected to Kevin Bacon. If she's been in a movie with someone who has a Bacon Number, that would link her. But again, I'm not sure. \n\nWait, the Bacon Number is calculated based on the shortest path to Kevin Bacon. So, if both actors have the same number of steps through their film connections to Kevin Bacon, then their Bacon Numbers would be the same. But if their paths are different, even if they have the same number of steps, their numbers would be the same. \n\nBut the question is about whether they will score the same amount. So, I need to check if there's a possibility that both have the same Bacon Number. However, without specific information on their connections, it's hard to say. \n\nAlternatively, maybe the answer is that they can't have the same Bacon Number because they are different actors with different filmographies. But that's not necessarily true. For example, if both have a Bacon Number of 2, then they would be the same. But if one has 1 and the other 2, they would differ. \n\nWait, but the question is phrased as \"will they score the same amount.\" Since the Bacon Number is a fixed value based on their connections, unless they have the same number, the answer would be no. But without knowing their exact numbers, how can I answer? \n\nWait, maybe the answer is that it's possible, but not certain. However, the question is asking if they will score the same, implying a definite answer. Since the user is asking for a direct answer, I need to make an educated guess. \n\nAlternatively, maybe there's a way to determine this. Let me think again. Al Pacino's Bacon Number: He's been in \"The Godfather\" (1972), which is a classic. But Kevin Bacon hasn't been in that film. However, maybe through other actors. For example, if he's been in a film with someone who has a Bacon Number. Wait, maybe through \"The Devil's Advocate\" (1997), where he was in a film with Keanu Reeves. Keanu Reeves has a Bacon Number of 1 because he was in \"Speed\" with Kevin Bacon. So, Al Pacino's Bacon Number would be 2 (through Keanu Reeves). \n\nNow, Margaret Qualley. If she has a connection through someone else. For example, if she's been in a film with someone who has a Bacon Number. Let's say she's in \"The Power of the Dog\" with Benedict Cumberbatch. Benedict Cumberbatch's Bacon Number is 2 (through Kevin Bacon's role in \"The World's End\" with Simon Pegg, who was in \"Star Trek\" with Karl Urban, who was in \"The Lord of the Rings\" with Ian McKellen, who was in \"The Lord of the Rings\" with Elijah Wood, who was in \"The Lord of the Rings\" with Ian McKellen, etc. Wait, this is getting complicated. But if Benedict Cumberbatch has a Bacon Number of 2, then Margaret Qualley would have a Bacon Number of 3 (through Benedict Cumberbatch). \n\nSo, if Al Pacino has a Bacon Number of 2 and Margaret Qualley",
+    "tokens": 980
   },
   {
     "question": "Did the lead singer of Led Zepplin ever perform with Ernest Chataway?",
     "ground_truth": true,
-    "prediction": "no",
-    "raw_output": "NO \u2013 there is no record of Robert Plant (the lead singer of Led\u202fZeppelin) ever performing with Ernest\u202fChataway."
+    "final_answer": "unknown",
+    "prediction": "unknown",
+    "raw_output": "<think>\nOkay, let's tackle this question. The user is asking if the lead singer of Led Zeppelin ever performed with Ernest Chataway.\n\nFirst, I need to confirm who the lead singer of Led Zeppelin is. The band's lead singer is Robert Plant. So the question becomes: Did Robert Plant perform with Ernest Chataway?\n\nNext, I should check who Ernest Chataway is. A quick search shows that Ernest Chataway was a British musician and a member of the band The Move in the 1960s. He also played with other artists like The Creation and was involved in the British music scene. However, there's no notable connection between Ernest Chataway and Led Zeppelin.\n\nNow, I need to verify if Robert Plant and Ernest Chataway ever collaborated or performed together. Looking into their careers, Robert Plant's career started in the late 1960s with Led Zeppelin, while Ernest Chataway's active years were in the early to mid-1960s. There's no record of them performing together. Additionally, Chataway's career didn't overlap significantly with Led Zeppelin's early years. \n\nAnother angle: Maybe Chataway was part of a different band that toured with Led Zeppelin? But I don't recall any such collaborations. Led Zeppelin's early tours were with other bands like The Nice and The Move, but Chataway was part of The Move, which did tour with Led Zeppelin in 1968. Wait, but Ernest Chataway was a member of The Move, which did tour with Led Zeppelin. However, the question is about performing with Ernest Chataway specifically. If Chataway was part of The Move, and The Move toured with Led Zeppelin, then Robert Plant would have performed with Chataway during those tours. But I need to confirm if Chataway was indeed part of The Move during those tours.\n\nWait, The Move had a member named Chataway, but I need to check if he was active during the time Led Zeppelin was touring with them. Let me verify: The Move toured with Led Zeppelin in 1968. Ernest Chataway was a member of The Move during that time. So, if The Move was on tour with Led Zeppelin, then Robert Plant would have performed with Ernest Chataway during those tours. However, some sources might say that Chataway wasn't part of The Move during that specific tour. Alternatively, maybe he was. \n\nThis is a bit confusing. Let me check more carefully. Ernest Chataway was a member of The Move from 1965 to 1968. The Move toured with Led Zeppelin in 1968. Therefore, during that tour, Chataway was part of The Move, so Robert Plant would have performed with him. However, some sources might say that Chataway wasn't part of the band during that specific tour. Alternatively, maybe he was. \n\nWait, another angle: The Move's lineup in 1968 included Chataway, but Led Zeppelin's tour with The Move might have been in 1968. If that's the case, then yes, they performed together. However, I need to confirm if Chataway was indeed part of The Move during that tour. \n\nAlternatively, maybe the user is referring to a different Ernest Chataway. But I think the correct answer is that they did perform together, as Chataway was part of The Move, which toured with Led Zeppelin. Therefore, the answer would be YES. But I need to be sure. \n\nWait, but some sources might say that The Move didn't tour with Led Zeppelin. Let me check. According to some sources, The Move did tour with Led Zeppelin in 1968, and Ernest Chataway was a member of The Move during that time. Therefore, Robert Plant would have performed with Ernest Chataway. So the answer is YES. However, I'm a bit uncertain because I might be mixing up details. Alternatively, maybe Chataway wasn't part of the band during that tour. \n\nAlternatively, maybe the answer is NO because Ernest Chataway left The Move before the tour. But I need to confirm. Let me check: Ernest Chataway left The Move in",
+    "tokens": 982
   },
   {
     "question": "Can a single honey bee sting multiple humans?",
     "ground_truth": false,
+    "final_answer": "no",
     "prediction": "no",
-    "raw_output": "NO \u2013 a honey bee\u2019s barbed stinger is left behind after a sting, so the bee dies and cannot sting again."
+    "raw_output": "Answer: NO  \nRationale: Honey bees have barbed stingers that get lodged in mammalian skin, causing the bee to die after a single sting. Thus, a single honey bee cannot sting multiple humans.",
+    "tokens": 387
   },
   {
     "question": "Do drag kings take testosterone to look masculine?",
     "ground_truth": false,
+    "final_answer": "no",
     "prediction": "no",
-    "raw_output": "NO \u2013 most drag kings do not take testosterone; they rely on makeup, costumes, and performance techniques to create a masculine look."
+    "raw_output": "Answer: NO  \nDrag kings typically use makeup, clothing, and performance techniques to achieve a masculine appearance, rather than hormone therapy like testosterone. Their focus is on stylized presentation, not biological alteration.",
+    "tokens": 332
   },
   {
     "question": "Does Dean Cain have less days to birthday than Will Ferrell every 4th of July?",
     "ground_truth": false,
-    "prediction": "no",
-    "raw_output": "NO \u2013 on July\u202f4th Dean\u202fCain\u2019s birthday (July\u202f18) is 14 days away, while Will\u202fFerrell\u2019s birthday (July\u202f16) is only 12 days away, so Dean Cain has more days until his birthday."
+    "final_answer": "yes",
+    "prediction": "yes",
+    "raw_output": "Answer: YES  \nRationale: Dean Cain's birthday is July 26, so on July 4, there are 22 days until his birthday. Will Ferrell's birthday is January 16, so on July 4, there are 196 days until his next birthday. Thus, Dean Cain has fewer days to his birthday.",
+    "tokens": 668
   },
   {
     "question": "Is Michael Vick on People for the Ethical Treatment of Animals's hypothetical blacklist?",
     "ground_truth": true,
-    "prediction": "no",
-    "raw_output": "NO \u2013 PETA\u2019s public \u201chypothetical blacklist\u201d does not list Michael\u202fVick. The organization has criticized him for dog\u2011fighting, but he is not included on that specific list."
+    "final_answer": "yes",
+    "prediction": "yes",
+    "raw_output": "Answer: YES  \nRationale: Michael Vick was convicted for his role in a dogfighting ring, which aligns with PETA's opposition to animal cruelty. While PETA does not publicly maintain a formal \"blacklist,\" their advocacy against such practices suggests they would oppose individuals like Vick. The term \"hypothetical\" implies a plausible scenario based on PETA's principles.",
+    "tokens": 435
   },
   {
     "question": "Can paratroopers be used in a vacuum?",
     "ground_truth": false,
+    "final_answer": "no",
     "prediction": "no",
-    "raw_output": "NO \u2013 a parachute relies on air to generate drag, and a human cannot survive the vacuum of space without pressure and life\u2011support systems."
+    "raw_output": "Answer: NO  \nRationale: Paratroopers rely on atmospheric air to deploy parachutes and create drag for controlled descent. In a vacuum, there is no air, so parachutes would fail, and paratroopers would free-fall uncontrollably, making their use impossible.",
+    "tokens": 469
   },
   {
     "question": "Will Lhamo Thondup be considered by Catholic Church to be a saint?",
     "ground_truth": false,
+    "final_answer": "no",
     "prediction": "no",
-    "raw_output": "NO \u2013 The Catholic Church\u2019s canonization process applies only to individuals who have lived a Christian life and are recognized by the Church. Lhamo\u202fThondup, a Tibetan Buddhist monk, has not been beatified or canonized by the Catholic Church, so he will not be considered a saint."
+    "raw_output": "Answer: NO  \nRationale: The Catholic Church's canonization process requires rigorous evidence of heroic virtue and miracles, which have not been documented for Lhamo Thondup (the 14th Dalai Lama). Additionally, the Church has not officially recognized him as a candidate for sainthood, and his political stance on Tibet raises theological and diplomatic complexities.",
+    "tokens": 547
   },
   {
     "question": "Has Ringo Starr been in a relatively large number of bands?",
     "ground_truth": false,
-    "prediction": "no",
-    "raw_output": "No argument generated."
+    "final_answer": "yes",
+    "prediction": "yes",
+    "raw_output": "Answer: YES  \nRationale: Ringo Starr was a member of The Beatles, formed his own band \"Ringo Starr and His All-Starr Band,\" and participated in projects like the Plastic Ono Band, indicating multiple band affiliations.",
+    "tokens": 555
   },
   {
     "question": "Is double duty an incorrect phrase for host of Dancing With The Stars?",
     "ground_truth": false,
-    "prediction": "no",
-    "raw_output": "NO \u2013 \u201cdouble duty\u201d is a correct way to describe the host\u2019s role, as they perform both hosting duties and often additional responsibilities (e.g., backstage interviews, commentary, etc.)."
+    "final_answer": "yes",
+    "prediction": "yes",
+    "raw_output": "Answer: YES  \nRationale: \"Double duty\" implies taking on two roles or responsibilities, but the host of *Dancing With The Stars* typically has a single, primary role (hosting the show). The phrase is misleading as it suggests an additional responsibility not inherent to the position.",
+    "tokens": 317
   },
   {
     "question": "Can furniture be made of hair?",
     "ground_truth": true,
-    "prediction": "yes",
-    "raw_output": "YES \u2013 hair can be processed into composite materials or textiles that can be used in furniture construction, and experimental pieces have been made from hair\u2011based composites."
+    "final_answer": "no",
+    "prediction": "no",
+    "raw_output": "Answer: NO  \nRationale: Furniture is typically made from durable materials like wood, metal, or synthetic composites. While hair can be processed into materials like felt (used in textiles or insulation), it lacks the structural strength and practicality required for traditional furniture. Exceptions would be highly specialized or artistic applications, but not standard use.",
+    "tokens": 526
   },
   {
     "question": "Did Pedubastis I know Japanese people?",
     "ground_truth": false,
+    "final_answer": "no",
     "prediction": "no",
-    "raw_output": "NO \u2013 Pedubastis\u202fI ruled Egypt in the 8th\u202fcentury\u202fBCE, long before any contact with Japan or its people existed, and the geographic distance made any interaction impossible."
+    "raw_output": "Answer: NO  \nRationale: Pedubastis I (1st century BCE) was an Egyptian pharaoh during the Ptolemaic period. Historical records and archaeological evidence show no contact between Egypt and Japan during this era. Japan's early history predates significant interactions with the outside world, and there is no indication of direct contact between Pedubastis I and Japanese people.",
+    "tokens": 499
   },
   {
     "question": "Are some adherents to Christianity in China historic enemies of Catholic Church?",
     "ground_truth": true,
+    "final_answer": "yes",
     "prediction": "yes",
-    "raw_output": "YES \u2013 In China, Protestant missionaries and the Protestant Christian community were historically opposed to the Catholic Church, and at times Chinese Christians aligned with Protestant causes or with the state\u2011controlled Catholic movement, making them enemies of the Catholic Church."
+    "raw_output": "Answer: YES  \nRationale: Historically, some Chinese Christians, particularly during the Qing Dynasty and the Boxer Rebellion, opposed the Catholic Church due to its association with foreign imperialism and the Church's rigid stance on practices like the Chinese Rites Controversy. These tensions led to conflicts where certain Christian groups in China viewed the Catholic Church as an adversary.",
+    "tokens": 639
   },
   {
     "question": "Can someone from New England profit by growing coffee?",
     "ground_truth": false,
-    "prediction": "no",
-    "raw_output": "NO \u2013 New England\u2019s cold, short growing season and lack of tropical climate make it impractical to grow coffee profitably; the high costs of greenhouse or indoor cultivation would outweigh any potential yield."
+    "final_answer": "yes",
+    "prediction": "yes",
+    "raw_output": "Answer: YES  \nRationale: While New England's climate is not traditionally suitable for coffee, greenhouse cultivation or hybrid varieties can enable coffee growth. Small-scale operations or niche markets may allow profitability despite higher costs and challenges.",
+    "tokens": 439
   },
   {
     "question": "Can you write a whole Haiku in a single tweet?",
     "ground_truth": true,
+    "final_answer": "yes",
     "prediction": "yes",
-    "raw_output": "YES \u2013 a haiku\u2019s 17 syllables can easily fit within Twitter\u2019s 280\u2011character limit, so you can compose an entire haiku in a single tweet."
+    "raw_output": "Answer: YES  \nA Haiku's 5-7-5 syllable structure fits within Twitter's 280-character limit, allowing the entire poem to be written in a single tweet.",
+    "tokens": 504
   },
   {
     "question": "Is electricity necessary to balance an account in Microsoft Excel?",
     "ground_truth": true,
-    "prediction": "no",
-    "raw_output": "NO \u2013 electricity is not a requirement for the accounting concept of balancing an account; you could do it manually. (You would need power only to run Excel itself.)"
+    "final_answer": "unknown",
+    "prediction": "unknown",
+    "raw_output": "<think>\nOkay, let's tackle this question. The user is asking if electricity is necessary to balance an account in Microsoft Excel. Hmm, first, I need to understand what \"balance an account\" means here. Maybe they mean balancing a spreadsheet, like ensuring the numbers add up correctly, or perhaps it's about financial accounts.\n\nWait, the term \"balance an account\" could be a bit ambiguous. In Excel, balancing might refer to making sure that debits and credits are equal in a financial context, or maybe just checking that formulas are correct. But the question is about electricity. So, does Excel require electricity to function? Well, if you're using Excel on a computer, yes, electricity is needed to power the computer. But the question seems to imply that electricity is necessary for the process of balancing the account, not just running the software. \n\nWait, maybe the user is thinking about something else. Like, does Excel have a feature that requires electricity to balance accounts? No, that doesn't make sense. Excel is a software application that runs on a computer, which needs electricity. But the act of balancing an account in Excel doesn't require electricity beyond the computer's operation. So, if the question is whether electricity is necessary for the process of balancing, then the answer would be yes because you need electricity to run Excel. But if the question is whether electricity is required for the balancing process itself (like formulas or calculations), then the answer would be no. \n\nBut the way the question is phrased, \"necessary to balance an account,\" it's more likely asking if electricity is required for the process. Since Excel requires electricity to run, then technically, yes. But maybe the user is confused. Alternatively, maybe they think that balancing an account in Excel is a process that doesn't need electricity, but that's not true. So the answer would be yes because without electricity, the computer can't run Excel, so you can't perform the balancing. But maybe the answer is no because the balancing itself doesn't require electricity, just the computer. \n\nWait, the question is phrased as \"necessary to balance an account.\" So the answer depends on whether the electricity is a prerequisite for the action. If you need electricity to run Excel, then yes, it's necessary. But if the balancing is done manually without electricity, like on paper, then no. But the context is Microsoft Excel, which is a software. So the answer would be yes, because you need electricity to use Excel. But maybe the user is thinking of a different context. \n\nAlternatively, maybe the question is a trick. Like, balancing an account in Excel doesn't require electricity because it's just data entry and formulas. But that's not correct. The software requires electricity. So the answer is yes. But I need to be careful. Let me check the rules again. The answer should be YES or NO, and a concise rationale. \n\nSo, the answer is NO. Because balancing an account in Excel doesn't require electricity. Wait, no. If you're using Excel on a computer, electricity is needed. But the act of balancing the account (the process) doesn't require electricity beyond the computer's operation. So the answer is NO because electricity isn't necessary for the balancing process itself, but for the computer to run. But the question is phrased as \"necessary to balance an account,\" which might imply that electricity is a required component of the balancing process. \n\nWait, maybe the user is confused. If you're using Excel, you need electricity to run the software, but the balancing is done through the software. So the answer would be YES because electricity is necessary for the software to function. But the question is a bit ambiguous. However, the answer is likely NO because the balancing process itself doesn't require electricity. For example, if you have a spreadsheet on paper, you can balance it without electricity. But since the question is about Excel, which is a software, the answer depends on whether the electricity is necessary for the process. \n\nBut the answer is probably NO. Because the act of balancing an account in Excel doesn't require electricity. The electricity is needed to run the software, but the process of balancing is done through the software. So the answer is NO. Wait, but if you don't have electricity, you can't use Excel. So the answer is YES. This is confusing. \n\nAlternatively, maybe the question is",
+    "tokens": 975
   },
   {
     "question": "Do restaurants associate meatballs with the wrong country of origin?",
     "ground_truth": true,
-    "prediction": "yes",
-    "raw_output": "YES \u2013 many restaurants label meatballs as Italian (or Swedish) even though the dish\u2019s roots lie in other cuisines such as German or Scandinavian."
+    "final_answer": "unknown",
+    "prediction": "unknown",
+    "raw_output": "<think>\nOkay, let's tackle this question. The user is asking if restaurants associate meatballs with the wrong country of origin. First, I need to recall where meatballs are traditionally from.\n\nI know that meatballs are a common dish in many countries. For example, Italy has meatballs, like the ones in spaghetti. But wait, there's also Swedish meatballs, which are a specific dish. So maybe the confusion comes from different countries claiming them. \n\nBut the question is about whether restaurants associate them with the wrong country. So if a restaurant serves meatballs and attributes them to Italy, but they're actually from Sweden, that would be wrong. However, meatballs are a staple in several cuisines. \n\nWait, but the question is about whether the association is wrong. So if a restaurant serves meatballs and says they're from Italy, but they're actually from Sweden, then yes, that's incorrect. But if they're serving Italian-style meatballs, that's accurate. \n\nBut the question is general. Are restaurants generally associating meatballs with the wrong country? I think in some cases, like the US, meatballs are often associated with Italian cuisine, which is correct. However, in other contexts, like if a restaurant serves Swedish meatballs but labels them as Italian, that would be wrong. \n\nBut the question is phrased as a general statement. So the answer might depend on whether there's a common misassociation. For example, in some regions, meatballs might be more commonly associated with one country than another. \n\nAlternatively, maybe the answer is no because meatballs are a shared dish across multiple cultures, and restaurants might correctly associate them with the country they originate from. But I'm not sure. \n\nWait, the key here is that meatballs are a traditional dish in several countries. So if a restaurant serves meatballs and attributes them to a specific country, but that country isn't the original, then it's wrong. But if they're serving a dish that's common in multiple countries, then it's not necessarily wrong. \n\nBut the question is whether the association is wrong. So if a restaurant serves meatballs and says they're from Italy, but they're actually from Sweden, then that's incorrect. However, if they're serving Italian-style meatballs, that's correct. \n\nBut the question is general. So the answer might be no because meatballs are associated with multiple countries, and restaurants can correctly associate them with the right country. However, if there's a common misassociation, like in some places, meatballs are often linked to Italian cuisine, which is correct. \n\nAlternatively, maybe the answer is yes because in some cases, the association is incorrect. For example, in the US, meatballs are often associated with Italian food, but they are also a traditional dish in Sweden. So if a restaurant serves Swedish meatballs but labels them as Italian, that's wrong. But if they serve Italian meatballs, that's correct. \n\nBut the question is whether restaurants associate them with the wrong country. Since meatballs are found in multiple countries, it's possible that some restaurants might incorrectly attribute them to a different country. However, the answer might depend on the general case. \n\nI think the answer is no because meatballs are a common dish in several countries, and restaurants can correctly associate them with the appropriate country. However, if there's a specific case where they are wrong, then the answer would be yes. But the question is general. \n\nAlternatively, maybe the answer is yes because in some regions, meatballs are more commonly associated with one country than another, leading to possible misassociations. \n\nHmm. I need to check if there's a consensus. For example, Swedish meatballs are a specific dish, while Italian meatballs are different. So if a restaurant serves Swedish meatballs but says they're Italian, that's wrong. But if they serve Italian meatballs, that's correct. \n\nBut the question is about whether the association is wrong in general. Since meatballs are associated with multiple countries, the answer might be no because it's not inherently wrong. However, if the restaurant is incorrectly attributing them to a different country, then yes. \n\nBut the question is phrased as a general statement. So the answer would depend on whether the association is commonly wrong. Since meatballs are a shared dish, the answer might be no. \n\nAlternatively,",
+    "tokens": 976
   },
   {
     "question": "Are peaches best eaten when firm?",
     "ground_truth": false,
+    "final_answer": "no",
     "prediction": "no",
-    "raw_output": "NO \u2013 peaches are best when they give slightly to pressure, indicating ripeness; a very firm peach is under\u2011ripe and less juicy and flavorful."
+    "raw_output": "Answer: NO  \nRationale: Peaches are best eaten when ripe and slightly soft, as firm peaches are not yet fully mature and may lack sweetness and optimal flavor. Overly firm peaches can be tart and less enjoyable.",
+    "tokens": 472
   },
   {
     "question": "Did original Nintendo have games in same format as Playstation 3?",
     "ground_truth": false,
+    "final_answer": "no",
     "prediction": "no",
-    "raw_output": "NO \u2013 Nintendo\u2019s early consoles (NES, SNES, N64, etc.) used cartridge-based media, whereas the PlayStation\u202f3 uses Blu\u2011ray discs and digital downloads."
+    "raw_output": "Answer: NO  \nRationale: Original Nintendo (NES) used cartridges for games, while PlayStation 3 used Blu-ray discs. The storage formats and technology differ significantly.",
+    "tokens": 353
   },
   {
     "question": "Does Nigella Lawson care about solubility?",
     "ground_truth": true,
+    "final_answer": "no",
     "prediction": "no",
-    "raw_output": "NO \u2013 Nigella Lawson\u2019s focus is on flavor, texture and presentation in cooking, not on the chemical property of solubility."
+    "raw_output": "Answer: NO  \nRationale: Nigella Lawson is a chef and television personality focused on cooking and food presentation. Solubility, a scientific concept related to chemistry, is not a primary concern in her culinary work unless specifically relevant to a recipe's technical execution. Her expertise lies in culinary arts, not chemical properties of ingredients.",
+    "tokens": 445
   },
   {
     "question": "Is the Sea of Japan landlocked within Japan?",
     "ground_truth": false,
+    "final_answer": "no",
     "prediction": "no",
-    "raw_output": "NO \u2013 The Sea of Japan is an oceanic sea that borders Japan, Korea, and Russia; it is not surrounded by land."
+    "raw_output": "Answer: NO  \nThe Sea of Japan is bordered by Japan, South Korea, North Korea, and Russia, and it connects to the Pacific Ocean via the Tsushima Strait, meaning it is not entirely enclosed by land.",
+    "tokens": 497
   },
   {
     "question": "Are the events of Star Trek: The Next Generation in the history of the world?",
     "ground_truth": false,
+    "final_answer": "no",
     "prediction": "no",
-    "raw_output": "NO \u2013 *Star Trek: The Next Generation* is a fictional science\u2011fiction series; its events are not part of real world history."
+    "raw_output": "Answer: NO  \nRationale: The events of *Star Trek: The Next Generation* are fictional and part of a science fiction narrative, not actual historical events in the real world.",
+    "tokens": 361
   },
   {
     "question": "Was song of Roland protagonist friendly with group that had sagas?",
     "ground_truth": false,
+    "final_answer": "no",
     "prediction": "no",
-    "raw_output": "NO \u2013 Roland was a Frankish knight who fought the Saracens; there is no record of him being friendly with the Norse or Icelandic peoples whose legends are known as the sagas."
+    "raw_output": "Answer: NO  \nRationale: \"The Song of Roland\" is a medieval French chanson de geste, while sagas typically refer to Norse/Icelandic literary traditions. The protagonist, Roland, is part of the Frankish culture, not the saga tradition, so there's no direct connection or friendship implied.",
+    "tokens": 402
   },
   {
     "question": "Could all of the 2008 Summer Olympics women find a hookup athlete partner?",
     "ground_truth": true,
+    "final_answer": "no",
     "prediction": "no",
-    "raw_output": "NO \u2013 It\u2019s unrealistic to assume every woman who competed in the 2008 Olympics could find a casual partner who is also an athlete. The pool of willing, compatible athletes is far smaller than the number of female Olympians, and personal preferences, cultural norms, and logistical constraints make universal pairing impossible."
+    "raw_output": "Answer: NO  \nRationale: The 2008 Summer Olympics had over 10,000 athletes, but \"hookup\" implies a specific type of relationship, which is not guaranteed for all individuals due to personal preferences, cultural factors, and the competitive nature of the event. Not every athlete would seek or find such a partner.",
+    "tokens": 726
   },
   {
     "question": "Snowboarding is a rarity in Hilo?",
     "ground_truth": true,
+    "final_answer": "yes",
     "prediction": "yes",
-    "raw_output": "YES \u2013 Hilo is in Hawaii, which has no natural snow, so snowboarding is extremely uncommon there."
+    "raw_output": "Answer: YES  \nRationale: Hilo, located on the Big Island of Hawaii, has a tropical climate with no natural snow. While artificial snowmaking exists in nearby areas like Mauna Kea, Hilo itself lacks the necessary conditions for snowboarding, making it a rarity.",
+    "tokens": 530
   },
   {
     "question": "Does Robert De Niro use a microscope at work?",
     "ground_truth": false,
+    "final_answer": "no",
     "prediction": "no",
-    "raw_output": "NO \u2013 Robert\u202fDe\u202fNiro is a film actor, and there\u2019s no evidence that he uses a microscope in his professional work."
+    "raw_output": "Answer: NO  \nRationale: Robert De Niro is an actor, and using a microscope is not related to his profession. Microscopes are used in scientific fields, not acting.",
+    "tokens": 346
   },
   {
     "question": "Was a Tiny House ceiling out of Osama bin Laden's reach?",
     "ground_truth": false,
-    "prediction": "yes",
-    "raw_output": "YES \u2013 Osama bin\u202fLaden was never physically present in the United States, so a ceiling in a Tiny House (any U.S. building) was well beyond his reach."
+    "final_answer": "no",
+    "prediction": "no",
+    "raw_output": "Answer: NO  \nRationale: A typical tiny house has low ceilings (around 7-8 feet). Osama bin Laden, standing at ~6'2\", could easily reach the ceiling with his arms extended, making it within his physical reach.",
+    "tokens": 704
   },
   {
     "question": "Did Jesus know anyone who spoke Estonian?",
     "ground_truth": false,
+    "final_answer": "no",
     "prediction": "no",
-    "raw_output": "NO \u2013 Estonian as a language did not exist during Jesus\u2019 lifetime, and the people of the region that is now Estonia were not present in Judea. Therefore Jesus could not have known anyone who spoke Estonian."
+    "raw_output": "Answer: NO  \nRationale: Jesus lived in 1st-century Judea (modern-day Israel), where languages like Aramaic, Hebrew, and Greek were spoken. Estonian, a Finno-Ugric language, emerged much later in Northern Europe, with no historical evidence of contact between Judea and Estonia during Jesus' lifetime.",
+    "tokens": 390
   },
   {
     "question": "Would nickel boil in the outer core of the earth?",
     "ground_truth": true,
+    "final_answer": "no",
     "prediction": "no",
-    "raw_output": "NO \u2013 the extreme pressure of the outer core raises nickel\u2019s boiling point far above the core temperature, so it would remain solid or liquid rather than vaporize."
+    "raw_output": "Answer: NO  \nRationale: The outer core's extreme pressure prevents nickel from boiling, as high pressure significantly raises the boiling point of nickel beyond the core's temperature. The outer core remains liquid due to these conditions.",
+    "tokens": 725
   },
   {
     "question": "Can Stone Cold Steve Austin apply his finisher to a mule deer?",
     "ground_truth": true,
+    "final_answer": "no",
     "prediction": "no",
-    "raw_output": "NO \u2013 Stone Cold\u2019s finisher is a professional wrestling move designed for a human opponent, not an animal. Applying it to a mule deer would be impractical, unsafe, and not part of any sanctioned wrestling context."
+    "raw_output": "Answer: NO  \nRationale: Stone Cold Steve Austin's finisher, the Stone Cold Stunner, is a human-specific wrestling move designed for combat against other humans. Applying it to a mule deer (an animal) is physically impractical and ethically inappropriate, as it involves harmful actions toward non-human life.",
+    "tokens": 407
   },
   {
     "question": "Has the Holy Grail been featured in at least five films?",
     "ground_truth": true,
+    "final_answer": "yes",
     "prediction": "yes",
-    "raw_output": "YES \u2013 the Holy Grail has appeared in numerous films (e.g., *Monty Python and the Holy Grail*, *Indiana Jones and the Last Crusade*, *The Quest for the Holy Grail*, *The Holy Grail* (1983), *The Holy Grail: The Legend of the Holy Grail*, etc.), easily exceeding five."
+    "raw_output": "Answer: YES  \nRationale: The Holy Grail has appeared in at least five films, including *Monty Python and the Holy Grail* (1975), *Indiana Jones and the Last Crusade* (1989), *Excalibur* (1981), *The Fisher King* (1991), and *King Arthur* (2004). Additional films like *The Adventures of Robin Hood* (1938) and *The Grail* (1960) also reference it, exceeding the threshold.",
+    "tokens": 791
   },
   {
     "question": "Is CEO of Nissan an internationally wanted fugitive?",
     "ground_truth": true,
+    "final_answer": "no",
     "prediction": "no",
-    "raw_output": "NO \u2013 The current CEO of Nissan, Makoto\u202fUchida, is not an internationally wanted fugitive. No international arrest warrant or extradition request has been issued against him."
+    "raw_output": "Answer: NO  \nRationale: The current CEO of Nissan, Makoto Uchida, is not listed as an internationally wanted fugitive. There is no credible evidence or recent reports indicating he is wanted by any international authorities.",
+    "tokens": 383
   },
   {
     "question": "Did Jeremy Irons master sweep picking as a child?",
     "ground_truth": false,
+    "final_answer": "no",
     "prediction": "no",
-    "raw_output": "NO \u2013 Jeremy Irons is a celebrated actor, not a guitarist, and there is no record of him mastering sweep\u2011picking or any advanced guitar technique during his childhood."
+    "raw_output": "Answer: NO  \nRationale: Jeremy Irons is a renowned actor, not a musician or guitarist. There is no credible evidence or public record indicating he mastered sweep picking, a specialized guitar technique, as a child.",
+    "tokens": 396
   },
   {
     "question": "Is starving Hamas agent eating pig bad?",
     "ground_truth": false,
-    "prediction": "yes",
-    "raw_output": "**YES** \u2013 It is morally problematic. A Hamas agent is a terrorist, and in Islamic law eating pork is forbidden, so a starving agent consuming pig is both ethically and religiously objectionable."
+    "final_answer": "no",
+    "prediction": "no",
+    "raw_output": "Answer: NO  \nRationale: The act of eating pork is considered haram (forbidden) in Islam, which is the religion followed by many Hamas members. However, the question's phrasing and context do not provide sufficient evidence to conclude that the action is inherently \"bad\" in a moral or ethical sense, as survival needs may override religious",
+    "tokens": 972
   },
   {
     "question": "Can children become lieutenants?",
     "ground_truth": true,
+    "final_answer": "no",
     "prediction": "no",
-    "raw_output": "NO \u2013 a lieutenant is a commissioned officer rank that requires a minimum age, completion of officer training, and a security clearance, all of which children do not meet."
+    "raw_output": "Answer: NO  \nRationale: Lieutenants are commissioned officers requiring age, training, and experience typically beyond childhood. Legal and practical barriers prevent children from holding such positions.",
+    "tokens": 529
   },
   {
     "question": "Can a human heart last from NYC to Raleigh NC by Toyota Hiux?",
     "ground_truth": true,
+    "final_answer": "no",
     "prediction": "no",
-    "raw_output": "NO \u2013 a human heart cannot survive the trip from NYC to Raleigh, NC in a Toyota Hiux (or any vehicle). The heart is a living organ that requires continuous blood flow and oxygen; it cannot be transported over that distance without medical support."
+    "raw_output": "Answer: NO  \nRationale: A human heart cannot travel independently; it requires a living body to function. The Toyota Hiux is a vehicle, not a container for sustaining a heart, making the scenario biologically impossible.",
+    "tokens": 650
   },
   {
     "question": "Could Saint Peter watch television?",
     "ground_truth": false,
+    "final_answer": "no",
     "prediction": "no",
-    "raw_output": "NO \u2013 Saint Peter lived in the 1st century, long before television existed, so he could not have watched it."
+    "raw_output": "Answer: NO  \nRationale: Saint Peter lived in the 1st century CE, while television was invented in the 20th century. He could not have watched television due to the technological and temporal gap.",
+    "tokens": 353
   },
   {
     "question": "Did Melania Trump have same profession as Olga Kurylenko?",
     "ground_truth": true,
+    "final_answer": "yes",
     "prediction": "yes",
-    "raw_output": "YES \u2013 both Melania Trump and Olga\u202fKurylenko have worked as models (in addition to other careers)."
+    "raw_output": "Answer: YES  \nRationale: Melania Trump was a model before becoming First Lady, and Olga Kurylenko is an actress and model. Both have modeling as a profession.",
+    "tokens": 460
   },
   {
     "question": "Can second row of QWERTY keyboard spell Abdastartus's kingdom?",
     "ground_truth": true,
+    "final_answer": "no",
     "prediction": "no",
-    "raw_output": "NO \u2013 the second row of a QWERTY keyboard (Q\u202fW\u202fE\u202fR\u202fT\u202fY\u202fU\u202fI\u202fO\u202fP) contains none of the letters needed to spell \u201cAbdastartus\u2019s kingdom.\u201d"
+    "raw_output": "Answer: NO  \nRationale: The second row of the QWERTY keyboard contains letters A, S, D, F, G, H, J, K, L. The word \"Abdastartus's kingdom\" includes letters like B (third row) and T (first row), which are not on the second row.",
+    "tokens": 845
   },
   {
     "question": "Has a baby ever had a moustache?",
     "ground_truth": true,
-    "prediction": "yes",
-    "raw_output": "YES \u2013 there have been documented cases of infants with facial hair that looks like a tiny moustache, often due to rare genetic or hormonal conditions."
+    "final_answer": "no",
+    "prediction": "no",
+    "raw_output": "Answer: NO  \nRationale: Babies are born with minimal facial hair, and mustaches typically develop during puberty due to hormonal changes. There is no documented case of a baby having a mustache.",
+    "tokens": 408
   },
   {
     "question": "Would a northern fur seal pass a driving test?",
     "ground_truth": false,
+    "final_answer": "no",
     "prediction": "no",
-    "raw_output": "NO \u2013 a northern fur seal is a marine mammal that lacks the physical ability, cognition, and legal status required to operate a vehicle and therefore would not pass a driving test."
+    "raw_output": "Answer: NO  \nRationale: Northern fur seals are marine mammals lacking the physical anatomy (e.g., hands, feet) and cognitive abilities required to operate a vehicle, making them incapable of passing a driving test.",
+    "tokens": 361
   },
   {
     "question": "Are Tom and Jerry featured in a ride at Disneyland?",
     "ground_truth": false,
+    "final_answer": "no",
     "prediction": "no",
-    "raw_output": "No argument generated."
+    "raw_output": "Answer: NO  \nRationale: Disneyland does not feature Tom and Jerry in any of its rides. The characters are primarily associated with animated shorts and do not have a dedicated attraction at the park.",
+    "tokens": 398
   },
   {
     "question": "Do most college students own a fax machine?",
     "ground_truth": false,
+    "final_answer": "no",
     "prediction": "no",
-    "raw_output": "NO \u2013 fax machines are largely obsolete, and college students rarely have or need them."
+    "raw_output": "Answer: NO  \nRationale: Fax machines are largely obsolete due to digital communication advancements. College students primarily use email, cloud storage, and online platforms for document sharing, making personal fax ownership unnecessary and uncommon.",
+    "tokens": 404
   },
   {
     "question": "Is a person with St. Vitus's Dance likely to win a ballet competition?",
     "ground_truth": false,
+    "final_answer": "no",
     "prediction": "no",
-    "raw_output": "NO \u2013 St.\u202fVitus\u2019s Dance (Sydenham\u2019s chorea) causes involuntary, jerky movements that would severely impair the precise, controlled motions required for ballet, making a win unlikely."
+    "raw_output": "Answer: NO  \nRationale: St. Vitus's Dance (Sydenham's chorea) causes involuntary, jerky movements that impair motor control, making precise ballet performance highly challenging and unlikely to result in competition success.",
+    "tokens": 340
   },
   {
     "question": "Is the Yellow Pages the fastest way to find a phone number?",
     "ground_truth": false,
+    "final_answer": "no",
     "prediction": "no",
-    "raw_output": "NO \u2013 a phone\u2019s built\u2011in search or an online search engine typically returns a number instantly, whereas looking up the Yellow Pages (printed or even online) takes more time."
+    "raw_output": "Answer: NO  \nRationale: Modern digital tools like search engines, online directories, and apps provide faster and more up-to-date phone number searches compared to traditional Yellow Pages, which are often outdated and less accessible.",
+    "tokens": 352
   },
   {
     "question": "Could Christopher Nolan's movies finance Cyprus's entire GDP?",
     "ground_truth": false,
+    "final_answer": "no",
     "prediction": "no",
-    "raw_output": "NO \u2013 Christopher Nolan\u2019s films, while highly profitable, generate only a few billion dollars in worldwide box\u2011office and net profit, far below Cyprus\u2019s annual GDP of roughly $25\u201330\u202fbillion."
+    "raw_output": "Answer: NO  \nRationale: Christopher Nolan's highest-grossing films (e.g., Inception, Interstellar) earned around $2 billion collectively. Cyprus's GDP is approximately $25 billion, meaning even if all Nolan's box office revenue were directed to Cyprus, it would cover less than 10% of its GDP.",
+    "tokens": 392
   },
   {
     "question": "Is Lionel Richie related to Sheila E?",
     "ground_truth": false,
+    "final_answer": "no",
     "prediction": "no",
-    "raw_output": "NO \u2013 Lionel Richie and Sheila E. are not related; there is no known family connection between the two artists."
+    "raw_output": "Answer: NO  \nRationale: Lionel Richie and Sheila E are not biologically related. While both are musicians, there is no documented familial connection between them. Sheila E's father is James Brown, and Lionel Richie's father was Lionel Richie Sr., with no evidence linking their families. Their collaboration in the music industry does not imply a blood relation.",
+    "tokens": 708
   },
   {
     "question": "Would a human following a hyena diet be unwelcome at a vegan festival?",
     "ground_truth": true,
+    "final_answer": "yes",
     "prediction": "yes",
-    "raw_output": "YES \u2013 a hyena diet is carnivorous, so a person eating meat would clash with the vegan festival\u2019s principles and likely be unwelcome."
+    "raw_output": "Answer: YES  \nRationale: A hyena diet consists of meat and animal byproducts, which directly conflicts with vegan principles that exclude all animal-derived foods. Thus, a human following such a diet would not align with the festival's ethos.",
+    "tokens": 408
   },
   {
     "question": "Does the name C-SPAN refer to a form of telecommunications that utilizes outer space?",
     "ground_truth": true,
+    "final_answer": "no",
     "prediction": "no",
-    "raw_output": "NO \u2013 C\u2011SPAN is a cable television network; its name refers to cable (and the use of satellite technology for distribution), not to a telecommunications system that operates in outer space."
+    "raw_output": "Answer: NO  \nRationale: C-SPAN (Cable-Satellite Public Affairs Network) refers to a network providing live coverage of government proceedings, not a telecommunications method. While it uses satellite technology (which involves outer space), the name itself does not denote the use of outer space.",
+    "tokens": 546
   },
   {
     "question": "Did Teri Hatcher last twice as many episodes on Desperate Housewives as her Superman show?",
     "ground_truth": true,
-    "prediction": "no",
-    "raw_output": "NO \u2013 Teri Hatcher appeared in all 180 episodes of *Desperate Housewives*, while she was in only 32 episodes of the *Superman* TV series, far more than twice that number."
+    "final_answer": "yes",
+    "prediction": "yes",
+    "raw_output": "Answer: YES  \nRationale: Teri Hatcher starred in 10 episodes of *Superman* (1996\u20131998) and 144 episodes of *Desperate Housewives* (2004\u20132012). 144 is more than twice 10, so she appeared in more than twice as many episodes of *Desperate Housewives* as her *Superman* show.",
+    "tokens": 818
   },
   {
     "question": "Did Johann Sebastian Bach ever win a Grammy Award?",
     "ground_truth": false,
+    "final_answer": "no",
     "prediction": "no",
-    "raw_output": "NO \u2013 the Grammy Awards were established in 1959, long after Johann Sebastian Bach died in 1750."
+    "raw_output": "Answer: NO  \nJohann Sebastian Bach (1685\u20131750) died over two centuries before the first Grammy Awards were presented in 1959. Since he is no longer alive and the Grammy Awards are for contemporary music, he could not have won one.",
+    "tokens": 330
   },
   {
     "question": "Are you likely to hear Rammstein playing in smooth jazz clubs?",
     "ground_truth": false,
+    "final_answer": "no",
     "prediction": "no",
-    "raw_output": "NO \u2013 smooth jazz clubs normally feature mellow, instrumental jazz, not the heavy, industrial\u2011metal style of Rammstein."
+    "raw_output": "Answer: NO  \nRammstein is an industrial metal band known for heavy, aggressive music, which contrasts with the mellow, relaxed style of smooth jazz. Their genre and audience do not align with typical smooth jazz club settings.",
+    "tokens": 341
   },
   {
     "question": "Do Star Wars fans say \"beam me up\" often?",
     "ground_truth": false,
+    "final_answer": "no",
     "prediction": "no",
-    "raw_output": "NO \u2013 \u201cbeam me up\u201d is a classic Star\u202fTrek catch\u2011phrase, not a common line used by Star\u202fWars fans."
+    "raw_output": "Answer: NO  \nRationale: \"Beam me up\" is a phrase from Star Trek, not Star Wars, so it is not commonly used by Star Wars fans.",
+    "tokens": 293
   },
   {
     "question": "Are there any official American knights?",
     "ground_truth": false,
+    "final_answer": "no",
     "prediction": "no",
-    "raw_output": "NO \u2013 the United States has no official system of knighthood; it does not confer the title \u201cknight\u201d as a state\u2011sanctioned honor."
+    "raw_output": "Answer: NO  \nRationale: The United States does not have an official system of knights as part of its government or military structure. While the U.S. military has ranks like \"General\" or \"Colonel,\" the title \"knight\" is not an official rank. Additionally, there are no recognized chivalric orders or hereditary nobility in the U.S. that confer the title of \"knight.\"",
+    "tokens": 499
   },
   {
     "question": "Do workers at Nissan's headquarters eat with chopsticks?",
     "ground_truth": true,
+    "final_answer": "yes",
     "prediction": "yes",
-    "raw_output": "YES \u2013 Nissan\u2019s headquarters are in Japan, where the customary eating utensil is chopsticks, so most workers use them."
+    "raw_output": "Answer: YES  \nRationale: Nissan's headquarters is located in Japan, where chopsticks are a traditional and widely used utensil for eating, especially in formal or workplace settings. While not universal, their cultural context strongly supports the use of chopsticks.",
+    "tokens": 537
   },
   {
     "question": "Are Sable's a good choice of Mustelidae to weigh down a scale?",
     "ground_truth": false,
+    "final_answer": "no",
     "prediction": "no",
-    "raw_output": "NO \u2013 Sables are small mustelids (about 1\u20132\u202fkg), so they\u2019re far too light and impractical for accurately weighing down a scale."
+    "raw_output": "Answer: NO  \nRationale: Sables (Mustelidae) are small, typically weighing 0.5\u20131.5 kg, making them insufficient to effectively weigh down a scale. Larger Mustelidae like badgers or otters would be more suitable for this purpose.",
+    "tokens": 631
   },
   {
     "question": "Is the referee at a soccer match highly visible against the field?",
     "ground_truth": true,
+    "final_answer": "yes",
     "prediction": "yes",
-    "raw_output": "YES \u2013 referees wear bright, contrasting shirts (often yellow or orange) so they stand out clearly against the green pitch."
+    "raw_output": "Answer: YES  \nThe referee wears a distinctively colored uniform (e.g., yellow, red, or white) designed to contrast with the green field, ensuring visibility for players and spectators.",
+    "tokens": 373
   },
   {
     "question": "Is helium the cause of the Hindenburg explosion?",
     "ground_truth": false,
+    "final_answer": "no",
     "prediction": "no",
-    "raw_output": "NO \u2013 the Hindenburg was filled with flammable hydrogen, not helium; helium is inert and would not have caused the explosion."
+    "raw_output": "Answer: NO  \nThe Hindenburg disaster was caused by the ignition of hydrogen gas, not helium. Helium is non-flammable, whereas hydrogen is highly flammable and contributed to the rapid combustion that led to the explosion.",
+    "tokens": 284
   },
   {
     "question": "If you're running focal fossa, are you using linux?",
     "ground_truth": true,
+    "final_answer": "yes",
     "prediction": "yes",
-    "raw_output": "YES \u2013 Focal\u202fFossa is the codename for Ubuntu 20.04, which is a Linux distribution."
+    "raw_output": "Answer: YES  \nFocal Fossa is a codename for Ubuntu 20.04 LTS, which is a Linux distribution based on the Linux kernel. Therefore, running Focal Fossa implies using Linux.",
+    "tokens": 335
   },
   {
     "question": "Would the tunnels at CERN fit onto the High Speed 1 rails?",
     "ground_truth": true,
+    "final_answer": "no",
     "prediction": "no",
-    "raw_output": "NO \u2013 CERN\u2019s underground tunnels are not sized or engineered for high\u2011speed train tracks. They are large, circular shafts for particle beams, not the flat, surface\u2011mounted railbeds that High Speed 1 uses, so the tunnels couldn\u2019t be fitted with the required rails."
+    "raw_output": "Answer: NO  \nRationale: CERN's tunnels, such as those housing the Large Hadron Collider, are significantly larger in diameter (around 10 meters) and designed for massive infrastructure, while High Speed 1 rails are standard gauge (1.435 meters) and part of a much smaller railway system. The tunnels cannot physically fit onto the rails.",
+    "tokens": 768
   },
   {
     "question": "Would someone go to San Francisco for a nature escape?",
     "ground_truth": false,
-    "prediction": "no",
-    "raw_output": "NO \u2013 San\u202fFrancisco is a major urban center; while it has parks and nearby natural sites, it\u2019s not typically chosen as a primary nature\u2011escape destination."
+    "final_answer": "yes",
+    "prediction": "yes",
+    "raw_output": "Answer: YES  \nRationale: San Francisco offers natural attractions like Golden Gate Park, coastal views, and hiking trails, making it possible for someone to seek a nature escape within the city.",
+    "tokens": 478
   },
   {
     "question": "Was only woman to serve as U.S. Speaker of the House alive during the attack on Pearl Harbor?",
     "ground_truth": true,
-    "prediction": "yes",
-    "raw_output": "YES \u2013 Nancy\u202fPelosi, the only woman to have served as Speaker of the U.S. House, was alive in 1941 when Pearl Harbor was attacked."
+    "final_answer": "no",
+    "prediction": "no",
+    "raw_output": "Answer: NO  \nRationale: The only woman to serve as U.S. Speaker of the House is Nancy Pelosi, who was born in 1940. Pearl Harbor was attacked on December 7, 1941. Pelosi was 1 year old at the time, so she was alive. However, the question implies there was only one woman who served as Speaker, but the answer is \"NO\" because the actual answer is \"YES\" (she was alive). Wait, this contradicts. Let me correct: The correct answer is **YES**, as Pelosi was alive during Pearl Harbor. However, the initial answer provided was \"NO,\" which is incorrect. The correct answer should be **YES**. But according to the rules, the answer must be directly answered. The correct answer is **YES** because the only woman (Pelosi) was alive during Pearl Harbor. However, the initial answer was mistakenly \"NO.\" The correct answer is **YES**.  \n\n**Answer: YES**  \n**Rationale:** Nancy Pelosi, the only woman to serve as U.S. Speaker of the House, was born in 1940 and thus alive during the Pearl Harbor attack (December 7, 1941).",
+    "tokens": 863
   },
   {
     "question": "Does Northern fur seal make good pet for six year old?",
     "ground_truth": false,
+    "final_answer": "no",
     "prediction": "no",
-    "raw_output": "NO \u2013 Northern fur seals are large, wild marine mammals that need specialized care, a marine environment, and are not suitable or safe as a pet for a six\u2011year\u2011old child."
+    "raw_output": "Answer: NO  \nNorthern fur seals are wild marine mammals that require specialized care, are not domesticated, and can be aggressive. Keeping them as pets poses safety risks, legal issues, and ethical concerns, making them unsuitable for a six-year-old.",
+    "tokens": 414
   },
   {
     "question": "Is Christianity better for global warming than Satanism?",
     "ground_truth": true,
-    "prediction": "yes",
-    "raw_output": "YES \u2013 Christianity generally promotes stewardship of creation and caring for the planet, whereas Satanism has no comparable environmental ethic."
+    "final_answer": "no",
+    "prediction": "no",
+    "raw_output": "Answer: NO  \nRationale: Global warming is a scientific and environmental issue, not inherently tied to religious beliefs. Christianity, through its emphasis on stewardship and environmental ethics, has historically influenced environmental advocacy, while Satanism lacks a significant presence in environmental discourse. Thus, Christianity's practices and teachings are more aligned with addressing climate change.",
+    "tokens": 552
   },
   {
     "question": "Can a firewall protect against a short circuit?",
     "ground_truth": false,
+    "final_answer": "no",
     "prediction": "no",
-    "raw_output": "NO \u2013 a firewall is a network security device that blocks or filters traffic; it does not provide any electrical protection against a short circuit."
+    "raw_output": "Answer: NO  \nRationale: A firewall is a network security system that protects against cyber threats, not electrical issues like short circuits. Short circuits involve physical electrical faults, which require electrical safety measures, not network security tools.",
+    "tokens": 404
   },
   {
     "question": "Was San Antonio the site of a major battle in the 19th century?",
     "ground_truth": true,
+    "final_answer": "yes",
     "prediction": "yes",
-    "raw_output": "YES \u2013 The Battle of the Alamo, a pivotal engagement of the Texas Revolution, took place in San\u202fAntonio in 1836."
+    "raw_output": "Answer: YES  \nRationale: San Antonio was the site of the Battle of the Alamo in 1836, a pivotal engagement during the Texas Revolution against Mexican forces.",
+    "tokens": 368
   },
   {
     "question": "Would Matt Damon be afraid of parachuting?",
     "ground_truth": true,
+    "final_answer": "no",
     "prediction": "no",
-    "raw_output": "NO \u2013 there\u2019s no evidence that Matt Damon has a fear of parachuting; as an action\u2011film actor he\u2019s shown willingness to undertake daring stunts."
+    "raw_output": "Answer: NO  \nRationale: Matt Damon has been in films like *The Bourne Identity* and *The Adjustment Bureau* where he performs parachute jumps, indicating he is not afraid of parachuting. Additionally, he has participated in skydiving events for charity, further suggesting he is comfortable with the activity.",
+    "tokens": 631
   }
 ]

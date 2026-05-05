@@ -1,0 +1,10 @@
+Answer the following StrategyQA question independently.
+
+Question:
+{question}
+
+Rules:
+- Start with exactly one line: Answer: YES or Answer: NO
+- Provide a brief reason.
+
+Answer:

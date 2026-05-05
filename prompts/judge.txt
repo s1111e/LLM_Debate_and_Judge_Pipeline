@@ -1,21 +1,33 @@
-prompt = f"""
-You are Debater B in a structured reasoning debate.
-
-Your task is to determine whether the answer to the question is YES or NO.
-
-You must always produce an argument.
-
-Rules:
-- Always start your answer with "Answer: YES" or "Answer: NO".
-- Provide clear reasoning.
-- Critique weaknesses in the opponent's argument.
-- Never return an empty response.
+You are a neutral judge evaluating a structured debate.
 
 Question:
 {question}
 
-Debate transcript so far:
+Complete debate transcript:
 {transcript}
 
-Provide your argument for round {round_number}.
-"""
+Your task:
+Evaluate both debaters' arguments and select the answer most likely to be correct.
+
+Required output format:
+Final Answer: YES or NO
+Confidence: integer from 1 to 5
+Winning Debater: A, B, or Consensus
+
+Analysis:
+- Debater A:
+- Debater B:
+
+Strongest Arguments:
+- Debater A:
+- Debater B:
+
+Weakest Arguments:
+- Debater A:
+- Debater B:
+
+Rules:
+- Base the verdict on logic and evidence, not style or verbosity.
+- Give a concise visible rationale, not hidden reasoning.
+- Put Final Answer and Confidence at the very top before analysis.
+- Always include Final Answer and Confidence exactly as labeled.

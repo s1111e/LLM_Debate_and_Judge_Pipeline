@@ -6,6 +6,8 @@ Each debater calls the LLM using the query_llm function.
 """
 
 from api_basics import query_llm
+from utils.answer_utils import normalize_answer
+from utils.prompt_loader import render_prompt
 
 
 class Debater:
@@ -15,36 +17,27 @@ class Debater:
         role: 'A' or 'B'
         """
         self.role = role
+        self.template_name = "debaterA.txt" if role == "A" else "debaterB.txt"
 
 
     def generate_initial_answer(self, question):
         """
-        Generate the initial position of the debater
+        Generate an independent initial position before seeing the opponent.
         """
 
-        if self.role == "A":
-            stance = "YES"
-        else:
-            stance = "NO"
+        task = (
+            "Independently choose the answer you believe is correct. "
+            "Do not assume the other debater's position."
+        )
 
-        prompt = f"""
-You are Debater {self.role}.
-
-Question:
-{question}
-
-Your role:
-Argue that the answer is {stance}.
-
-Provide:
-1. Answer
-2. Reasoning
-
-IMPORTANT:
-Do not include internal thinking.
-Do not output <think> tags.
-Write only the final answer and reasoning.
-"""
+        prompt = render_prompt(
+            self.template_name,
+            question=question,
+            transcript="No previous debate transcript.",
+            round_number="initial",
+            position="Choose YES or NO independently.",
+            task=task
+        )
 
         response, tokens = query_llm(prompt)
 
@@ -54,36 +47,23 @@ Write only the final answer and reasoning.
         return response
 
 
-    def generate_argument(self, question, transcript, round_number=1):
+    def generate_argument(self, question, transcript, round_number=1, position="unknown"):
+        answer = normalize_answer(position)
+        position_text = answer.upper() if answer in {"yes", "no"} else "the answer you defended initially"
 
         if self.role == "A":
-            role_instruction = "Defend the answer YES and respond to Debater B."
+            task = "Defend your position and address Debater B's strongest previous objection."
         else:
-            role_instruction = "Attack Debater A's reasoning and defend the answer NO."
+            task = "Challenge Debater A's latest argument and defend your own position."
 
-        prompt = f"""
-        You are Debater {self.role} in a formal debate.
-
-        Question:
-        {question}
-
-        This is round {round_number} of the debate.
-
-        Debate transcript so far:
-        {transcript}
-
-        Your task:
-        {role_instruction}
-
-        Rules:
-        - Respond to the other debater's latest argument.
-        - Do NOT repeat your previous arguments.
-        - Provide NEW reasoning or evidence.
-        - Keep your answer under 120 words.
-        - Do NOT include <think> tags or internal reasoning.
-
-        Write only the final argument.
-        """
+        prompt = render_prompt(
+            self.template_name,
+            question=question,
+            transcript=transcript,
+            round_number=round_number,
+            position=position_text,
+            task=task
+        )
 
         response, tokens = query_llm(prompt)
 

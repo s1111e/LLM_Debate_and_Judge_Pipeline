@@ -1,4 +1,3 @@
-prompt = f"""
 Question:
 {question}
 
@@ -14,4 +13,3 @@ A or B
 
 Explanation:
 Short explanation.
-"""
